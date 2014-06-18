@@ -2759,7 +2759,7 @@ os2*)
   library_names_spec='`eval $os2dllname_cmds`${shared_ext} ${libname}_dll.$libext'
   dynamic_linker='OS/2 ld.exe'
   shlibpath_var=BEGINLIBPATH
-  sys_lib_search_path_spec="/lib /usr/lib /usr/local/lib"
+  sys_lib_search_path_spec="/lib /usr/lib /usr/local/lib /@unixroot/usr/lib /@unixroot/usr/local/lib"
   sys_lib_dlsearch_path_spec="$sys_lib_search_path_spec"
   ;;
 
