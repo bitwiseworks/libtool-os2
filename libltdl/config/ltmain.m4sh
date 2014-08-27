@@ -2229,6 +2229,7 @@ func_mode_install ()
 		case $host_os in
 		os2*)
 		  # Create import libraries instead of links on OS/2
+		  eval shared_ext=\"$shrext_cmds\"
 		  func_show_eval "(emximp -o $destdir/$linkname $dir/${realname%%$shared_ext}.def)"
 		  ;;
 		*)
@@ -7874,6 +7875,7 @@ EOF
 	    case $host_os in
 	    os2*)
 	      # Create import libraries instead of links on OS/2
+	      eval shared_ext=\"$shrext_cmds\"
 	      func_show_eval '(emximp -o $output_objdir/$linkname $output_objdir/${realname%%$shared_ext}.def)' 'exit $?'
 	      ;;
 	    *)
