@@ -1635,7 +1635,7 @@ The following components of LINK-COMMAND are treated specially:
   -no-undefined     declare that a library does not refer to external symbols
   -o OUTPUT-FILE    create OUTPUT-FILE from the specified objects
   -objectlist FILE  Use a list of object files found in FILE to specify objects
-  -os2dllname NAME  specify a OS/2 DLL name(effect on OS/2 only)
+  -os2dllname NAME  override OS/2 DLL name (effective only on OS/2)
   -precious-files-regex REGEX
                     don't remove output files matching REGEX
   -release RELEASE  specify package release information
@@ -4621,7 +4621,7 @@ func_mode_link ()
 	  continue
 	  ;;
 	os2dllname)
-	  os2dllname_cmds="$ECHO $arg | cut -b -8"
+	  os2dllname_spec='$ECHO '"$arg"' | cut -b $(( 8-${#major} ))'
 	  prev=
 	  continue
 	  ;;
@@ -6750,6 +6750,10 @@ func_mode_link ()
 	  func_arith $current - $age
 	  major=.$func_arith_result
 	  versuffix="$major.$age.$revision"
+	  ;;
+
+	os2)
+	  major="$current"
 	  ;;
 
 	osf)
