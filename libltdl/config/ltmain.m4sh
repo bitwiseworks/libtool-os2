@@ -2229,7 +2229,7 @@ func_mode_install ()
 		case $host_os in
 		os2*)
 		  # Create import libraries instead of links on OS/2
-		  func_show_eval "(emximp -o $destdir/$linkname $dir/${linkname%%_dll.$libext}.def)"
+		  func_show_eval "(emximp -o $destdir/$linkname $dir/${realname%%$shared_ext}.def)"
 		  ;;
 		*)
 		  func_show_eval "(cd $destdir && { $LN_S -f $realname $linkname || { $RM $linkname && $LN_S $realname $linkname; }; })"
@@ -7874,7 +7874,7 @@ EOF
 	    case $host_os in
 	    os2*)
 	      # Create import libraries instead of links on OS/2
-	      func_show_eval '(emximp -o $output_objdir/$linkname $output_objdir/$libname.def)' 'exit $?'
+	      func_show_eval '(emximp -o $output_objdir/$linkname $output_objdir/${realname%%$shared_ext}.def)' 'exit $?'
 	      ;;
 	    *)
 	      func_show_eval '(cd "$output_objdir" && $RM "$linkname" && $LN_S "$realname" "$linkname")' 'exit $?'
