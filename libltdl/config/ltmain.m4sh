@@ -4621,7 +4621,7 @@ func_mode_link ()
 	  continue
 	  ;;
 	os2dllname)
-	  os2dllname_spec='$ECHO '"$arg"' | cut -b $(( 8-${#major} ))'
+	  os2dllname_cmds='$ECHO '"$arg"' | cut -b $(( 8-${#major} ))'
 	  prev=
 	  continue
 	  ;;
