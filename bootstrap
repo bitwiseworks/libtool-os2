@@ -131,6 +131,10 @@ $SED '/^if /,/^endif$/d;/^else$/,/^endif$/d;/^include /d' $makes > Makefile
 # configure, and ltversion.m4 to generate configure in the first place:
 rm -f $auxdir/ltmain.sh $m4dir/ltversion.m4
 
+# Also, force libtoolize.in and defs.in/testsuite generation to make sure
+# all nuances from the current autoconf are picked up.
+rm -f libtoolize.in tests/defs.in tests/testsuite
+
 $MAKE ./$auxdir/ltmain.sh ./$m4dir/ltversion.m4 \
     ./libtoolize.in ./tests/defs.in ./tests/package.m4 \
     ./tests/testsuite ./libltdl/Makefile.am ./doc/notes.txt \
