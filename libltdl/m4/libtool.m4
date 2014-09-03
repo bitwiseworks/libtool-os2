@@ -7117,6 +7117,17 @@ if AC_TRY_EVAL(ac_compile); then
     esac
   done
 
+  case $host_os in
+    os2*)
+      # Make sure that unix-like entries in paths contain /@unixroot instead of
+      # hardcoded absolute paths to avoid these hardcoded paths in generated files.
+      if test -n "$UNIXROOT"; then
+        _LT_TAGVAR(compiler_lib_search_path, $1)=`echo "$_LT_TAGVAR(compiler_lib_search_path, $1)" | sed "s|$UNIXROOT\/usr\/|\/@unixroot\/usr\/|gI"`
+        _LT_TAGVAR(predep_objects, $1)=`echo "$_LT_TAGVAR(predep_objects, $1)" | sed "s|$UNIXROOT\/usr\/|\/@unixroot\/usr\/|gI"`
+      fi
+      ;;
+  esac
+
   # Clean up.
   rm -f a.out a.exe
 else
