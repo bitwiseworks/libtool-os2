@@ -4622,7 +4622,7 @@ func_mode_link ()
 	  continue
 	  ;;
 	os2dllname)
-	  os2dllname_cmds='$ECHO '"$arg"' | cut -b -$(( 8-${#major} ))'
+	  os2dllname_cmds='$ECHO '"$arg"' | cut -b -$(( 8-${#release}-${#versuffix} ))'
 	  prev=
 	  continue
 	  ;;
@@ -6042,6 +6042,11 @@ func_mode_link ()
 		major=$func_arith_result
 		versuffix="-$major"
 		;;
+	      *os2*)
+		func_arith $current - $age
+		major=$func_arith_result
+		versuffix="$major"
+		;;
 	      esac
 	      eval soname=\"$soname_spec\"
 	    else
@@ -6754,7 +6759,10 @@ func_mode_link ()
 	  ;;
 
 	os2)
-	  major="$current"
+	  # Use only major as suffix to save space in 8.3 file name format
+	  func_arith $current - $age
+	  major=$func_arith_result
+	  versuffix="$major"
 	  ;;
 
 	osf)

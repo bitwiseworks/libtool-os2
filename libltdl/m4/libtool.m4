@@ -2756,8 +2756,8 @@ os2*)
   # OS/2 limits a length of a DLL basename up to 8 characters.
   # So there is need to use a short name instead of a original name
   # longer than 8 characters.
-  os2dllname_cmds='$ECHO $libname | cut -b -$(( 8-${#major} ))'
-  library_names_spec='`eval $os2dllname_cmds`${major}${shared_ext} ${libname}${major}_dll.$libext ${libname}_dll.$libext'
+  os2dllname_cmds='$ECHO $libname | cut -b -$(( 8-${#release}-${#versuffix} ))'
+  library_names_spec='`eval $os2dllname_cmds`${release}${versuffix}${shared_ext} ${libname}${release}${versuffix}_dll.$libext ${libname}_dll.$libext'
   dynamic_linker='OS/2 ld.exe'
   shlibpath_var=BEGINLIBPATH
   sys_lib_search_path_spec="/lib /usr/lib /usr/local/lib /@unixroot/usr/lib /@unixroot/usr/local/lib"
