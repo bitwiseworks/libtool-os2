@@ -2225,7 +2225,7 @@ BEGIN {RS=" "; FS="/|\n";} {
 else
   sys_lib_search_path_spec="/lib /usr/lib /usr/local/lib"
 fi])
-os2dllname_cmds=
+shortname_cmds=
 library_names_spec=
 libname_spec='lib$name'
 soname_spec=
@@ -2756,8 +2756,8 @@ os2*)
   # OS/2 limits a length of a DLL basename up to 8 characters.
   # So there is need to use a short name instead of a original name
   # longer than 8 characters.
-  os2dllname_cmds='$ECHO $libname | cut -b -$(( 8-${#release}-${#versuffix} ))'
-  library_names_spec='`eval $os2dllname_cmds`${release}${versuffix}${shared_ext} ${libname}${release}${versuffix}_dll.$libext ${libname}_dll.$libext'
+  shortname_cmds='$ECHO $libname | cut -b -$(( 8-${#release}-${#versuffix} ))'
+  library_names_spec='`eval $shortname_cmds`${release}${versuffix}${shared_ext} ${libname}${release}${versuffix}_dll.$libext ${libname}_dll.$libext'
   dynamic_linker='OS/2 ld.exe'
   shlibpath_var=BEGINLIBPATH
   sys_lib_search_path_spec="/lib /usr/lib /usr/local/lib /@unixroot/usr/lib /@unixroot/usr/local/lib"
@@ -2907,7 +2907,7 @@ _LT_DECL([], [shlibpath_var], [0],[Shared library path variable])
 _LT_DECL([], [shlibpath_overrides_runpath], [0],
     [Is shlibpath searched before the hard-coded library search path?])
 _LT_DECL([], [libname_spec], [1], [Format of library name prefix])
-_LT_DECL([], [os2dllname_cmds], [2], [Command to tailor OS/2 DLL name])
+_LT_DECL([], [shortname_cmds], [2], [Command to tailor DLL name to 8.3 format])
 _LT_DECL([], [library_names_spec], [1],
     [[List of archive names.  First name is the real one, the rest are links.
     The last name is the one that the linker finds with -lNAME]])

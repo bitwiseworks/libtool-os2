@@ -8,7 +8,7 @@ New in 2.4.2 2011-10-17: git version 2.4.1a, Libtool team:
     package names.  This can be used to build some static libraries with PIC
     objects while building others with non-PIC objects.
 
-  - Added -os2dllname option to specify a OS/2 DLL name (OS/2 only)
+  - Added -shortname option to override the DLL name (OS/2 only).
 
   - Initial support for Go, using the gccgo compiler.
 
