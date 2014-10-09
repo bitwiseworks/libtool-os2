@@ -1796,7 +1796,7 @@ func_mode_execute ()
       if eval "test -z \"\$$shlibpath_var\""; then
 	eval "$shlibpath_var=\"\$dir\""
       else
-	eval "$shlibpath_var=\"\$dir:\$$shlibpath_var\""
+	eval "$shlibpath_var=\"\$dir\$PATH_SEPARATOR\$$shlibpath_var\""
       fi
     done
 
