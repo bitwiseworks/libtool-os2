@@ -4318,7 +4318,7 @@ func_mode_link ()
 {
     $opt_debug
     case $host in
-    *-*-cygwin* | *-*-mingw* | *-*-pw32* | *-*-os2* | *-cegcc*)
+    *-*-cygwin* | *-*-mingw* | *-*-pw32* | *-cegcc*)
       # It is impossible to link a dll without this setting, and
       # we shouldn't force the makefile maintainer to figure out
       # which system we are compiling for in order to pass an extra
@@ -4331,6 +4331,12 @@ func_mode_link ()
       # -no-undefined on the libtool link line when we can be certain
       # that all symbols are satisfied, otherwise we get a static library.
       allow_undefined=yes
+      ;;
+    *-*-os2*)
+      # OS/2 is like Windows (see above).  It is the expected behavior to
+      # not build a static library when the DLL cannot be built due to
+      # undefined symbols.
+      allow_undefined=no
       ;;
     *)
       allow_undefined=yes
