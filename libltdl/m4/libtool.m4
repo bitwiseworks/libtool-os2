@@ -2753,6 +2753,7 @@ os2*)
   libname_spec='$name'
   shrext_cmds=".dll"
   need_lib_prefix=no
+  need_version=no
   # OS/2 limits a length of a DLL basename up to 8 characters.
   # So there is need to use a short name instead of a original name
   # longer than 8 characters.
