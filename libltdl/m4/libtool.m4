@@ -4805,6 +4805,7 @@ _LT_EOF
       _LT_TAGVAR(hardcode_libdir_flag_spec, $1)='-L$libdir'
       _LT_TAGVAR(hardcode_minus_L, $1)=yes
       _LT_TAGVAR(allow_undefined_flag, $1)=unsupported
+      _LT_TAGVAR(file_list_spec, $1)='@'
       shrext_cmds=".dll"
       _LT_TAGVAR(archive_cmds, $1)='\$ECHO "LIBRARY ${realname%%$shared_ext} INITINSTANCE TERMINSTANCE" > $output_objdir/${realname%%$shared_ext}.def~\$ECHO "DESCRIPTION \"$libname\"" >> $output_objdir/${realname%%$shared_ext}.def~\$ECHO DATA >> $output_objdir/${realname%%$shared_ext}.def~\$ECHO "  MULTIPLE NONSHARED" >> $output_objdir/${realname%%$shared_ext}.def~\$ECHO EXPORTS >> $output_objdir/${realname%%$shared_ext}.def~emxexp $libobjs | \$SED /"_DLL_InitTerm"/d >> $output_objdir/${realname%%$shared_ext}.def~\$CC -Zdll -Zomf -o $lib $libobjs $deplibs $compiler_flags $output_objdir/${realname%%$shared_ext}.def'
       _LT_TAGVAR(old_archive_From_new_cmds, $1)='emximp -o $output_objdir/${libname}_dll.$libext $output_objdir/${realname%%$shared_ext}.def'
@@ -5434,6 +5435,7 @@ _LT_EOF
       _LT_TAGVAR(hardcode_libdir_flag_spec, $1)='-L$libdir'
       _LT_TAGVAR(hardcode_minus_L, $1)=yes
       _LT_TAGVAR(allow_undefined_flag, $1)=unsupported
+      _LT_TAGVAR(file_list_spec, $1)='@'
       shrext_cmds=".dll"
       _LT_TAGVAR(archive_cmds, $1)='\$ECHO "LIBRARY ${realname%%$shared_ext} INITINSTANCE TERMINSTANCE" > $output_objdir/${realname%%$shared_ext}.def~\$ECHO "DESCRIPTION \"$libname\"" >> $output_objdir/${realname%%$shared_ext}.def~\$ECHO DATA >> $output_objdir/${realname%%$shared_ext}.def~\$ECHO "  MULTIPLE NONSHARED" >> $output_objdir/${realname%%$shared_ext}.def~\$ECHO EXPORTS >> $output_objdir/${realname%%$shared_ext}.def~emxexp $libobjs | \$SED /"_DLL_InitTerm"/d >> $output_objdir/${realname%%$shared_ext}.def~\$CC -Zdll -Zomf -o $lib $libobjs $deplibs $compiler_flags $output_objdir/${realname%%$shared_ext}.def'
       _LT_TAGVAR(old_archive_From_new_cmds, $1)='emximp -o $output_objdir/${libname}_dll.$libext $output_objdir/${realname%%$shared_ext}.def'
