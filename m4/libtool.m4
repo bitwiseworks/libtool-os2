@@ -2860,7 +2860,6 @@ openbsd* | bitrig*)
 os2*)
   version_type=os2
   libname_spec='$name'
-  version_type=windows
   shrext_cmds=.dll
   need_version=no
   need_lib_prefix=no
