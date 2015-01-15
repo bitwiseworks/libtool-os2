@@ -5035,16 +5035,16 @@ _LT_EOF
       _LT_TAGVAR(allow_undefined_flag, $1)=unsupported
       _LT_TAGVAR(file_list_spec, $1)='@'
       shrext_cmds=.dll
-      _LT_TAGVAR(archive_cmds, $1)='$ECHO "LIBRARY ${realname%%$shared_ext} INITINSTANCE TERMINSTANCE" > $output_objdir/${realname%%$shared_ext}.def~
-	$ECHO "DESCRIPTION \"$libname\"" >> $output_objdir/${realname%%$shared_ext}.def~
-	$ECHO "DATA MULTIPLE NONSHARED" >> $output_objdir/${realname%%$shared_ext}.def~
-	$ECHO EXPORTS >> $output_objdir/${realname%%$shared_ext}.def~
+      _LT_TAGVAR(archive_cmds, $1)='\$ECHO "LIBRARY ${realname%%$shared_ext} INITINSTANCE TERMINSTANCE" > $output_objdir/${realname%%$shared_ext}.def~
+	\$ECHO "DESCRIPTION \"$libname\"" >> $output_objdir/${realname%%$shared_ext}.def~
+	\$ECHO "DATA MULTIPLE NONSHARED" >> $output_objdir/${realname%%$shared_ext}.def~
+	\$ECHO EXPORTS >> $output_objdir/${realname%%$shared_ext}.def~
 	emxexp $libobjs | $SED /"_DLL_InitTerm"/d >> $output_objdir/${realname%%$shared_ext}.def~
 	$CC -Zdll -Zomf -o $lib $libobjs $deplibs $compiler_flags $output_objdir/${realname%%$shared_ext}.def'
-      _LT_TAGVAR(archive_expsym_cmds, $1)='$ECHO "LIBRARY ${realname%%$shared_ext} INITINSTANCE TERMINSTANCE" > $output_objdir/${realname%%$shared_ext}.def~
-	$ECHO "DESCRIPTION \"$libname\"" >> $output_objdir/${realname%%$shared_ext}.def~
-	$ECHO "DATA MULTIPLE NONSHARED" >> $output_objdir/${realname%%$shared_ext}.def~
-	$ECHO EXPORTS >> $output_objdir/${realname%%$shared_ext}.def~
+      _LT_TAGVAR(archive_expsym_cmds, $1)='\$ECHO "LIBRARY ${realname%%$shared_ext} INITINSTANCE TERMINSTANCE" > $output_objdir/${realname%%$shared_ext}.def~
+	\$ECHO "DESCRIPTION \"$libname\"" >> $output_objdir/${realname%%$shared_ext}.def~
+	\$ECHO "DATA MULTIPLE NONSHARED" >> $output_objdir/${realname%%$shared_ext}.def~
+	\$ECHO EXPORTS >> $output_objdir/${realname%%$shared_ext}.def~
 	prefix_cmds="$SED"~
 	if test EXPORTS = "`$SED 1q $export_symbols`"; then
 	  prefix_cmds="$prefix_cmds -e 1d";
@@ -5739,16 +5739,16 @@ _LT_EOF
       _LT_TAGVAR(allow_undefined_flag, $1)=unsupported
       _LT_TAGVAR(file_list_spec, $1)='@'
       shrext_cmds=.dll
-      _LT_TAGVAR(archive_cmds, $1)='$ECHO "LIBRARY ${realname%%$shared_ext} INITINSTANCE TERMINSTANCE" > $output_objdir/${realname%%$shared_ext}.def~
-	$ECHO "DESCRIPTION \"$libname\"" >> $output_objdir/${realname%%$shared_ext}.def~
-	$ECHO "DATA MULTIPLE NONSHARED" >> $output_objdir/${realname%%$shared_ext}.def~
-	$ECHO EXPORTS >> $output_objdir/${realname%%$shared_ext}.def~
+      _LT_TAGVAR(archive_cmds, $1)='\$ECHO "LIBRARY ${realname%%$shared_ext} INITINSTANCE TERMINSTANCE" > $output_objdir/${realname%%$shared_ext}.def~
+	\$ECHO "DESCRIPTION \"$libname\"" >> $output_objdir/${realname%%$shared_ext}.def~
+	\$ECHO "DATA MULTIPLE NONSHARED" >> $output_objdir/${realname%%$shared_ext}.def~
+	\$ECHO EXPORTS >> $output_objdir/${realname%%$shared_ext}.def~
 	emxexp $libobjs | $SED /"_DLL_InitTerm"/d >> $output_objdir/${realname%%$shared_ext}.def~
 	$CC -Zdll -Zomf -o $lib $libobjs $deplibs $compiler_flags $output_objdir/${realname%%$shared_ext}.def'
-      _LT_TAGVAR(archive_expsym_cmds, $1)='$ECHO "LIBRARY ${realname%%$shared_ext} INITINSTANCE TERMINSTANCE" > $output_objdir/${realname%%$shared_ext}.def~
-	$ECHO "DESCRIPTION \"$libname\"" >> $output_objdir/${realname%%$shared_ext}.def~
-	$ECHO "DATA MULTIPLE NONSHARED" >> $output_objdir/${realname%%$shared_ext}.def~
-	$ECHO EXPORTS >> $output_objdir/${realname%%$shared_ext}.def~
+      _LT_TAGVAR(archive_expsym_cmds, $1)='\$ECHO "LIBRARY ${realname%%$shared_ext} INITINSTANCE TERMINSTANCE" > $output_objdir/${realname%%$shared_ext}.def~
+	\$ECHO "DESCRIPTION \"$libname\"" >> $output_objdir/${realname%%$shared_ext}.def~
+	\$ECHO "DATA MULTIPLE NONSHARED" >> $output_objdir/${realname%%$shared_ext}.def~
+	\$ECHO EXPORTS >> $output_objdir/${realname%%$shared_ext}.def~
 	prefix_cmds="$SED"~
 	if test EXPORTS = "`$SED 1q $export_symbols`"; then
 	  prefix_cmds="$prefix_cmds -e 1d";
@@ -6607,16 +6607,16 @@ if test yes != "$_lt_caught_CXX_error"; then
         _LT_TAGVAR(allow_undefined_flag, $1)=unsupported
         _LT_TAGVAR(file_list_spec, $1)='@'
         shrext_cmds=.dll
-        _LT_TAGVAR(archive_cmds, $1)='$ECHO "LIBRARY ${realname%%$shared_ext} INITINSTANCE TERMINSTANCE" > $output_objdir/${realname%%$shared_ext}.def~
-	  $ECHO "DESCRIPTION \"$libname\"" >> $output_objdir/${realname%%$shared_ext}.def~
-	  $ECHO "DATA MULTIPLE NONSHARED" >> $output_objdir/${realname%%$shared_ext}.def~
-	  $ECHO EXPORTS >> $output_objdir/${realname%%$shared_ext}.def~
+        _LT_TAGVAR(archive_cmds, $1)='\$ECHO "LIBRARY ${realname%%$shared_ext} INITINSTANCE TERMINSTANCE" > $output_objdir/${realname%%$shared_ext}.def~
+	  \$ECHO "DESCRIPTION \"$libname\"" >> $output_objdir/${realname%%$shared_ext}.def~
+	  \$ECHO "DATA MULTIPLE NONSHARED" >> $output_objdir/${realname%%$shared_ext}.def~
+	  \$ECHO EXPORTS >> $output_objdir/${realname%%$shared_ext}.def~
 	  emxexp $libobjs | $SED /"_DLL_InitTerm"/d >> $output_objdir/${realname%%$shared_ext}.def~
 	  $CC -Zdll -Zomf -o $lib $libobjs $deplibs $compiler_flags $output_objdir/${realname%%$shared_ext}.def'
-        _LT_TAGVAR(archive_expsym_cmds, $1)='$ECHO "LIBRARY ${realname%%$shared_ext} INITINSTANCE TERMINSTANCE" > $output_objdir/${realname%%$shared_ext}.def~
-	  $ECHO "DESCRIPTION \"$libname\"" >> $output_objdir/${realname%%$shared_ext}.def~
-	  $ECHO "DATA MULTIPLE NONSHARED" >> $output_objdir/${realname%%$shared_ext}.def~
-	  $ECHO EXPORTS >> $output_objdir/${realname%%$shared_ext}.def~
+        _LT_TAGVAR(archive_expsym_cmds, $1)='\$ECHO "LIBRARY ${realname%%$shared_ext} INITINSTANCE TERMINSTANCE" > $output_objdir/${realname%%$shared_ext}.def~
+	  \$ECHO "DESCRIPTION \"$libname\"" >> $output_objdir/${realname%%$shared_ext}.def~
+	  \$ECHO "DATA MULTIPLE NONSHARED" >> $output_objdir/${realname%%$shared_ext}.def~
+	  \$ECHO EXPORTS >> $output_objdir/${realname%%$shared_ext}.def~
 	  prefix_cmds="$SED"~
 	  if test EXPORTS = "`$SED 1q $export_symbols`"; then
 	    prefix_cmds="$prefix_cmds -e 1d";
