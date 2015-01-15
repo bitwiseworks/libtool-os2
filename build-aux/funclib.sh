@@ -87,8 +87,8 @@ IFS="$sp	$nl"
 # There are apparently some retarded systems that use ';' as a PATH separator!
 if test "${PATH_SEPARATOR+set}" != set; then
   PATH_SEPARATOR=:
-  (PATH='/bin;/bin'; FPATH=$PATH; sh -c :) >/dev/null 2>&1 && {
-    (PATH='/bin:/bin'; FPATH=$PATH; sh -c :) >/dev/null 2>&1 ||
+  (PATH='/bin;/bin;/@unixroot/usr/bin'; FPATH=$PATH; sh -c :) >/dev/null 2>&1 && {
+    (PATH='/bin:/bin:/@unixroot/usr/bin'; FPATH=$PATH; sh -c :) >/dev/null 2>&1 ||
       PATH_SEPARATOR=';'
   }
 fi
@@ -147,7 +147,7 @@ func_path_progs ()
     done
     IFS=$_G_save_IFS
     test -z "$func_path_progs_result" && {
-      echo "no acceptable sed could be found in \$PATH" >&2
+      echo "no acceptable \'$1\' could be found in \$PATH" >&2
       exit 1
     }
 }
