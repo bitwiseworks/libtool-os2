@@ -127,8 +127,7 @@ fi
 
 tag_sed_script="${tag_sed_script:-s/x/x/}"
 
-nl='
-'
+nl='\n\r'
 
 # Avoid meddling by environment variable of the same name.
 v=
@@ -140,7 +139,7 @@ if test -f $tarball_version_file
 then
     v=`cat $tarball_version_file` || v=
     case $v in
-        *$nl*) v= ;; # reject multi-line output
+        *[$nl]*) v= ;; # reject multi-line output
         [0-9]*) ;;
         *) v= ;;
     esac
