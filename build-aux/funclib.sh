@@ -1,10 +1,10 @@
 # Set a version string for this script.
-scriptversion=2014-01-03.01; # UTC
+scriptversion=2015-01-20.17; # UTC
 
 # General shell script boiler plate, and helper functions.
 # Written by Gary V. Vaughan, 2004
 
-# Copyright (C) 2004-2014 Free Software Foundation, Inc.
+# Copyright (C) 2004-2015 Free Software Foundation, Inc.
 # This is free software; see the source for copying conditions.  There is NO
 # warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 
@@ -127,7 +127,7 @@ func_path_progs ()
 
     _G_path_prog_max=0
     _G_path_prog_found=false
-    _G_save_IFS=$IFS; IFS=$PATH_SEPARATOR
+    _G_save_IFS=$IFS; IFS=${PATH_SEPARATOR-:}
     for _G_dir in $_G_PATH; do
       IFS=$_G_save_IFS
       test -z "$_G_dir" && _G_dir=.

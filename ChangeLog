@@ -1,4 +1,314 @@
+2015-02-15  Gary V. Vaughan  <gary@gnu.org>
+
+	version 2.4.6
+	* NEWS: Record release date.
+
+2015-02-06  Gary V. Vaughan  <gary@gnu.org>
+
+	libtool: don't execute automake and autoconf on every invocation.
+	Regression from 2.4.2 was causing noticable slow-down in builds
+	that call libtool many times.
+	* build-aux/ltmain.in (func_help): Override func_help() from
+	gl/build-aux/options-parser to only run automake --version and
+	autoconf --version when libtool --help is executed on the command
+	line.
+	* NO-THANKS: Add Robert Yang.
+	Reported by Robert Yang
+
+2015-01-20  Gary V. Vaughan  <gary@gnu.org>
+
+	maint: undo copyright years regression.
+	* gl/build-aux/options-parser: Undo copyright years regression.
+	* bootstrap: Regenerate.
+
+	bootstrap: sync with upstream.
+	* gl/build-aux/bootstrap.in, gl/build-aux/extract-trace,
+	gl/build-aux/funclib.sh, gl/build-aux/options-parser: Sync with
+	upstream.
+	* bootstrap: Regenerate.
+
+2015-01-20  Pavel Raiskup  <praiskup@redhat.com>
+
+	libtool: respect config.site LT_SYS_LIBRARY_PATH
+	Libtool generator code needs to remember the configure time
+	LT_SYS_LIBRARY_PATH content to allow config.status properly
+	instantiate default LT_SYS_LIBRARY_PATH libtool run-time value;
+	Thats because config.status has no idea what the contents of
+	config.site file is (by default).
+	* m4/libtool.m4 (_LT_CONFIG): Use the _LT_DECLared
+	$configure_time_lt_sys_library_path variable as the default for
+	LT_SYS_DLSEARCH_PATH at run-time.
+	(_LT_SYS_DYNAMIC_LINKER): Don't change ac_cv_* variable if it is
+	not necessary. New $configure_time_lt_sys_library_path variable.
+	* NEWS: Update.
+
+	libtool.m4: typofix, subst last '$' with quadrigraph
+	* m4/libtool.m4 (_LT_LIBTOOL_TAG_VARS): Encase the
+	configure/libtool shared function into parseable borders; for
+	testing purposes.
+	(func_munge_path_list): Typo s/$/@S|@/.
+	* tests/configure-funcs.at: New testcase.
+	* Makefile.am (TESTSUITE_AT): Mention new testcase.
+	* NEWS: Update.
+
+	tests: fix an ltdl dryrun race condition.
+	* tests/testsuite.at (LT_AT_ACLOCAL): Inject a 1 second sleep
+	after aclocal to ensure subsequently generated autotools files
+	will be newer.
+	* NEWS: Update.
+
+2015-01-19  Gary V. Vaughan  <gary@gnu.org>
+
+	maint: post-release administrivia
+	* NEWS: Add header line for next release.
+	* .prev-version: Record previous version.
+	* cfg.mk (old_NEWS_hash): Auto-update.
+
+	version 2.4.5
+	* NEWS: Record release date.
+
+2015-01-18  Gary V. Vaughan  <gary@gnu.org>
+
+	maint: update copyright statements to include 2015.
+	* AUTHORS, HACKING, Makefile.am, NEWS, README.md, TODO,
+	bootstrap, bootstrap.conf, build-aux/edit-readme-alpha,
+	build-aux/git-hooks/commit-msg, build-aux/ltmain.in, cfg.mk,
+	configure.ac, doc/libtool.texi, gl/build-aux/bootstrap.in,
+	gl/build-aux/extract-trace, gl/build-aux/funclib.sh,
+	gl/build-aux/inline-source, gl/build-aux/options-parser,
+	libltdl/README, libltdl/configure.ac,
+	libltdl/libltdl/lt__alloc.h, libltdl/libltdl/lt__argz_.h,
+	libltdl/libltdl/lt__dirent.h, libltdl/libltdl/lt__glibc.h,
+	libltdl/libltdl/lt__private.h, libltdl/libltdl/lt__strl.h,
+	libltdl/libltdl/lt_dlloader.h, libltdl/libltdl/lt_error.h,
+	libltdl/libltdl/lt_system.h, libltdl/libltdl/slist.h,
+	libltdl/loaders/dld_link.c, libltdl/loaders/dlopen.c,
+	libltdl/loaders/dyld.c, libltdl/loaders/load_add_on.c,
+	libltdl/loaders/loadlibrary.c, libltdl/loaders/preopen.c,
+	libltdl/loaders/shl_load.c, libltdl/lt__alloc.c,
+	libltdl/lt__argz.c, libltdl/lt__dirent.c, libltdl/lt__strl.c,
+	libltdl/lt_dlloader.c, libltdl/lt_error.c, libltdl/ltdl.c,
+	libltdl/ltdl.h, libltdl/ltdl.mk, libltdl/slist.c, libtoolize.in,
+	m4/autobuild.m4, m4/libtool.m4, m4/ltargz.m4, m4/ltdl.m4,
+	m4/ltoptions.m4, m4/ltsugar.m4, m4/ltversion.in,
+	m4/lt~obsolete.m4, m4/m4.m4, tests/am-subdir.at,
+	tests/archive-in-archive.at, tests/bindir.at, tests/cdemo.at,
+	tests/cmdline_wrap.at, tests/configure-iface.at,
+	tests/convenience.at, tests/ctor.at, tests/cwrapper.at,
+	tests/darwin.at, tests/demo.at, tests/depdemo.at,
+	tests/deplib-in-subdir.at, tests/deplibs-ident.at,
+	tests/deplibs-mingw.at, tests/destdir.at, tests/dlloader-api.at,
+	tests/dumpbin-symbols.at, tests/duplicate_conv.at,
+	tests/duplicate_deps.at, tests/duplicate_members.at,
+	tests/early-libtool.at, tests/exceptions.at,
+	tests/execute-mode.at, tests/exeext.at, tests/export-def.at,
+	tests/export.at, tests/f77demo.at, tests/fail.at,
+	tests/fcdemo.at, tests/flags.at, tests/help.at,
+	tests/indirect_deps.at, tests/infer-tag.at,
+	tests/inherited_flags.at, tests/install.at,
+	tests/lalib-syntax.at, tests/libtool.at, tests/libtoolize.at,
+	tests/link-order.at, tests/link-order2.at, tests/loadlibrary.at,
+	tests/localization.at, tests/lt_dladvise.at, tests/lt_dlexit.at,
+	tests/lt_dlopen.at, tests/lt_dlopen_a.at, tests/lt_dlopenext.at,
+	tests/ltdl-api.at, tests/ltdl-libdir.at, tests/mdemo.at,
+	tests/need_lib_prefix.at, tests/no-executables.at,
+	tests/nocase.at, tests/nonrecursive.at, tests/old-ltdl-iface.at,
+	tests/old-m4-iface.at, tests/pic_flag.at, tests/recursive.at,
+	tests/resident.at, tests/runpath-in-lalib.at,
+	tests/search-path.at, tests/shlibpath.at, tests/slist.at,
+	tests/standalone.at, tests/static.at, tests/stresstest.at,
+	tests/subproject.at, tests/sysroot.at, tests/tagdemo.at,
+	tests/template.at, tests/testsuite.at, tests/versioning.at,
+	tests/with-pic.at: Update copyright statement to include 2015.
+	* cfg.mk: Adjust old_NEWS_hash accordingly.
+
+2015-01-16  Gary V. Vaughan  <gary@gnu.org>
+
+	gnulib: sync with upstream.
+	* gnulib: Sync with upstream.
+	* doc/.gitignore: Regenerate.
+
+2015-01-16  Pavel Raiskup  <praiskup@redhat.com>
+
+	libtoolize: fix ltdl installation order.
+	Fixes regression caused by commit 99a808be.
+	Makefile.in has aclocal.m4 as prerequisite, so Makefile.in
+	should be installed later to avoid unnecessary rebuild by
+	(versioned) aclocal.
+	* Makefile.am (pkgltdl_files): Move the Makefile.in file down in
+	the list after aclocal.m4.
+	* tests/libtoolize.at: Adjust to match reordered output.
+
+2014-12-12  Gary V. Vaughan  <gary@gnu.org>
+
+	libtool: check Sun Pro CXX ABI postdeps at libtool time.
+	* m4/libtool.m4 (_LT_PREPARE_CC_BASENAME): Factor cc_basename
+	calculation into a shell function...
+	(_LT_CONFIG_SAVE_COMMAND): ...and expand it into generated
+	libtool script.
+	(_LT_CC_BASENAME): Adjust accordingly.
+	(_LT_FUNC_SUNCC_CSTD_ABI): Remove from here...
+	* build-aux/ltmain.in (func_suncc_cstd_abi): ...and reimplement
+	here.
+	* m4/libtool.m4 (_LT_SYS_HIDDEN_LIBDEPS): Remove postdeps
+	augmentation from here...
+	* build-aux/ltmain.in (func_mode_link): ...and reimplement here
+	just before postdeps are added.
+	* NEWS: Update.
+
+	libtool: more carefully avoid automatic -Cstd -Crun on Sun Pro CXX.
+	* m4/libtool.m4 (_LT_FUNC_SUNCC_CSTD_ABI): New function factored out
+	of repeated code.  Take note of other known -Cstd incompatible
+	compiler flags.
+	(_LT_SYS_HIDDEN_LIBDEPS): Use it to determine whether -Cstd -Crun
+	can be safely added to postdeps with Sun Pro CXX.
+	* NEWS: Update.
+	* NO-THANKS: Add Marc Glisse.
+	Reported by Marc Glisse
+
+	libtool: take care not to double-apply LT_SYS_LIBRARY_PATH.
+	* m4/libtool.m4 (_LT_CONFIG_SAVE_COMMANDS): Copy configure-time
+	LT_SYS_LIBRARY_PATH settings as default, but allow run-time
+	override.
+	(_LT_SYS_DYNAMIC_LINKER): Save the unmunged
+	sys_lib_dlsearch_path_spec value, and use it for _LT_DECL,
+	but then munge it with LT_SYS_LIBRARY_PATH for use in ltdl.m4
+	macros, such as LT_SYS_DLSEARCH_PATH.
+
+2014-12-11  Pavel Raiskup  <praiskup@redhat.com>
+
+	libtool: support LT_SYS_LIBRARY_PATH for adjusting bad guesses.
+	Revert 8728e07 and 440fee6.
+	Some GNU/Linux distributions install libraries into /lib64 (or
+	/usr/lib64) on 64-bit machines, while /lib (/usr/lib
+	respectively) stays for multilib variant.  Other distributions
+	keep /usr/lib for 64-bit variant and reserve other directory for
+	multilib. Detection of what approach a given system uses is
+	difficult, however, especially because Glibc's ldconfig does not
+	report the full and correct list of search paths. Allow the user
+	to adjust Libtools heuristically determined search paths with
+	the new LT_SYS_LIBRARY_PATH environment variable at both
+	compile-time, when libtool is called, and at configure time.
+	* m4/libtool.m4 (_LT_PREPARE_MUNGE_PATH_LIST): Define a new
+	function to munge a libtool path list according to a user
+	supplied colon-delimited path.
+	(_LT_SYS_DYNAMIC_LINKER): Require _LT_PREPARE_MUNGE_PATH_LIST.
+	Mark LT_SYS_LIBRARY_PATH as precious to autoconf (to survive
+	automatic "autoreconf").
+	Call the new func_munge_path_list function on
+	sys_lib_dlsearch_path_spec - this propagates results to
+	generated libtool script.
+	(_LT_CONFIG): Expand _LT_PREPARE_MUNGE_PATH_LIST into generated
+	libtool script.
+	* build-aux/ltmain.in (func_mode_link): Call it to adjust
+	sys_lib_dlsearch_path according to LT_SYS_LIBRARY_PATH.
+	* doc/libtool.texi: Document new LT_SYS_LIBRARY_PATH.
+	* doc/notes.texi: Likewise.
+	* NEWS: Update.
+
+	References: http://thread.gmane.org/gmane.comp.gnu.libtool.general/8339/focus=8345
+
+2014-12-11  Gary V. Vaughan  <gary@gnu.org>
+
+	maint: fix syntax-check failures.
+	* m4/m4.m4 (AC_PROG_GNU_M4): Reverse some test arguments for
+	sc_prohibit_test_const_follows_var.
+	Remove some spurious braces for
+	sc_useless_braces_in_variable_drefs.
+
+	bootstrap: sync with upstream.
+	* gl/build-aux/extract-trace (func_find_tool): Quote a bare
+	variable expansion in a test argument.
+	* bootstrap: Regenerate.
+
+2014-12-05  Gary V. Vaughan  <gary@gnu.org>
+
+	libtool: s390x is also a 64bit glibc/ELF platform.
+	* m4/libtool.m4 (_LT_SYS_DYNAMIC_LIB): Add s390x to glibc/ELF
+	compatible CPUs that have /lib64 and /usr/lib64 in
+	sys_lib_dlsearch_path_spec.
+	Reported by Pavel Raiskup
+
+2014-12-04  Gary V. Vaughan  <gary@gnu.org>
+
+	libtool: for 64bit GNU arches, add /lib64 and /usr/lib64 to sys_lib_dlsearch_path.
+	* m4/libtool.m4 (_LT_SYS_DYNAMIC_LINKER) <linux*, k*bsd*-gnu>
+	<kopensolaris*-gnu, gnu*>: If $host_cpu contains "64", add /lib64
+	and /usr/lib64 to sys_lib_dlsearch_path_spec.
+	Reported by Orion Poplawski, Christian Rössel, Olly Betts et. al.
+
+	libltdl: fix gcc compiler warning for unused attributes.
+	* libltdl/ltdl.c, libltdl/loaders/dld_link.c,
+	libltdl/loaders/dlopen.c, libltdl/loaders/dyld.c,
+	libltdl/loaders/load_add_on.c, libltdl/loaders/loadlibrary.c,
+	libltdl/loaders/preopen.c, libltdl/loaders/shl_load.c: For at
+	least gcc 4.8.3 and 4.9.1, __attribute__((__unused)) should
+	follow the unused parameter declaration.
+	* NO-THANKS: Add Дилян Палаузов.
+	Reported by Дилян Палаузов
+
+2014-12-04  Eric Bavier  <bavier@cray.com>
+
+	tests: do not assume compiler prefers shared libraries.
+	Testing whether -static-libtool-libs causes a non-libtool library to be
+	linked dynamically is effectively a test of the compiler's preference in
+	this case.  The Cray compiler prefers static libraries if not told
+	otherwise.
+	* tests/static.at [static linking flags for programs]: Do not expect
+	 -static-libtool-libs to fail.
+
+2014-12-04  Norihiro Tanaka  <noritnk@kcn.ne.jp>
+
+	libtool: fix sys_lib_dlsearch_path_spec for ia64 HP-UX.
+	The run-time loader does not search /usr/local or subdirectories
+	by default on ia64 HP-UX.
+	* m4/libtool.m4 (_LT_SYS_DYNAMIC_LINKER): Fix
+	sys_lib_dlsearch_path_spec for ia64 HP-UX.
+	* NEWS: Update.
+
+2014-12-04  Gary V. Vaughan  <gary@gnu.org>
+
+	libltdl: edit AM_CPPFLAGS correctly for libltdl/Makefile.am.
+	* libltdl/ltdl.mk (AM_CPPFLAGS): Make sure the sed expression to
+	remove the first libltdl/ on each line is not confused by misuse
+	of linebreaks.
+	* Makefile.am (lt_Makefile_am): Also edit out the duplicated
+	include paths after libltdl/ elimination.
+	* NEWS: Update.
+	Reported by Michael Wobst
+
+2014-12-04  Tijl Coosemans  <tijl@FreeBSD.org>
+
+	libtool: commit forgotten soname_spec for freebsd-elf in bb7cef9.
+	* m4/libtool.m4 (_LT_SYS_DYNAMIC_LINKER) <freebsd-elf>: Set
+	soname_spec correctly, per original patch.
+	* NEWS: Update.
+
+2014-12-03  Gary V. Vaughan  <gary@gnu.org>
+
+	bootstrap: sync with upstream for runtime M4 checking functions.
+	* gl/build-aux/extract-trace: Sync with upstream for runtime M4
+	checking functions.
+	* bootstrap: Regenerate.
+	* NEWS: Update.
+
+	configury: bail out early if GNU M4 is not on the path.
+	Now that libtoolize requires an installed GNU M4 to parse
+	configure.ac and aclocal.m4 sources for libltdl macros, let the
+	user know at configure time when it is missing.
+	* m4/m4.m4: New file for rejecting non-GNU and buggy GNU versions
+	of M4. Copied from GNU Autoconf m4.m4.
+	* Makefile.am (lt_aclocal_m4_deps): Add m4/m4.m4.
+	* configure.ac (AC_PROG_GNU_M4): Call it.
+	* NEWS: Update.
+	Reported by Michael Felt
+
 2014-11-29  Gary V. Vaughan  <gary@gnu.org>
+
+	maint: post-release administrivia
+	* NEWS: Add header line for next release.
+	* .prev-version: Record previous version.
+	* cfg.mk (old_NEWS_hash): Auto-update.
 
 	version 2.4.4
 	* NEWS: Record release date.

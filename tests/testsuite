@@ -590,175 +590,176 @@ at_tested=''
 # numerical order.
 at_format='???'
 # Description of all the test groups.
-at_help_all="1;libtoolize.at:84;libtoolize macro installation;libtoolize;
-2;libtoolize.at:109;libtoolize macro directory mismatch error;libtoolize;
-3;libtoolize.at:130;multiple AC_CONFIG_MACRO_DIRS invocation;libtoolize;
-4;libtoolize.at:158;multiple AC_CONFIG_MACRO_DIRS directories;libtoolize;
-5;libtoolize.at:190;libtoolize ACLOCAL_AMFLAGS extraction;libtoolize;
-6;libtoolize.at:225;libtoolize macro serial update;libtoolize;
-7;libtoolize.at:298;libtoolize config files serial update;libtoolize;
-8;libtoolize.at:378;diagnose missing LT_CONFIG_LTDL_DIR;libtoolize;
-9;libtoolize.at:523;copy ltdl.m4 with shared macro directory;libtoolize;
-10;libtoolize.at:535;correctly parse LTDL_INIT from configure.ac;libtoolize;
-11;libtoolize.at:547;diagnose missing LTDL_INIT invocation;libtoolize;
-12;libtoolize.at:624;upgrading verbatim style aclocal.m4;libtoolize automake;
-13;libtoolize.at:748;verbatim aclocal.m4 w/o AC_CONFIG_MACRO_DIRS;libtoolize automake;
-14;libtoolize.at:877;nonrecursive ltdl with AC_CONFIG_MACRO_DIRS;libtoolize;
-15;libtoolize.at:948;subproject ltdl with unconventional layout;libtoolize;
-16;libtoolize.at:1024;Subproject ltdl without GNU M4;;
-17;libtoolize.at:1096;LIBTOOLIZE_OPTIONS;libtoolize;
-18;libtoolize.at:1142;cleanup old installation;libtoolize;
-19;libtool.at:33;check help output;;
-20;libtool.at:48;diagnose no mode specified;;
-21;libtool.at:60;quote shell meta-characters in filenames;;
-22;libtool.at:155;transform source suffices;;
-23;libtool.at:183;check link mode operation;;
-24;libtool.at:205;check objectlist file operation;;
-25;libtool.at:217;test LT_SUPPORTED_TAG interface;;
-26;demo.at:383;link against a preloaded static library;libtoolize automake autoconf;
-27;demo.at:400;build and dynamically load a module;libtoolize automake autoconf;
-28;demo.at:417;preload static and dynamic module;libtoolize automake autoconf;
-29;demo.at:437;deplibs_check_method;libtoolize automake autoconf;
-30;demo.at:478;disable fast install;libtoolize automake autoconf;
-31;demo.at:496;force PIC objects;libtoolize automake autoconf;
-32;demo.at:510;force non-PIC objects;libtoolize automake autoconf;
-33;demo.at:548;hardcoding library path;libtoolize automake autoconf;
-34;demo.at:714;binary relinking at install time;interactive libtoolize automake autoconf;
-35;demo.at:786;uninstalled libraries have priority;libtoolize automake autoconf;
-36;demo.at:809;linking with long file names;libtoolize automake autoconf;
-37;pic_flag.at:24;override pic_flag at configure time;libtoolize automake autoconf;
-38;with-pic.at:24;test --with-pic;libtoolize automake autoconf;
-39;cdemo.at:135;build and link against a static library;libtoolize automake autoconf;
-40;cdemo.at:150;build and link against a dynamic library;libtoolize automake autoconf;
-41;cdemo.at:165;build both static and dynamic;libtoolize automake autoconf;
-42;cdemo.at:180;allow_undefined_flag;libtoolize automake autoconf;
-43;convenience.at:30;C convenience archives;libtool;
-44;convenience.at:69;C++ convenience archives;cxx libtool;
-45;convenience.at:109;F77 convenience archives;f77 libtool;
-46;convenience.at:169;FC convenience archives;fc libtool;
-47;convenience.at:229;Java convenience archives;gcj libtool;
-48;depdemo.at:285;static library interdependencies;libtoolize automake autoconf;
-49;depdemo.at:302;shared library interdependencies;libtoolize automake autoconf;
-50;depdemo.at:319;shared and static interdependencies;libtoolize automake autoconf;
-51;depdemo.at:336;disable fast install;libtoolize automake autoconf;
-52;depdemo.at:354;binary relinking at install time;interactive libtoolize automake autoconf;
-53;help.at:26;standard command line options;libtool libtoolize;
-54;help.at:45;mode short-hands;;
-55;help.at:97;debug tracing;;
-56;duplicate_members.at:26;duplicate members in archive tests;libtool;
-57;duplicate_conv.at:25;duplicate convenience archive names;libtool;
-58;duplicate_deps.at:25;preserve duplicate convenience deps;libtool;
-59;flags.at:116;passing CC flags through libtool;libtool cc;
-60;flags.at:116;passing CXX flags through libtool;libtool cxx;
-61;flags.at:116;passing F77 flags through libtool;libtool f77;
-62;flags.at:116;passing FC flags through libtool;libtool fc;
-63;flags.at:116;passing GCJ flags through libtool;libtool gcj;
-64;inherited_flags.at:26;inherited_linker_flags;libtool;
-65;link-order.at:27;Link order test;libtool;
-66;link-order2.at:46;Link order of deplibs;libtool interactive;
-67;fail.at:28;Failure tests;libtool;
-68;shlibpath.at:25;shlibpath_overrides_runpath;libtool;
-69;runpath-in-lalib.at:25;Runpath in libtool library files;libtool;
-70;static.at:68;static linking flags for programs;libtool interactive;
-71;static.at:356;ccache -all-static;;
-72;export.at:25;Export test;libtool;
-73;export-def.at:25;export from a DLL with a .def file;libtool;
-74;search-path.at:24;sys_lib_search_path;libtool;
-75;search-path.at:62;sys_lib_search_path on w32;libtool;
-76;indirect_deps.at:25;indirect convenience;libtool;
-77;indirect_deps.at:71;indirect uninstalled;libtool;
-78;archive-in-archive.at:26;static library contains static library;libtool;
-79;exeext.at:26;both of -o prog and -o prog\$EXEEXT work;libtool;
-80;execute-mode.at:25;execute mode;libtool;
-81;bindir.at:64;bindir basic lib test;;
-82;bindir.at:173;bindir install tests;;
-83;cwrapper.at:25;cwrapper for uninstalled executables;libtool;
-84;cwrapper.at:138;cwrapper string length;;
-85;cwrapper.at:201;cwrapper and installed shared libraries;libtool;
-86;deplib-in-subdir.at:34;deplib in subdir;libtool;
-87;infer-tag.at:30;inferred tag;libtool;
-88;infer-tag.at:42;CXX inferred tag;cxx libtool;
-89;infer-tag.at:55;F77 inferred tag;f77 libtool;
-90;infer-tag.at:69;FC inferred tag;fc libtool;
-91;infer-tag.at:83;GCJ inferred tag;gcj libtool;
-92;localization.at:24;localized compiler messages;libtool;
-93;nocase.at:26;nocase library search;libtool;
-94;install.at:25;Install tests;libtool;
-95;versioning.at:24;versioning;libtool;
-96;destdir.at:48;Simple DESTDIR install;libtool;
-97;destdir.at:75;DESTDIR with in-package deplibs;libtool;
-98;old-m4-iface.at:41;AM_PROG_LIBTOOL;libtoolize autoconf;
-99;old-m4-iface.at:113;AC_WITH_LTDL;libtoolize automake autoconf;
-100;old-m4-iface.at:173;AC_CONFIG_MACRO_DIR;libtoolize;
-101;old-ltdl-iface.at:35;Makefile.inc;libtoolize automake autoconf;
-102;am-subdir.at:33;C subdir-objects;libtoolize automake autoconf;
-103;am-subdir.at:93;C++ subdir-objects;cxx libtoolize automake autoconf;
-104;lt_dlexit.at:30;lt_dlexit unloading libs;libltdl;
-105;lt_dladvise.at:28;lt_dlopenadvise library loading;libltdl;
-106;lt_dlopen.at:23;lt_dlopen error messages;libltdl;
-107;lt_dlopen_a.at:23;lt_dlopen archive;libltdl lt_dlopen_a;
-108;lt_dlopenext.at:23;lt_dlopenext error messages;libltdl;
-109;ltdl-libdir.at:23;libdir of installed modules;libltdl;
-110;ltdl-api.at:25;ltdl API;libltdl;
-111;dlloader-api.at:23;dlloader API;libltdl;
-112;loadlibrary.at:23;loadlibrary error messages;libltdl;
-113;lalib-syntax.at:24;syntax of .la files;libtool libltdl;
-114;resident.at:27;resident modules;libltdl;
-115;slist.at:24;SList functionality;;
-116;need_lib_prefix.at:25;enforced lib prefix;libltdl libtool;
-117;mdemo.at:625;dynamically ltdl preload static modules;libtoolize automake autoconf;
-118;mdemo.at:642;dynamically ltdl load a shared module;libtoolize automake autoconf;
-119;mdemo.at:659;ltdl load shared and static modules;libtoolize automake autoconf;
-120;mdemo.at:676;ltdl dryrun;libtoolize automake autoconf;
-121;mdemo.at:777;link with library that loads ltdl modules;libtoolize automake autoconf;
-122;standalone.at:31;compiling softlinked libltdl;libtoolize;
-123;standalone.at:46;compiling copied libltdl;libtoolize;
-124;standalone.at:61;installable libltdl;libtoolize;
-125;standalone.at:79;linking libltdl without autotools;libtoolize;
-126;subproject.at:57;compiling softlinked libltdl;libtoolize automake autoconf;
-127;subproject.at:73;compiling copied libltdl;libtoolize automake autoconf;
-128;subproject.at:89;installable libltdl;libtoolize automake autoconf;
-129;subproject.at:109;linking libltdl without autotools;libtoolize;
-130;nonrecursive.at:79;compiling softlinked libltdl;libtoolize automake autoconf;
-131;nonrecursive.at:103;compiling copied libltdl;libtoolize automake autoconf;
-132;nonrecursive.at:127;installable libltdl;libtoolize automake autoconf;
-133;recursive.at:60;compiling softlinked libltdl;libtoolize autoconf automake;
-134;recursive.at:80;compiling copied libltdl;libtoolize autoconf automake;
-135;recursive.at:100;installable libltdl;libtoolize autoconf automake;
-136;tagdemo.at:338;static library;cxx libtool libtoolize automake autoconf;
-137;tagdemo.at:353;shared library;cxx libtool libtoolize automake autoconf;
-138;tagdemo.at:368;shared and static together;cxx libtool libtoolize automake autoconf;
-139;tagdemo.at:383;allow_undefined_flag;cxx libtool libtoolize automake autoconf;
-140;template.at:28;simple template test;cxx libtool;
-141;template.at:127;template test with subdirs;cxx libtool;
-142;ctor.at:27;C++ static constructors;cxx libtool;
-143;exceptions.at:24;C++ exception handling;libtool libltdl;
-144;early-libtool.at:32;config.status;libtoolize automake autoconf;
-145;early-libtool.at:126;config.lt;libtoolize automake autoconf;
-146;no-executables.at:25;AC_NO_EXECUTABLES;libtoolize automake autoconf;
-147;deplibs-ident.at:33;build tree relpaths;libtool;
-148;configure-iface.at:102;installable libltdl;libltdl libtoolize automake autoconf;
-149;configure-iface.at:162;--with-ltdl-include/lib;libltdl libtoolize automake autoconf;
-150;configure-iface.at:243;--with-included-ltdl;libltdl libtoolize automake autoconf;
-151;configure-iface.at:304;convenience libltdl;libtoolize automake autoconf;
-152;f77demo.at:296;static library;interactive f77 libtool autoconf libtoolize automake;
-153;f77demo.at:314;shared library;f77 libtool autoconf libtoolize automake;
-154;f77demo.at:329;shared and static together;f77 libtool autoconf libtoolize automake;
-155;fcdemo.at:310;static library;interactive fc libtool autoconf libtoolize automake;
-156;fcdemo.at:328;shared library;fc libtool autoconf libtoolize automake;
-157;fcdemo.at:343;shared and static together;fc libtool autoconf libtoolize automake;
-158;darwin.at:26;darwin fat compile;;
-159;darwin.at:103;darwin concurrent library extraction;;
-160;darwin.at:152;darwin gdb debug information;;
-161;darwin.at:208;darwin ld warnings changing configure results;libtoolize autoconf automake;
-162;darwin.at:232;darwin can lt_dlopen .dylib and .so files;libltdl dylib;
-163;dumpbin-symbols.at:25;dumpbin -symbols section hiding;;
-164;deplibs-mingw.at:27;deplibs without file command;libtool;
-165;sysroot.at:203;-L=.../lib -l;libtool sysroot libtoolize automake autoconf;
-166;sysroot.at:204;-L SYSROOT/.../lib -l;libtool sysroot libtoolize automake autoconf;
-167;sysroot.at:205;SYSROOT/.../*.la;libtool sysroot libtoolize automake autoconf;
-168;stresstest.at:31;Link option thorough search test;libtool expensive;
-169;cmdline_wrap.at:28;Run tests with low max_cmd_len;recursive expensive;
+at_help_all="1;configure-funcs.at:39;func_munge_path_list works;;
+2;libtoolize.at:84;libtoolize macro installation;libtoolize;
+3;libtoolize.at:109;libtoolize macro directory mismatch error;libtoolize;
+4;libtoolize.at:130;multiple AC_CONFIG_MACRO_DIRS invocation;libtoolize;
+5;libtoolize.at:158;multiple AC_CONFIG_MACRO_DIRS directories;libtoolize;
+6;libtoolize.at:190;libtoolize ACLOCAL_AMFLAGS extraction;libtoolize;
+7;libtoolize.at:225;libtoolize macro serial update;libtoolize;
+8;libtoolize.at:298;libtoolize config files serial update;libtoolize;
+9;libtoolize.at:378;diagnose missing LT_CONFIG_LTDL_DIR;libtoolize;
+10;libtoolize.at:523;copy ltdl.m4 with shared macro directory;libtoolize;
+11;libtoolize.at:535;correctly parse LTDL_INIT from configure.ac;libtoolize;
+12;libtoolize.at:547;diagnose missing LTDL_INIT invocation;libtoolize;
+13;libtoolize.at:624;upgrading verbatim style aclocal.m4;libtoolize automake;
+14;libtoolize.at:748;verbatim aclocal.m4 w/o AC_CONFIG_MACRO_DIRS;libtoolize automake;
+15;libtoolize.at:877;nonrecursive ltdl with AC_CONFIG_MACRO_DIRS;libtoolize;
+16;libtoolize.at:948;subproject ltdl with unconventional layout;libtoolize;
+17;libtoolize.at:1024;Subproject ltdl without GNU M4;;
+18;libtoolize.at:1096;LIBTOOLIZE_OPTIONS;libtoolize;
+19;libtoolize.at:1142;cleanup old installation;libtoolize;
+20;libtool.at:33;check help output;;
+21;libtool.at:48;diagnose no mode specified;;
+22;libtool.at:60;quote shell meta-characters in filenames;;
+23;libtool.at:155;transform source suffices;;
+24;libtool.at:183;check link mode operation;;
+25;libtool.at:205;check objectlist file operation;;
+26;libtool.at:217;test LT_SUPPORTED_TAG interface;;
+27;demo.at:383;link against a preloaded static library;libtoolize automake autoconf;
+28;demo.at:400;build and dynamically load a module;libtoolize automake autoconf;
+29;demo.at:417;preload static and dynamic module;libtoolize automake autoconf;
+30;demo.at:437;deplibs_check_method;libtoolize automake autoconf;
+31;demo.at:478;disable fast install;libtoolize automake autoconf;
+32;demo.at:496;force PIC objects;libtoolize automake autoconf;
+33;demo.at:510;force non-PIC objects;libtoolize automake autoconf;
+34;demo.at:548;hardcoding library path;libtoolize automake autoconf;
+35;demo.at:714;binary relinking at install time;interactive libtoolize automake autoconf;
+36;demo.at:786;uninstalled libraries have priority;libtoolize automake autoconf;
+37;demo.at:809;linking with long file names;libtoolize automake autoconf;
+38;pic_flag.at:24;override pic_flag at configure time;libtoolize automake autoconf;
+39;with-pic.at:24;test --with-pic;libtoolize automake autoconf;
+40;cdemo.at:135;build and link against a static library;libtoolize automake autoconf;
+41;cdemo.at:150;build and link against a dynamic library;libtoolize automake autoconf;
+42;cdemo.at:165;build both static and dynamic;libtoolize automake autoconf;
+43;cdemo.at:180;allow_undefined_flag;libtoolize automake autoconf;
+44;convenience.at:30;C convenience archives;libtool;
+45;convenience.at:69;C++ convenience archives;cxx libtool;
+46;convenience.at:109;F77 convenience archives;f77 libtool;
+47;convenience.at:169;FC convenience archives;fc libtool;
+48;convenience.at:229;Java convenience archives;gcj libtool;
+49;depdemo.at:285;static library interdependencies;libtoolize automake autoconf;
+50;depdemo.at:302;shared library interdependencies;libtoolize automake autoconf;
+51;depdemo.at:319;shared and static interdependencies;libtoolize automake autoconf;
+52;depdemo.at:336;disable fast install;libtoolize automake autoconf;
+53;depdemo.at:354;binary relinking at install time;interactive libtoolize automake autoconf;
+54;help.at:26;standard command line options;libtool libtoolize;
+55;help.at:45;mode short-hands;;
+56;help.at:97;debug tracing;;
+57;duplicate_members.at:26;duplicate members in archive tests;libtool;
+58;duplicate_conv.at:25;duplicate convenience archive names;libtool;
+59;duplicate_deps.at:25;preserve duplicate convenience deps;libtool;
+60;flags.at:116;passing CC flags through libtool;libtool cc;
+61;flags.at:116;passing CXX flags through libtool;libtool cxx;
+62;flags.at:116;passing F77 flags through libtool;libtool f77;
+63;flags.at:116;passing FC flags through libtool;libtool fc;
+64;flags.at:116;passing GCJ flags through libtool;libtool gcj;
+65;inherited_flags.at:26;inherited_linker_flags;libtool;
+66;link-order.at:27;Link order test;libtool;
+67;link-order2.at:46;Link order of deplibs;libtool interactive;
+68;fail.at:28;Failure tests;libtool;
+69;shlibpath.at:25;shlibpath_overrides_runpath;libtool;
+70;runpath-in-lalib.at:25;Runpath in libtool library files;libtool;
+71;static.at:68;static linking flags for programs;libtool interactive;
+72;static.at:359;ccache -all-static;;
+73;export.at:25;Export test;libtool;
+74;export-def.at:25;export from a DLL with a .def file;libtool;
+75;search-path.at:24;sys_lib_search_path;libtool;
+76;search-path.at:62;sys_lib_search_path on w32;libtool;
+77;indirect_deps.at:25;indirect convenience;libtool;
+78;indirect_deps.at:71;indirect uninstalled;libtool;
+79;archive-in-archive.at:26;static library contains static library;libtool;
+80;exeext.at:26;both of -o prog and -o prog\$EXEEXT work;libtool;
+81;execute-mode.at:25;execute mode;libtool;
+82;bindir.at:64;bindir basic lib test;;
+83;bindir.at:173;bindir install tests;;
+84;cwrapper.at:25;cwrapper for uninstalled executables;libtool;
+85;cwrapper.at:138;cwrapper string length;;
+86;cwrapper.at:201;cwrapper and installed shared libraries;libtool;
+87;deplib-in-subdir.at:34;deplib in subdir;libtool;
+88;infer-tag.at:30;inferred tag;libtool;
+89;infer-tag.at:42;CXX inferred tag;cxx libtool;
+90;infer-tag.at:55;F77 inferred tag;f77 libtool;
+91;infer-tag.at:69;FC inferred tag;fc libtool;
+92;infer-tag.at:83;GCJ inferred tag;gcj libtool;
+93;localization.at:24;localized compiler messages;libtool;
+94;nocase.at:26;nocase library search;libtool;
+95;install.at:25;Install tests;libtool;
+96;versioning.at:24;versioning;libtool;
+97;destdir.at:48;Simple DESTDIR install;libtool;
+98;destdir.at:75;DESTDIR with in-package deplibs;libtool;
+99;old-m4-iface.at:41;AM_PROG_LIBTOOL;libtoolize autoconf;
+100;old-m4-iface.at:113;AC_WITH_LTDL;libtoolize automake autoconf;
+101;old-m4-iface.at:173;AC_CONFIG_MACRO_DIR;libtoolize;
+102;old-ltdl-iface.at:35;Makefile.inc;libtoolize automake autoconf;
+103;am-subdir.at:33;C subdir-objects;libtoolize automake autoconf;
+104;am-subdir.at:93;C++ subdir-objects;cxx libtoolize automake autoconf;
+105;lt_dlexit.at:30;lt_dlexit unloading libs;libltdl;
+106;lt_dladvise.at:28;lt_dlopenadvise library loading;libltdl;
+107;lt_dlopen.at:23;lt_dlopen error messages;libltdl;
+108;lt_dlopen_a.at:23;lt_dlopen archive;libltdl lt_dlopen_a;
+109;lt_dlopenext.at:23;lt_dlopenext error messages;libltdl;
+110;ltdl-libdir.at:23;libdir of installed modules;libltdl;
+111;ltdl-api.at:25;ltdl API;libltdl;
+112;dlloader-api.at:23;dlloader API;libltdl;
+113;loadlibrary.at:23;loadlibrary error messages;libltdl;
+114;lalib-syntax.at:24;syntax of .la files;libtool libltdl;
+115;resident.at:27;resident modules;libltdl;
+116;slist.at:24;SList functionality;;
+117;need_lib_prefix.at:25;enforced lib prefix;libltdl libtool;
+118;mdemo.at:625;dynamically ltdl preload static modules;libtoolize automake autoconf;
+119;mdemo.at:642;dynamically ltdl load a shared module;libtoolize automake autoconf;
+120;mdemo.at:659;ltdl load shared and static modules;libtoolize automake autoconf;
+121;mdemo.at:676;ltdl dryrun;libtoolize automake autoconf;
+122;mdemo.at:777;link with library that loads ltdl modules;libtoolize automake autoconf;
+123;standalone.at:31;compiling softlinked libltdl;libtoolize;
+124;standalone.at:46;compiling copied libltdl;libtoolize;
+125;standalone.at:61;installable libltdl;libtoolize;
+126;standalone.at:79;linking libltdl without autotools;libtoolize;
+127;subproject.at:57;compiling softlinked libltdl;libtoolize automake autoconf;
+128;subproject.at:73;compiling copied libltdl;libtoolize automake autoconf;
+129;subproject.at:89;installable libltdl;libtoolize automake autoconf;
+130;subproject.at:109;linking libltdl without autotools;libtoolize;
+131;nonrecursive.at:79;compiling softlinked libltdl;libtoolize automake autoconf;
+132;nonrecursive.at:103;compiling copied libltdl;libtoolize automake autoconf;
+133;nonrecursive.at:127;installable libltdl;libtoolize automake autoconf;
+134;recursive.at:60;compiling softlinked libltdl;libtoolize autoconf automake;
+135;recursive.at:80;compiling copied libltdl;libtoolize autoconf automake;
+136;recursive.at:100;installable libltdl;libtoolize autoconf automake;
+137;tagdemo.at:338;static library;cxx libtool libtoolize automake autoconf;
+138;tagdemo.at:353;shared library;cxx libtool libtoolize automake autoconf;
+139;tagdemo.at:368;shared and static together;cxx libtool libtoolize automake autoconf;
+140;tagdemo.at:383;allow_undefined_flag;cxx libtool libtoolize automake autoconf;
+141;template.at:28;simple template test;cxx libtool;
+142;template.at:127;template test with subdirs;cxx libtool;
+143;ctor.at:27;C++ static constructors;cxx libtool;
+144;exceptions.at:24;C++ exception handling;libtool libltdl;
+145;early-libtool.at:32;config.status;libtoolize automake autoconf;
+146;early-libtool.at:126;config.lt;libtoolize automake autoconf;
+147;no-executables.at:25;AC_NO_EXECUTABLES;libtoolize automake autoconf;
+148;deplibs-ident.at:33;build tree relpaths;libtool;
+149;configure-iface.at:102;installable libltdl;libltdl libtoolize automake autoconf;
+150;configure-iface.at:162;--with-ltdl-include/lib;libltdl libtoolize automake autoconf;
+151;configure-iface.at:243;--with-included-ltdl;libltdl libtoolize automake autoconf;
+152;configure-iface.at:304;convenience libltdl;libtoolize automake autoconf;
+153;f77demo.at:296;static library;interactive f77 libtool autoconf libtoolize automake;
+154;f77demo.at:314;shared library;f77 libtool autoconf libtoolize automake;
+155;f77demo.at:329;shared and static together;f77 libtool autoconf libtoolize automake;
+156;fcdemo.at:310;static library;interactive fc libtool autoconf libtoolize automake;
+157;fcdemo.at:328;shared library;fc libtool autoconf libtoolize automake;
+158;fcdemo.at:343;shared and static together;fc libtool autoconf libtoolize automake;
+159;darwin.at:26;darwin fat compile;;
+160;darwin.at:103;darwin concurrent library extraction;;
+161;darwin.at:152;darwin gdb debug information;;
+162;darwin.at:208;darwin ld warnings changing configure results;libtoolize autoconf automake;
+163;darwin.at:232;darwin can lt_dlopen .dylib and .so files;libltdl dylib;
+164;dumpbin-symbols.at:25;dumpbin -symbols section hiding;;
+165;deplibs-mingw.at:27;deplibs without file command;libtool;
+166;sysroot.at:203;-L=.../lib -l;libtool sysroot libtoolize automake autoconf;
+167;sysroot.at:204;-L SYSROOT/.../lib -l;libtool sysroot libtoolize automake autoconf;
+168;sysroot.at:205;SYSROOT/.../*.la;libtool sysroot libtoolize automake autoconf;
+169;stresstest.at:31;Link option thorough search test;libtool expensive;
+170;cmdline_wrap.at:28;Run tests with low max_cmd_len;recursive expensive;
 "
 # List of the all the test groups.
 at_groups_all=`$as_echo "$at_help_all" | sed 's/;.*//'`
@@ -772,7 +773,7 @@ at_fn_validate_ranges ()
   for at_grp
   do
     eval at_value=\$$at_grp
-    if test $at_value -lt 1 || test $at_value -gt 169; then
+    if test $at_value -lt 1 || test $at_value -gt 170; then
       $as_echo "invalid test group: $at_value" >&2
       exit 1
     fi
@@ -1072,7 +1073,7 @@ fi
 # List of tests.
 if $at_list_p; then
   cat <<_ATEOF || at_write_fail=1
-GNU Libtool 2.4.4 test suite test groups:
+GNU Libtool 2.4.6 test suite test groups:
 
  NUM: FILE-NAME:LINE     TEST-GROUP-NAME
       KEYWORDS
@@ -1113,7 +1114,7 @@ _ATEOF
   exit $at_write_fail
 fi
 if $at_version_p; then
-  $as_echo "$as_me (GNU Libtool 2.4.4)" &&
+  $as_echo "$as_me (GNU Libtool 2.4.6)" &&
   cat <<\_ATEOF || at_write_fail=1
 
 Copyright (C) 2012 Free Software Foundation, Inc.
@@ -1130,93 +1131,96 @@ case $at_groups in #(
   * ) at_print_banners=false ;;
 esac
 # Text for banner N, set to a single space once printed.
-# Banner 1. libtoolize.at:27
+# Banner 1. configure-funcs.at:24
 # Category starts at test group 1.
-at_banner_text_1="Libtoolize operation."
-# Banner 2. libtool.at:26
-# Category starts at test group 19.
-at_banner_text_2="Basic libtool operation."
-# Banner 3. demo.at:26
-# Category starts at test group 26.
-at_banner_text_3="Linking and loading."
-# Banner 4. cdemo.at:26
-# Category starts at test group 39.
-at_banner_text_4="Convenience libraries."
-# Banner 5. depdemo.at:26
-# Category starts at test group 48.
-at_banner_text_5="Library interdependencies."
-# Banner 6. help.at:24
-# Category starts at test group 53.
-at_banner_text_6="Testing libtool functions."
-# Banner 7. destdir.at:25
-# Category starts at test group 96.
-at_banner_text_7="DESTDIR tests"
-# Banner 8. old-m4-iface.at:27
-# Category starts at test group 98.
-at_banner_text_8="Support for older m4 interface."
-# Banner 9. old-ltdl-iface.at:28
-# Category starts at test group 101.
-at_banner_text_9="Support for older libltdl interfaces."
-# Banner 10. am-subdir.at:26
+at_banner_text_1="Functions shared with configure and libtool."
+# Banner 2. libtoolize.at:27
+# Category starts at test group 2.
+at_banner_text_2="Libtoolize operation."
+# Banner 3. libtool.at:26
+# Category starts at test group 20.
+at_banner_text_3="Basic libtool operation."
+# Banner 4. demo.at:26
+# Category starts at test group 27.
+at_banner_text_4="Linking and loading."
+# Banner 5. cdemo.at:26
+# Category starts at test group 40.
+at_banner_text_5="Convenience libraries."
+# Banner 6. depdemo.at:26
+# Category starts at test group 49.
+at_banner_text_6="Library interdependencies."
+# Banner 7. help.at:24
+# Category starts at test group 54.
+at_banner_text_7="Testing libtool functions."
+# Banner 8. destdir.at:25
+# Category starts at test group 97.
+at_banner_text_8="DESTDIR tests"
+# Banner 9. old-m4-iface.at:27
+# Category starts at test group 99.
+at_banner_text_9="Support for older m4 interface."
+# Banner 10. old-ltdl-iface.at:28
 # Category starts at test group 102.
-at_banner_text_10="Libtool subdir-objects support."
-# Banner 11. lt_dlexit.at:28
-# Category starts at test group 104.
-at_banner_text_11="Libltdl functionality."
-# Banner 12. mdemo.at:29
-# Category starts at test group 117.
-at_banner_text_12="Dynamic ltdl runtime loading."
-# Banner 13. standalone.at:25
-# Category starts at test group 122.
-at_banner_text_13="Standalone Libltdl."
-# Banner 14. subproject.at:25
-# Category starts at test group 126.
-at_banner_text_14="Subproject Libltdl."
-# Banner 15. nonrecursive.at:27
-# Category starts at test group 130.
-at_banner_text_15="Nonrecursive Automake Libltdl."
-# Banner 16. recursive.at:25
-# Category starts at test group 133.
-at_banner_text_16="Recursive Automake Libltdl."
-# Banner 17. tagdemo.at:26
-# Category starts at test group 136.
-at_banner_text_17="C++ language support."
-# Banner 18. template.at:26
-# Category starts at test group 140.
-at_banner_text_18="C++ template tests."
-# Banner 19. ctor.at:25
-# Category starts at test group 142.
-at_banner_text_19="Constructors."
-# Banner 20. early-libtool.at:25
-# Category starts at test group 144.
-at_banner_text_20="libtool script generation."
-# Banner 21. no-executables.at:24
-# Category starts at test group 146.
-at_banner_text_21="Libtool usage in GCC"
-# Banner 22. deplibs-ident.at:26
+at_banner_text_10="Support for older libltdl interfaces."
+# Banner 11. am-subdir.at:26
+# Category starts at test group 103.
+at_banner_text_11="Libtool subdir-objects support."
+# Banner 12. lt_dlexit.at:28
+# Category starts at test group 105.
+at_banner_text_12="Libltdl functionality."
+# Banner 13. mdemo.at:29
+# Category starts at test group 118.
+at_banner_text_13="Dynamic ltdl runtime loading."
+# Banner 14. standalone.at:25
+# Category starts at test group 123.
+at_banner_text_14="Standalone Libltdl."
+# Banner 15. subproject.at:25
+# Category starts at test group 127.
+at_banner_text_15="Subproject Libltdl."
+# Banner 16. nonrecursive.at:27
+# Category starts at test group 131.
+at_banner_text_16="Nonrecursive Automake Libltdl."
+# Banner 17. recursive.at:25
+# Category starts at test group 134.
+at_banner_text_17="Recursive Automake Libltdl."
+# Banner 18. tagdemo.at:26
+# Category starts at test group 137.
+at_banner_text_18="C++ language support."
+# Banner 19. template.at:26
+# Category starts at test group 141.
+at_banner_text_19="C++ template tests."
+# Banner 20. ctor.at:25
+# Category starts at test group 143.
+at_banner_text_20="Constructors."
+# Banner 21. early-libtool.at:25
+# Category starts at test group 145.
+at_banner_text_21="libtool script generation."
+# Banner 22. no-executables.at:24
 # Category starts at test group 147.
-at_banner_text_22="Detecting identical deplibs."
-# Banner 23. configure-iface.at:25
+at_banner_text_22="Libtool usage in GCC"
+# Banner 23. deplibs-ident.at:26
 # Category starts at test group 148.
-at_banner_text_23="configure interface to libltdl."
-# Banner 24. f77demo.at:28
-# Category starts at test group 152.
-at_banner_text_24="F77 language support."
-# Banner 25. fcdemo.at:28
-# Category starts at test group 155.
-at_banner_text_25="Fortran language support."
-# Banner 26. darwin.at:25
-# Category starts at test group 158.
-at_banner_text_26="Mac OS X tests"
-# Banner 27. dumpbin-symbols.at:24
-# Category starts at test group 163.
-at_banner_text_27="Windows tests."
-# Banner 28. sysroot.at:202
-# Category starts at test group 165.
-at_banner_text_28="sysroot tests"
-# Banner 29. stresstest.at:30
-# Category starts at test group 168.
-at_banner_text_29="Libtool stress test."
+at_banner_text_23="Detecting identical deplibs."
+# Banner 24. configure-iface.at:25
+# Category starts at test group 149.
+at_banner_text_24="configure interface to libltdl."
+# Banner 25. f77demo.at:28
+# Category starts at test group 153.
+at_banner_text_25="F77 language support."
+# Banner 26. fcdemo.at:28
+# Category starts at test group 156.
+at_banner_text_26="Fortran language support."
+# Banner 27. darwin.at:25
+# Category starts at test group 159.
+at_banner_text_27="Mac OS X tests"
+# Banner 28. dumpbin-symbols.at:24
+# Category starts at test group 164.
+at_banner_text_28="Windows tests."
+# Banner 29. sysroot.at:202
+# Category starts at test group 166.
+at_banner_text_29="sysroot tests"
+# Banner 30. stresstest.at:30
+# Category starts at test group 169.
+at_banner_text_30="Libtool stress test."
 
 # Take any -C into account.
 if $at_change_dir ; then
@@ -1377,11 +1381,11 @@ exec 5>>"$at_suite_log"
 
 # Banners and logs.
 $as_echo "## ----------------------------- ##
-## GNU Libtool 2.4.4 test suite. ##
+## GNU Libtool 2.4.6 test suite. ##
 ## ----------------------------- ##"
 {
   $as_echo "## ----------------------------- ##
-## GNU Libtool 2.4.4 test suite. ##
+## GNU Libtool 2.4.6 test suite. ##
 ## ----------------------------- ##"
   echo
 
@@ -1679,7 +1683,7 @@ IFS=$as_save_IFS
   esac
   if test -f "$at_program_"; then
     {
-      $as_echo "$at_srcdir/testsuite.at:524: $at_program_ --version"
+      $as_echo "$at_srcdir/testsuite.at:529: $at_program_ --version"
       "$at_program_" --version </dev/null
       echo
     } >&5 2>&1
@@ -2278,7 +2282,7 @@ _ASBOX
   $as_echo "Please send $at_msg and all information you think might help:
 
    To: <bug-libtool@gnu.org>
-   Subject: [GNU Libtool 2.4.4] $as_me: $at_fail_list${at_fail_list:+ failed${at_xpass_list:+, }}$at_xpass_list${at_xpass_list:+ passed unexpectedly}
+   Subject: [GNU Libtool 2.4.6] $as_me: $at_fail_list${at_fail_list:+ failed${at_xpass_list:+, }}$at_xpass_list${at_xpass_list:+ passed unexpectedly}
 
 You may investigate any problem if you feel able to do so, in which
 case the test suite provides a good starting point.  Its output may
@@ -2293,16 +2297,80 @@ exit 0
 ## Actual tests. ##
 ## ------------- ##
 #AT_START_1
-at_fn_group_banner 1 'libtoolize.at:84' \
-  "libtoolize macro installation" "                  " 1
+at_fn_group_banner 1 'configure-funcs.at:39' \
+  "func_munge_path_list works" "                     " 1
 at_xfail=no
 (
   $as_echo "1. $at_setup_line: testing $at_desc ..."
   $at_traceon
+_lt_bin=$abs_top_builddir/libtool
+re_begincf='^# ### BEGIN FUNCTIONS SHARED WITH CONFIGURE'
+re_endcf='^# ### END FUNCTIONS SHARED WITH CONFIGURE'
+
+$ECHO '#!/bin/sh'       > "func_munge_path_list"
+$ECHO '#: ${SED=sed}'   >> "func_munge_path_list"
+$ECHO '#: ${ECHO=echo}' >> "func_munge_path_list"
+
+sed "1,/$re_begincf/d;/$re_endcf/,\$d" < "$_lt_bin" >> "func_munge_path_list"
+
+
+cat <<\EOF >> func_munge_path_list
+for orig in "/usr/lib" " /lib /usr/lib "; do
+  $ECHO "'$orig':"
+  for path in "/p1:" "/p3:/p2:" ":/a1" ":/a2:/a3" "/p4::/a4" "/p6:/p5::/a5:/a6"; do
+    old=$orig
+    func_munge_path_list orig "$path" || exit 1
+    $ECHO "munge ($path) = $orig"
+  done
+done
+EOF
+chmod +x func_munge_path_list
+
+{ set +x
+$as_echo "$at_srcdir/configure-funcs.at:68: ECHO=\"\$ECHO\" SED=\"\$SED\" ./func_munge_path_list"
+at_fn_check_prepare_dynamic "ECHO=\"$ECHO\" SED=\"$SED\" ./func_munge_path_list" "configure-funcs.at:68"
+( $at_check_trace; ECHO="$ECHO" SED="$SED" ./func_munge_path_list
+) >>"$at_stdout" 2>>"$at_stderr" 5>&-
+at_status=$? at_failed=false
+$at_check_filter
+at_fn_diff_devnull "$at_stderr" || at_failed=:
+echo >>"$at_stdout"; $as_echo "'/usr/lib':
+munge (/p1:) = /p1 /usr/lib
+munge (/p3:/p2:) = /p3 /p2 /p1 /usr/lib
+munge (:/a1) = /p3 /p2 /p1 /usr/lib /a1
+munge (:/a2:/a3) = /p3 /p2 /p1 /usr/lib /a1 /a2 /a3
+munge (/p4::/a4) = /p4 /p3 /p2 /p1 /usr/lib /a1 /a2 /a3 /a4
+munge (/p6:/p5::/a5:/a6) = /p6 /p5 /p4 /p3 /p2 /p1 /usr/lib /a1 /a2 /a3 /a4 /a5 /a6
+' /lib /usr/lib ':
+munge (/p1:) = /p1  /lib /usr/lib 
+munge (/p3:/p2:) = /p3 /p2 /p1  /lib /usr/lib 
+munge (:/a1) = /p3 /p2 /p1  /lib /usr/lib  /a1
+munge (:/a2:/a3) = /p3 /p2 /p1  /lib /usr/lib  /a1 /a2 /a3
+munge (/p4::/a4) = /p4 /p3 /p2 /p1  /lib /usr/lib  /a1 /a2 /a3 /a4
+munge (/p6:/p5::/a5:/a6) = /p6 /p5 /p4 /p3 /p2 /p1  /lib /usr/lib  /a1 /a2 /a3 /a4 /a5 /a6
+" | \
+  $at_diff - "$at_stdout" || at_failed=:
+at_fn_check_status 0 $at_status "$at_srcdir/configure-funcs.at:68"
+$at_failed && at_fn_log_failure
+$at_traceon; }
+
+
+  set +x
+  $at_times_p && times >"$at_times_file"
+) 5>&1 2>&1 7>&- | eval $at_tee_pipe
+read at_status <"$at_status_file"
+#AT_STOP_1
+#AT_START_2
+at_fn_group_banner 2 'libtoolize.at:84' \
+  "libtoolize macro installation" "                  " 2
+at_xfail=no
+(
+  $as_echo "2. $at_setup_line: testing $at_desc ..."
+  $at_traceon
 
 
 cat >configure.ac <<'_ATEOF'
-AC_INIT([libtoolize-demo], 2.4.4, bug-libtool@gnu.org)
+AC_INIT([libtoolize-demo], 2.4.6, bug-libtool@gnu.org)
 AC_CONFIG_AUX_DIR([build-aux])
 AC_CONFIG_MACRO_DIRS([m4])
 LT_INIT
@@ -2351,18 +2419,18 @@ $at_traceon; }
   $at_times_p && times >"$at_times_file"
 ) 5>&1 2>&1 7>&- | eval $at_tee_pipe
 read at_status <"$at_status_file"
-#AT_STOP_1
-#AT_START_2
-at_fn_group_banner 2 'libtoolize.at:109' \
-  "libtoolize macro directory mismatch error" "      " 1
+#AT_STOP_2
+#AT_START_3
+at_fn_group_banner 3 'libtoolize.at:109' \
+  "libtoolize macro directory mismatch error" "      " 2
 at_xfail=no
 (
-  $as_echo "2. $at_setup_line: testing $at_desc ..."
+  $as_echo "3. $at_setup_line: testing $at_desc ..."
   $at_traceon
 
 
 cat >configure.ac <<'_ATEOF'
-AC_INIT([libtoolize-demo], 2.4.4, bug-libtool@gnu.org)
+AC_INIT([libtoolize-demo], 2.4.6, bug-libtool@gnu.org)
 AC_CONFIG_AUX_DIR([build-aux])
 AC_CONFIG_MACRO_DIRS([m4])
 LT_INIT
@@ -2408,18 +2476,18 @@ $at_traceon; }
   $at_times_p && times >"$at_times_file"
 ) 5>&1 2>&1 7>&- | eval $at_tee_pipe
 read at_status <"$at_status_file"
-#AT_STOP_2
-#AT_START_3
-at_fn_group_banner 3 'libtoolize.at:130' \
-  "multiple AC_CONFIG_MACRO_DIRS invocation" "       " 1
+#AT_STOP_3
+#AT_START_4
+at_fn_group_banner 4 'libtoolize.at:130' \
+  "multiple AC_CONFIG_MACRO_DIRS invocation" "       " 2
 at_xfail=no
 (
-  $as_echo "3. $at_setup_line: testing $at_desc ..."
+  $as_echo "4. $at_setup_line: testing $at_desc ..."
   $at_traceon
 
 
 cat >configure.ac <<'_ATEOF'
-AC_INIT([libtoolize-demo], 2.4.4, bug-libtool@gnu.org)
+AC_INIT([libtoolize-demo], 2.4.6, bug-libtool@gnu.org)
 AC_CONFIG_AUX_DIR([build-aux])
 AC_CONFIG_MACRO_DIRS([first])
 AC_CONFIG_MACRO_DIRS([second])
@@ -2468,18 +2536,18 @@ $at_traceon; }
   $at_times_p && times >"$at_times_file"
 ) 5>&1 2>&1 7>&- | eval $at_tee_pipe
 read at_status <"$at_status_file"
-#AT_STOP_3
-#AT_START_4
-at_fn_group_banner 4 'libtoolize.at:158' \
-  "multiple AC_CONFIG_MACRO_DIRS directories" "      " 1
+#AT_STOP_4
+#AT_START_5
+at_fn_group_banner 5 'libtoolize.at:158' \
+  "multiple AC_CONFIG_MACRO_DIRS directories" "      " 2
 at_xfail=no
 (
-  $as_echo "4. $at_setup_line: testing $at_desc ..."
+  $as_echo "5. $at_setup_line: testing $at_desc ..."
   $at_traceon
 
 
 cat >configure.ac <<'_ATEOF'
-AC_INIT([libtooize-demo], 2.4.4, bug-libtool@gnu.org)
+AC_INIT([libtooize-demo], 2.4.6, bug-libtool@gnu.org)
 AC_CONFIG_AUX_DIR([build-aux])
 AC_CONFIG_MACRO_DIRS([first second third])
 LT_INIT
@@ -2527,18 +2595,18 @@ $at_traceon; }
   $at_times_p && times >"$at_times_file"
 ) 5>&1 2>&1 7>&- | eval $at_tee_pipe
 read at_status <"$at_status_file"
-#AT_STOP_4
-#AT_START_5
-at_fn_group_banner 5 'libtoolize.at:190' \
-  "libtoolize ACLOCAL_AMFLAGS extraction" "          " 1
+#AT_STOP_5
+#AT_START_6
+at_fn_group_banner 6 'libtoolize.at:190' \
+  "libtoolize ACLOCAL_AMFLAGS extraction" "          " 2
 at_xfail=no
 (
-  $as_echo "5. $at_setup_line: testing $at_desc ..."
+  $as_echo "6. $at_setup_line: testing $at_desc ..."
   $at_traceon
 
 
 cat >configure.ac <<'_ATEOF'
-AC_INIT([libtoolize-demo], 2.4.4, bug-libtool@gnu.org)
+AC_INIT([libtoolize-demo], 2.4.6, bug-libtool@gnu.org)
 AC_CONFIG_AUX_DIR([build-aux])
 LT_INIT
 AC_OUTPUT
@@ -2591,18 +2659,18 @@ $at_traceon; }
   $at_times_p && times >"$at_times_file"
 ) 5>&1 2>&1 7>&- | eval $at_tee_pipe
 read at_status <"$at_status_file"
-#AT_STOP_5
-#AT_START_6
-at_fn_group_banner 6 'libtoolize.at:225' \
-  "libtoolize macro serial update" "                 " 1
+#AT_STOP_6
+#AT_START_7
+at_fn_group_banner 7 'libtoolize.at:225' \
+  "libtoolize macro serial update" "                 " 2
 at_xfail=no
 (
-  $as_echo "6. $at_setup_line: testing $at_desc ..."
+  $as_echo "7. $at_setup_line: testing $at_desc ..."
   $at_traceon
 
 
 cat >configure.ac <<'_ATEOF'
-AC_INIT([libtoolize-demo], 2.4.4, bug-libtool@gnu.org)
+AC_INIT([libtoolize-demo], 2.4.6, bug-libtool@gnu.org)
 AC_CONFIG_AUX_DIR([build-aux])
 AC_CONFIG_MACRO_DIRS([m4])
 LT_INIT
@@ -2815,18 +2883,18 @@ $at_traceon; }
   $at_times_p && times >"$at_times_file"
 ) 5>&1 2>&1 7>&- | eval $at_tee_pipe
 read at_status <"$at_status_file"
-#AT_STOP_6
-#AT_START_7
-at_fn_group_banner 7 'libtoolize.at:298' \
-  "libtoolize config files serial update" "          " 1
+#AT_STOP_7
+#AT_START_8
+at_fn_group_banner 8 'libtoolize.at:298' \
+  "libtoolize config files serial update" "          " 2
 at_xfail=no
 (
-  $as_echo "7. $at_setup_line: testing $at_desc ..."
+  $as_echo "8. $at_setup_line: testing $at_desc ..."
   $at_traceon
 
 
 cat >configure.ac <<'_ATEOF'
-AC_INIT([libtoolize-demo], 2.4.4, bug-libtool@gnu.org)
+AC_INIT([libtoolize-demo], 2.4.6, bug-libtool@gnu.org)
 AC_CONFIG_AUX_DIR([build-aux])
 AC_CONFIG_MACRO_DIRS([m4])
 LT_INIT
@@ -3046,13 +3114,13 @@ $at_traceon; }
   $at_times_p && times >"$at_times_file"
 ) 5>&1 2>&1 7>&- | eval $at_tee_pipe
 read at_status <"$at_status_file"
-#AT_STOP_7
-#AT_START_8
-at_fn_group_banner 8 'libtoolize.at:378' \
-  "diagnose missing LT_CONFIG_LTDL_DIR" "            " 1
+#AT_STOP_8
+#AT_START_9
+at_fn_group_banner 9 'libtoolize.at:378' \
+  "diagnose missing LT_CONFIG_LTDL_DIR" "            " 2
 at_xfail=no
 (
-  $as_echo "8. $at_setup_line: testing $at_desc ..."
+  $as_echo "9. $at_setup_line: testing $at_desc ..."
   $at_traceon
 
 
@@ -3106,7 +3174,7 @@ _ATEOF
 
 
 cat >configure.ac <<'_ATEOF'
-AC_INIT([libtoolize-demo], 2.4.4, bug-libtool@gnu.org)
+AC_INIT([libtoolize-demo], 2.4.6, bug-libtool@gnu.org)
 AC_CONFIG_AUX_DIR([build-aux])
 AC_CONFIG_MACRO_DIRS([m4])
 LT_INIT
@@ -3142,13 +3210,13 @@ $at_traceon; }
   $at_times_p && times >"$at_times_file"
 ) 5>&1 2>&1 7>&- | eval $at_tee_pipe
 read at_status <"$at_status_file"
-#AT_STOP_8
-#AT_START_9
-at_fn_group_banner 9 'libtoolize.at:523' \
-  "copy ltdl.m4 with shared macro directory" "       " 1
+#AT_STOP_9
+#AT_START_10
+at_fn_group_banner 10 'libtoolize.at:523' \
+  "copy ltdl.m4 with shared macro directory" "       " 2
 at_xfail=no
 (
-  $as_echo "9. $at_setup_line: testing $at_desc ..."
+  $as_echo "10. $at_setup_line: testing $at_desc ..."
   $at_traceon
 
 
@@ -3172,10 +3240,10 @@ libtoolize: linking file 'm4/lt~obsolete.m4'
 libtoolize: putting libltdl files in LT_CONFIG_LTDL_DIR, 'ltdl'.
 libtoolize: linking file 'ltdl/COPYING.LIB'
 libtoolize: linking file 'ltdl/Makefile.am'
-libtoolize: linking file 'ltdl/Makefile.in'
 libtoolize: linking file 'ltdl/README'
 libtoolize: linking file 'ltdl/configure.ac'
 libtoolize: copying file 'ltdl/aclocal.m4'
+libtoolize: linking file 'ltdl/Makefile.in'
 libtoolize: linking file 'ltdl/config-h.in'
 libtoolize: copying file 'ltdl/configure'
 libtoolize: linking file 'ltdl/libltdl/lt__alloc.h'
@@ -3208,7 +3276,7 @@ _ATEOF
 
 
 cat >configure.ac <<'_ATEOF'
-AC_INIT([libtoolize-demo], 2.4.4, bug-libtool@gnu.org)
+AC_INIT([libtoolize-demo], 2.4.6, bug-libtool@gnu.org)
 LT_CONFIG_LTDL_DIR([ltdl])
 AC_CONFIG_AUX_DIR([build-aux])
 AC_CONFIG_MACRO_DIRS([m4])
@@ -3251,13 +3319,13 @@ $at_traceon; }
   $at_times_p && times >"$at_times_file"
 ) 5>&1 2>&1 7>&- | eval $at_tee_pipe
 read at_status <"$at_status_file"
-#AT_STOP_9
-#AT_START_10
-at_fn_group_banner 10 'libtoolize.at:535' \
-  "correctly parse LTDL_INIT from configure.ac" "    " 1
+#AT_STOP_10
+#AT_START_11
+at_fn_group_banner 11 'libtoolize.at:535' \
+  "correctly parse LTDL_INIT from configure.ac" "    " 2
 at_xfail=no
 (
-  $as_echo "10. $at_setup_line: testing $at_desc ..."
+  $as_echo "11. $at_setup_line: testing $at_desc ..."
   $at_traceon
 
 
@@ -3281,10 +3349,10 @@ libtoolize: linking file 'm4/lt~obsolete.m4'
 libtoolize: putting libltdl files in LT_CONFIG_LTDL_DIR, 'ltdl'.
 libtoolize: linking file 'ltdl/COPYING.LIB'
 libtoolize: linking file 'ltdl/Makefile.am'
-libtoolize: linking file 'ltdl/Makefile.in'
 libtoolize: linking file 'ltdl/README'
 libtoolize: linking file 'ltdl/configure.ac'
 libtoolize: copying file 'ltdl/aclocal.m4'
+libtoolize: linking file 'ltdl/Makefile.in'
 libtoolize: linking file 'ltdl/config-h.in'
 libtoolize: copying file 'ltdl/configure'
 libtoolize: linking file 'ltdl/libltdl/lt__alloc.h'
@@ -3317,7 +3385,7 @@ _ATEOF
 
 
 cat >configure.ac <<'_ATEOF'
-AC_INIT([libtoolize-demo], 2.4.4, bug-libtool@gnu.org)
+AC_INIT([libtoolize-demo], 2.4.6, bug-libtool@gnu.org)
 LT_CONFIG_LTDL_DIR([ltdl])
 AC_CONFIG_AUX_DIR([build-aux])
 AC_CONFIG_MACRO_DIRS([m4])
@@ -3360,13 +3428,13 @@ $at_traceon; }
   $at_times_p && times >"$at_times_file"
 ) 5>&1 2>&1 7>&- | eval $at_tee_pipe
 read at_status <"$at_status_file"
-#AT_STOP_10
-#AT_START_11
-at_fn_group_banner 11 'libtoolize.at:547' \
-  "diagnose missing LTDL_INIT invocation" "          " 1
+#AT_STOP_11
+#AT_START_12
+at_fn_group_banner 12 'libtoolize.at:547' \
+  "diagnose missing LTDL_INIT invocation" "          " 2
 at_xfail=no
 (
-  $as_echo "11. $at_setup_line: testing $at_desc ..."
+  $as_echo "12. $at_setup_line: testing $at_desc ..."
   $at_traceon
 
 
@@ -3390,10 +3458,10 @@ libtoolize: copying file 'm4/lt~obsolete.m4'
 libtoolize: putting libltdl files in LT_CONFIG_LTDL_DIR, 'ltdl'.
 libtoolize: copying file 'ltdl/COPYING.LIB'
 libtoolize: copying file 'ltdl/Makefile.am'
-libtoolize: copying file 'ltdl/Makefile.in'
 libtoolize: copying file 'ltdl/README'
 libtoolize: copying file 'ltdl/configure.ac'
 libtoolize: copying file 'ltdl/aclocal.m4'
+libtoolize: copying file 'ltdl/Makefile.in'
 libtoolize: copying file 'ltdl/config-h.in'
 libtoolize: copying file 'ltdl/configure'
 libtoolize: copying file 'ltdl/libltdl/lt__alloc.h'
@@ -3428,7 +3496,7 @@ _ATEOF
 
 
 cat >configure.ac <<'_ATEOF'
-AC_INIT([libtoolize-demo], 2.4.4, bug-libtool@gnu.org)
+AC_INIT([libtoolize-demo], 2.4.6, bug-libtool@gnu.org)
 LT_CONFIG_LTDL_DIR([ltdl])
 AC_CONFIG_AUX_DIR([build-aux])
 AC_CONFIG_MACRO_DIRS([m4])
@@ -3464,19 +3532,19 @@ $at_traceon; }
   $at_times_p && times >"$at_times_file"
 ) 5>&1 2>&1 7>&- | eval $at_tee_pipe
 read at_status <"$at_status_file"
-#AT_STOP_11
-#AT_START_12
-at_fn_group_banner 12 'libtoolize.at:624' \
-  "upgrading verbatim style aclocal.m4" "            " 1
+#AT_STOP_12
+#AT_START_13
+at_fn_group_banner 13 'libtoolize.at:624' \
+  "upgrading verbatim style aclocal.m4" "            " 2
 at_xfail=no
       test no = "$ACLOCAL" && at_xfail=yes
 (
-  $as_echo "12. $at_setup_line: testing $at_desc ..."
+  $as_echo "13. $at_setup_line: testing $at_desc ..."
   $at_traceon
 
 
 cat >configure.ac <<'_ATEOF'
-AC_INIT([libtoolize-demo], 2.4.4, bug-libtool@gnu.org)
+AC_INIT([libtoolize-demo], 2.4.6, bug-libtool@gnu.org)
 AC_CONFIG_AUX_DIR([build-aux])
 LT_INIT
 AC_OUTPUT
@@ -3527,7 +3595,7 @@ $at_traceon; }
 ## --------------------------------------- ##
 
 cat >configure.ac <<'_ATEOF'
-AC_INIT([libtoolize-demo], 2.4.4, bug-libtool@gnu.org)
+AC_INIT([libtoolize-demo], 2.4.6, bug-libtool@gnu.org)
 AC_CONFIG_AUX_DIR([build-aux])
 AC_CONFIG_MACRO_DIRS([m4])
 LT_INIT
@@ -3619,6 +3687,11 @@ at_fn_check_status 0 $at_status "$at_srcdir/libtoolize.at:698"
 $at_failed && at_fn_log_failure
 $at_traceon; }
 
+# After the 'aclocal' run sleep 1 second to guarantee that aclocal.m4 is going
+# to have older timestamp than other autotools later-generated files (concretely
+# for libtool case, we speak about config.h.in generated autoheader).
+# Autoreconf does the same (after the first aclocal run).
+sleep 1
 
 
 
@@ -3721,19 +3794,19 @@ $at_traceon; }
   $at_times_p && times >"$at_times_file"
 ) 5>&1 2>&1 7>&- | eval $at_tee_pipe
 read at_status <"$at_status_file"
-#AT_STOP_12
-#AT_START_13
-at_fn_group_banner 13 'libtoolize.at:748' \
-  "verbatim aclocal.m4 w/o AC_CONFIG_MACRO_DIRS" "   " 1
+#AT_STOP_13
+#AT_START_14
+at_fn_group_banner 14 'libtoolize.at:748' \
+  "verbatim aclocal.m4 w/o AC_CONFIG_MACRO_DIRS" "   " 2
 at_xfail=no
       test no = "$ACLOCAL" && at_xfail=yes
 (
-  $as_echo "13. $at_setup_line: testing $at_desc ..."
+  $as_echo "14. $at_setup_line: testing $at_desc ..."
   $at_traceon
 
 
 cat >configure.ac <<'_ATEOF'
-AC_INIT([libtoolize-demo], 2.4.4, bug-libtool@gnu.org)
+AC_INIT([libtoolize-demo], 2.4.6, bug-libtool@gnu.org)
 LT_INIT
 AC_OUTPUT
 _ATEOF
@@ -3819,6 +3892,11 @@ at_fn_check_status 0 $at_status "$at_srcdir/libtoolize.at:789"
 $at_failed && at_fn_log_failure
 $at_traceon; }
 
+# After the 'aclocal' run sleep 1 second to guarantee that aclocal.m4 is going
+# to have older timestamp than other autotools later-generated files (concretely
+# for libtool case, we speak about config.h.in generated autoheader).
+# Autoreconf does the same (after the first aclocal run).
+sleep 1
 
 
 
@@ -3950,13 +4028,13 @@ $at_traceon; }
   $at_times_p && times >"$at_times_file"
 ) 5>&1 2>&1 7>&- | eval $at_tee_pipe
 read at_status <"$at_status_file"
-#AT_STOP_13
-#AT_START_14
-at_fn_group_banner 14 'libtoolize.at:877' \
-  "nonrecursive ltdl with AC_CONFIG_MACRO_DIRS" "    " 1
+#AT_STOP_14
+#AT_START_15
+at_fn_group_banner 15 'libtoolize.at:877' \
+  "nonrecursive ltdl with AC_CONFIG_MACRO_DIRS" "    " 2
 at_xfail=no
 (
-  $as_echo "14. $at_setup_line: testing $at_desc ..."
+  $as_echo "15. $at_setup_line: testing $at_desc ..."
   $at_traceon
 
 
@@ -4008,7 +4086,7 @@ _ATEOF
 
 
 cat >configure.ac <<'_ATEOF'
-AC_INIT([libtoolize-demo], 2.4.4, bug-libtool@gnu.org)
+AC_INIT([libtoolize-demo], 2.4.6, bug-libtool@gnu.org)
 LT_CONFIG_LTDL_DIR([ltdl])
 AC_CONFIG_AUX_DIR([build-aux])
 AC_CONFIG_MACRO_DIRS([m4])
@@ -4050,13 +4128,13 @@ $at_traceon; }
   $at_times_p && times >"$at_times_file"
 ) 5>&1 2>&1 7>&- | eval $at_tee_pipe
 read at_status <"$at_status_file"
-#AT_STOP_14
-#AT_START_15
-at_fn_group_banner 15 'libtoolize.at:948' \
-  "subproject ltdl with unconventional layout" "     " 1
+#AT_STOP_15
+#AT_START_16
+at_fn_group_banner 16 'libtoolize.at:948' \
+  "subproject ltdl with unconventional layout" "     " 2
 at_xfail=no
 (
-  $as_echo "15. $at_setup_line: testing $at_desc ..."
+  $as_echo "16. $at_setup_line: testing $at_desc ..."
   $at_traceon
 
 
@@ -4080,10 +4158,10 @@ libtoolize: copying file 'acm4/lt~obsolete.m4'
 libtoolize: putting libltdl files in LT_CONFIG_LTDL_DIR, 'ltdl'.
 libtoolize: copying file 'ltdl/COPYING.LIB'
 libtoolize: creating file 'ltdl/Makefile.am'
-libtoolize: creating file 'ltdl/Makefile.in'
 libtoolize: copying file 'ltdl/README'
 libtoolize: creating file 'ltdl/configure.ac'
 libtoolize: creating file 'ltdl/aclocal.m4'
+libtoolize: creating file 'ltdl/Makefile.in'
 libtoolize: copying file 'ltdl/config-h.in'
 libtoolize: creating file 'ltdl/configure'
 libtoolize: copying file 'ltdl/libltdl/lt__alloc.h'
@@ -4117,7 +4195,7 @@ _ATEOF
 
 
 cat >configure.ac <<'_ATEOF'
-AC_INIT([libtoolize-demo], 2.4.4, bug-libtool@gnu.org)
+AC_INIT([libtoolize-demo], 2.4.6, bug-libtool@gnu.org)
 LT_CONFIG_LTDL_DIR([ltdl])
 AC_CONFIG_AUX_DIR([acaux])
 AC_CONFIG_MACRO_DIRS([acm4])
@@ -4154,13 +4232,13 @@ $at_traceon; }
   $at_times_p && times >"$at_times_file"
 ) 5>&1 2>&1 7>&- | eval $at_tee_pipe
 read at_status <"$at_status_file"
-#AT_STOP_15
-#AT_START_16
-at_fn_group_banner 16 'libtoolize.at:1024' \
-  "Subproject ltdl without GNU M4" "                 " 1
+#AT_STOP_16
+#AT_START_17
+at_fn_group_banner 17 'libtoolize.at:1024' \
+  "Subproject ltdl without GNU M4" "                 " 2
 at_xfail=no
 (
-  $as_echo "16. $at_setup_line: testing $at_desc ..."
+  $as_echo "17. $at_setup_line: testing $at_desc ..."
   $at_traceon
 
 
@@ -4184,10 +4262,10 @@ libtoolize: linking file 'ltdl/m4/lt~obsolete.m4'
 libtoolize: putting libltdl files in 'ltdl'.
 libtoolize: linking file 'ltdl/COPYING.LIB'
 libtoolize: creating file 'ltdl/Makefile.am'
-libtoolize: creating file 'ltdl/Makefile.in'
 libtoolize: linking file 'ltdl/README'
 libtoolize: creating file 'ltdl/configure.ac'
 libtoolize: creating file 'ltdl/aclocal.m4'
+libtoolize: creating file 'ltdl/Makefile.in'
 libtoolize: linking file 'ltdl/config-h.in'
 libtoolize: creating file 'ltdl/configure'
 libtoolize: linking file 'ltdl/libltdl/lt__alloc.h'
@@ -4245,18 +4323,18 @@ $at_traceon; }
   $at_times_p && times >"$at_times_file"
 ) 5>&1 2>&1 7>&- | eval $at_tee_pipe
 read at_status <"$at_status_file"
-#AT_STOP_16
-#AT_START_17
-at_fn_group_banner 17 'libtoolize.at:1096' \
-  "LIBTOOLIZE_OPTIONS" "                             " 1
+#AT_STOP_17
+#AT_START_18
+at_fn_group_banner 18 'libtoolize.at:1096' \
+  "LIBTOOLIZE_OPTIONS" "                             " 2
 at_xfail=no
 (
-  $as_echo "17. $at_setup_line: testing $at_desc ..."
+  $as_echo "18. $at_setup_line: testing $at_desc ..."
   $at_traceon
 
 
 cat >configure.ac <<'_ATEOF'
-AC_INIT([libtoolize-demo], 2.4.4, bug-libtool@gnu.org)
+AC_INIT([libtoolize-demo], 2.4.6, bug-libtool@gnu.org)
 AC_CONFIG_AUX_DIR([build-aux])
 AC_CONFIG_MACRO_DIRS([m4])
 LT_INIT
@@ -4369,18 +4447,18 @@ $at_traceon; }
   $at_times_p && times >"$at_times_file"
 ) 5>&1 2>&1 7>&- | eval $at_tee_pipe
 read at_status <"$at_status_file"
-#AT_STOP_17
-#AT_START_18
-at_fn_group_banner 18 'libtoolize.at:1142' \
-  "cleanup old installation" "                       " 1
+#AT_STOP_18
+#AT_START_19
+at_fn_group_banner 19 'libtoolize.at:1142' \
+  "cleanup old installation" "                       " 2
 at_xfail=no
 (
-  $as_echo "18. $at_setup_line: testing $at_desc ..."
+  $as_echo "19. $at_setup_line: testing $at_desc ..."
   $at_traceon
 
 
 cat >configure.ac <<'_ATEOF'
-AC_INIT([libtoolize-demo], 2.4.4, bug-libtool@gnu.org)
+AC_INIT([libtoolize-demo], 2.4.6, bug-libtool@gnu.org)
 AC_CONFIG_AUX_DIR([build-aux])
 AC_CONFIG_MACRO_DIRS([m4])
 LT_INIT
@@ -4457,13 +4535,13 @@ $at_traceon; }
   $at_times_p && times >"$at_times_file"
 ) 5>&1 2>&1 7>&- | eval $at_tee_pipe
 read at_status <"$at_status_file"
-#AT_STOP_18
-#AT_START_19
-at_fn_group_banner 19 'libtool.at:33' \
-  "check help output" "                              " 2
+#AT_STOP_19
+#AT_START_20
+at_fn_group_banner 20 'libtool.at:33' \
+  "check help output" "                              " 3
 at_xfail=no
 (
-  $as_echo "19. $at_setup_line: testing $at_desc ..."
+  $as_echo "20. $at_setup_line: testing $at_desc ..."
   $at_traceon
 
 
@@ -4525,13 +4603,13 @@ $at_traceon; }
   $at_times_p && times >"$at_times_file"
 ) 5>&1 2>&1 7>&- | eval $at_tee_pipe
 read at_status <"$at_status_file"
-#AT_STOP_19
-#AT_START_20
-at_fn_group_banner 20 'libtool.at:48' \
-  "diagnose no mode specified" "                     " 2
+#AT_STOP_20
+#AT_START_21
+at_fn_group_banner 21 'libtool.at:48' \
+  "diagnose no mode specified" "                     " 3
 at_xfail=no
 (
-  $as_echo "20. $at_setup_line: testing $at_desc ..."
+  $as_echo "21. $at_setup_line: testing $at_desc ..."
   $at_traceon
 
 
@@ -4566,13 +4644,13 @@ $at_traceon; }
   $at_times_p && times >"$at_times_file"
 ) 5>&1 2>&1 7>&- | eval $at_tee_pipe
 read at_status <"$at_status_file"
-#AT_STOP_20
-#AT_START_21
-at_fn_group_banner 21 'libtool.at:60' \
-  "quote shell meta-characters in filenames" "       " 2
+#AT_STOP_21
+#AT_START_22
+at_fn_group_banner 22 'libtool.at:60' \
+  "quote shell meta-characters in filenames" "       " 3
 at_xfail=no
 (
-  $as_echo "21. $at_setup_line: testing $at_desc ..."
+  $as_echo "22. $at_setup_line: testing $at_desc ..."
   $at_traceon
 
 
@@ -4780,13 +4858,13 @@ done
   $at_times_p && times >"$at_times_file"
 ) 5>&1 2>&1 7>&- | eval $at_tee_pipe
 read at_status <"$at_status_file"
-#AT_STOP_21
-#AT_START_22
-at_fn_group_banner 22 'libtool.at:155' \
-  "transform source suffices" "                      " 2
+#AT_STOP_22
+#AT_START_23
+at_fn_group_banner 23 'libtool.at:155' \
+  "transform source suffices" "                      " 3
 at_xfail=no
 (
-  $as_echo "22. $at_setup_line: testing $at_desc ..."
+  $as_echo "23. $at_setup_line: testing $at_desc ..."
   $at_traceon
 
 
@@ -4859,13 +4937,13 @@ done
   $at_times_p && times >"$at_times_file"
 ) 5>&1 2>&1 7>&- | eval $at_tee_pipe
 read at_status <"$at_status_file"
-#AT_STOP_22
-#AT_START_23
-at_fn_group_banner 23 'libtool.at:183' \
-  "check link mode operation" "                      " 2
+#AT_STOP_23
+#AT_START_24
+at_fn_group_banner 24 'libtool.at:183' \
+  "check link mode operation" "                      " 3
 at_xfail=no
 (
-  $as_echo "23. $at_setup_line: testing $at_desc ..."
+  $as_echo "24. $at_setup_line: testing $at_desc ..."
   $at_traceon
 
 
@@ -4935,13 +5013,13 @@ $at_traceon; }
   $at_times_p && times >"$at_times_file"
 ) 5>&1 2>&1 7>&- | eval $at_tee_pipe
 read at_status <"$at_status_file"
-#AT_STOP_23
-#AT_START_24
-at_fn_group_banner 24 'libtool.at:205' \
-  "check objectlist file operation" "                " 2
+#AT_STOP_24
+#AT_START_25
+at_fn_group_banner 25 'libtool.at:205' \
+  "check objectlist file operation" "                " 3
 at_xfail=no
 (
-  $as_echo "24. $at_setup_line: testing $at_desc ..."
+  $as_echo "25. $at_setup_line: testing $at_desc ..."
   $at_traceon
 
 
@@ -4976,13 +5054,13 @@ $at_traceon; }
   $at_times_p && times >"$at_times_file"
 ) 5>&1 2>&1 7>&- | eval $at_tee_pipe
 read at_status <"$at_status_file"
-#AT_STOP_24
-#AT_START_25
-at_fn_group_banner 25 'libtool.at:217' \
-  "test LT_SUPPORTED_TAG interface" "                " 2
+#AT_STOP_25
+#AT_START_26
+at_fn_group_banner 26 'libtool.at:217' \
+  "test LT_SUPPORTED_TAG interface" "                " 3
 at_xfail=no
 (
-  $as_echo "25. $at_setup_line: testing $at_desc ..."
+  $as_echo "26. $at_setup_line: testing $at_desc ..."
   $at_traceon
 
 
@@ -5085,22 +5163,22 @@ $at_traceon; }
   $at_times_p && times >"$at_times_file"
 ) 5>&1 2>&1 7>&- | eval $at_tee_pipe
 read at_status <"$at_status_file"
-#AT_STOP_25
-#AT_START_26
-at_fn_group_banner 26 'demo.at:383' \
-  "link against a preloaded static library" "        " 3
+#AT_STOP_26
+#AT_START_27
+at_fn_group_banner 27 'demo.at:383' \
+  "link against a preloaded static library" "        " 4
 at_xfail=no
       test no = "$ACLOCAL" && at_xfail=yes
       test no = "$AUTOHEADER" && at_xfail=yes
       test no = "$AUTOMAKE" && at_xfail=yes
       test no = "$AUTOCONF" && at_xfail=yes
 (
-  $as_echo "26. $at_setup_line: testing $at_desc ..."
+  $as_echo "27. $at_setup_line: testing $at_desc ..."
   $at_traceon
 
 
 cat >configure.ac <<'_ATEOF'
-AC_INIT([demo], 2.4.4, bug-libtool@gnu.org)
+AC_INIT([demo], 2.4.6, bug-libtool@gnu.org)
 AC_CONFIG_AUX_DIR([build-aux])
 AC_CONFIG_MACRO_DIRS([m4])
 AM_INIT_AUTOMAKE
@@ -5434,6 +5512,11 @@ at_fn_check_status 0 $at_status "$at_srcdir/demo.at:388"
 $at_failed && at_fn_log_failure
 $at_traceon; }
 
+# After the 'aclocal' run sleep 1 second to guarantee that aclocal.m4 is going
+# to have older timestamp than other autotools later-generated files (concretely
+# for libtool case, we speak about config.h.in generated autoheader).
+# Autoreconf does the same (after the first aclocal run).
+sleep 1
 
 
 
@@ -5721,22 +5804,22 @@ $at_traceon; }
   $at_times_p && times >"$at_times_file"
 ) 5>&1 2>&1 7>&- | eval $at_tee_pipe
 read at_status <"$at_status_file"
-#AT_STOP_26
-#AT_START_27
-at_fn_group_banner 27 'demo.at:400' \
-  "build and dynamically load a module" "            " 3
+#AT_STOP_27
+#AT_START_28
+at_fn_group_banner 28 'demo.at:400' \
+  "build and dynamically load a module" "            " 4
 at_xfail=no
       test no = "$ACLOCAL" && at_xfail=yes
       test no = "$AUTOHEADER" && at_xfail=yes
       test no = "$AUTOMAKE" && at_xfail=yes
       test no = "$AUTOCONF" && at_xfail=yes
 (
-  $as_echo "27. $at_setup_line: testing $at_desc ..."
+  $as_echo "28. $at_setup_line: testing $at_desc ..."
   $at_traceon
 
 
 cat >configure.ac <<'_ATEOF'
-AC_INIT([demo], 2.4.4, bug-libtool@gnu.org)
+AC_INIT([demo], 2.4.6, bug-libtool@gnu.org)
 AC_CONFIG_AUX_DIR([build-aux])
 AC_CONFIG_MACRO_DIRS([m4])
 AM_INIT_AUTOMAKE
@@ -6070,6 +6153,11 @@ at_fn_check_status 0 $at_status "$at_srcdir/demo.at:405"
 $at_failed && at_fn_log_failure
 $at_traceon; }
 
+# After the 'aclocal' run sleep 1 second to guarantee that aclocal.m4 is going
+# to have older timestamp than other autotools later-generated files (concretely
+# for libtool case, we speak about config.h.in generated autoheader).
+# Autoreconf does the same (after the first aclocal run).
+sleep 1
 
 
 
@@ -6357,22 +6445,22 @@ $at_traceon; }
   $at_times_p && times >"$at_times_file"
 ) 5>&1 2>&1 7>&- | eval $at_tee_pipe
 read at_status <"$at_status_file"
-#AT_STOP_27
-#AT_START_28
-at_fn_group_banner 28 'demo.at:417' \
-  "preload static and dynamic module" "              " 3
+#AT_STOP_28
+#AT_START_29
+at_fn_group_banner 29 'demo.at:417' \
+  "preload static and dynamic module" "              " 4
 at_xfail=no
       test no = "$ACLOCAL" && at_xfail=yes
       test no = "$AUTOHEADER" && at_xfail=yes
       test no = "$AUTOMAKE" && at_xfail=yes
       test no = "$AUTOCONF" && at_xfail=yes
 (
-  $as_echo "28. $at_setup_line: testing $at_desc ..."
+  $as_echo "29. $at_setup_line: testing $at_desc ..."
   $at_traceon
 
 
 cat >configure.ac <<'_ATEOF'
-AC_INIT([demo], 2.4.4, bug-libtool@gnu.org)
+AC_INIT([demo], 2.4.6, bug-libtool@gnu.org)
 AC_CONFIG_AUX_DIR([build-aux])
 AC_CONFIG_MACRO_DIRS([m4])
 AM_INIT_AUTOMAKE
@@ -6706,6 +6794,11 @@ at_fn_check_status 0 $at_status "$at_srcdir/demo.at:422"
 $at_failed && at_fn_log_failure
 $at_traceon; }
 
+# After the 'aclocal' run sleep 1 second to guarantee that aclocal.m4 is going
+# to have older timestamp than other autotools later-generated files (concretely
+# for libtool case, we speak about config.h.in generated autoheader).
+# Autoreconf does the same (after the first aclocal run).
+sleep 1
 
 
 
@@ -6993,22 +7086,22 @@ $at_traceon; }
   $at_times_p && times >"$at_times_file"
 ) 5>&1 2>&1 7>&- | eval $at_tee_pipe
 read at_status <"$at_status_file"
-#AT_STOP_28
-#AT_START_29
-at_fn_group_banner 29 'demo.at:437' \
-  "deplibs_check_method" "                           " 3
+#AT_STOP_29
+#AT_START_30
+at_fn_group_banner 30 'demo.at:437' \
+  "deplibs_check_method" "                           " 4
 at_xfail=no
       test no = "$ACLOCAL" && at_xfail=yes
       test no = "$AUTOHEADER" && at_xfail=yes
       test no = "$AUTOMAKE" && at_xfail=yes
       test no = "$AUTOCONF" && at_xfail=yes
 (
-  $as_echo "29. $at_setup_line: testing $at_desc ..."
+  $as_echo "30. $at_setup_line: testing $at_desc ..."
   $at_traceon
 
 
 cat >configure.ac <<'_ATEOF'
-AC_INIT([demo], 2.4.4, bug-libtool@gnu.org)
+AC_INIT([demo], 2.4.6, bug-libtool@gnu.org)
 AC_CONFIG_AUX_DIR([build-aux])
 AC_CONFIG_MACRO_DIRS([m4])
 AM_INIT_AUTOMAKE
@@ -7369,6 +7462,11 @@ at_fn_check_status 0 $at_status "$at_srcdir/demo.at:467"
 $at_failed && at_fn_log_failure
 $at_traceon; }
 
+# After the 'aclocal' run sleep 1 second to guarantee that aclocal.m4 is going
+# to have older timestamp than other autotools later-generated files (concretely
+# for libtool case, we speak about config.h.in generated autoheader).
+# Autoreconf does the same (after the first aclocal run).
+sleep 1
 
 
 
@@ -7490,22 +7588,22 @@ $at_traceon; }
   $at_times_p && times >"$at_times_file"
 ) 5>&1 2>&1 7>&- | eval $at_tee_pipe
 read at_status <"$at_status_file"
-#AT_STOP_29
-#AT_START_30
-at_fn_group_banner 30 'demo.at:478' \
-  "disable fast install" "                           " 3
+#AT_STOP_30
+#AT_START_31
+at_fn_group_banner 31 'demo.at:478' \
+  "disable fast install" "                           " 4
 at_xfail=no
       test no = "$ACLOCAL" && at_xfail=yes
       test no = "$AUTOHEADER" && at_xfail=yes
       test no = "$AUTOMAKE" && at_xfail=yes
       test no = "$AUTOCONF" && at_xfail=yes
 (
-  $as_echo "30. $at_setup_line: testing $at_desc ..."
+  $as_echo "31. $at_setup_line: testing $at_desc ..."
   $at_traceon
 
 
 cat >configure.ac <<'_ATEOF'
-AC_INIT([demo], 2.4.4, bug-libtool@gnu.org)
+AC_INIT([demo], 2.4.6, bug-libtool@gnu.org)
 AC_CONFIG_AUX_DIR([build-aux])
 AC_CONFIG_MACRO_DIRS([m4])
 AM_INIT_AUTOMAKE
@@ -7839,6 +7937,11 @@ at_fn_check_status 0 $at_status "$at_srcdir/demo.at:482"
 $at_failed && at_fn_log_failure
 $at_traceon; }
 
+# After the 'aclocal' run sleep 1 second to guarantee that aclocal.m4 is going
+# to have older timestamp than other autotools later-generated files (concretely
+# for libtool case, we speak about config.h.in generated autoheader).
+# Autoreconf does the same (after the first aclocal run).
+sleep 1
 
 
 
@@ -8112,22 +8215,22 @@ $at_traceon; }
   $at_times_p && times >"$at_times_file"
 ) 5>&1 2>&1 7>&- | eval $at_tee_pipe
 read at_status <"$at_status_file"
-#AT_STOP_30
-#AT_START_31
-at_fn_group_banner 31 'demo.at:496' \
-  "force PIC objects" "                              " 3
+#AT_STOP_31
+#AT_START_32
+at_fn_group_banner 32 'demo.at:496' \
+  "force PIC objects" "                              " 4
 at_xfail=no
       test no = "$ACLOCAL" && at_xfail=yes
       test no = "$AUTOHEADER" && at_xfail=yes
       test no = "$AUTOMAKE" && at_xfail=yes
       test no = "$AUTOCONF" && at_xfail=yes
 (
-  $as_echo "31. $at_setup_line: testing $at_desc ..."
+  $as_echo "32. $at_setup_line: testing $at_desc ..."
   $at_traceon
 
 
 cat >configure.ac <<'_ATEOF'
-AC_INIT([demo], 2.4.4, bug-libtool@gnu.org)
+AC_INIT([demo], 2.4.6, bug-libtool@gnu.org)
 AC_CONFIG_AUX_DIR([build-aux])
 AC_CONFIG_MACRO_DIRS([m4])
 AM_INIT_AUTOMAKE
@@ -8461,6 +8564,11 @@ at_fn_check_status 0 $at_status "$at_srcdir/demo.at:500"
 $at_failed && at_fn_log_failure
 $at_traceon; }
 
+# After the 'aclocal' run sleep 1 second to guarantee that aclocal.m4 is going
+# to have older timestamp than other autotools later-generated files (concretely
+# for libtool case, we speak about config.h.in generated autoheader).
+# Autoreconf does the same (after the first aclocal run).
+sleep 1
 
 
 
@@ -8617,17 +8725,17 @@ $at_traceon; }
   $at_times_p && times >"$at_times_file"
 ) 5>&1 2>&1 7>&- | eval $at_tee_pipe
 read at_status <"$at_status_file"
-#AT_STOP_31
-#AT_START_32
-at_fn_group_banner 32 'demo.at:510' \
-  "force non-PIC objects" "                          " 3
+#AT_STOP_32
+#AT_START_33
+at_fn_group_banner 33 'demo.at:510' \
+  "force non-PIC objects" "                          " 4
 at_xfail=no
       test no = "$ACLOCAL" && at_xfail=yes
       test no = "$AUTOHEADER" && at_xfail=yes
       test no = "$AUTOMAKE" && at_xfail=yes
       test no = "$AUTOCONF" && at_xfail=yes
 (
-  $as_echo "32. $at_setup_line: testing $at_desc ..."
+  $as_echo "33. $at_setup_line: testing $at_desc ..."
   $at_traceon
 
 
@@ -8692,7 +8800,7 @@ $at_traceon; }
 
 
 cat >configure.ac <<'_ATEOF'
-AC_INIT([demo], 2.4.4, bug-libtool@gnu.org)
+AC_INIT([demo], 2.4.6, bug-libtool@gnu.org)
 AC_CONFIG_AUX_DIR([build-aux])
 AC_CONFIG_MACRO_DIRS([m4])
 AM_INIT_AUTOMAKE
@@ -9025,6 +9133,11 @@ at_fn_check_status 0 $at_status "$at_srcdir/demo.at:538"
 $at_failed && at_fn_log_failure
 $at_traceon; }
 
+# After the 'aclocal' run sleep 1 second to guarantee that aclocal.m4 is going
+# to have older timestamp than other autotools later-generated files (concretely
+# for libtool case, we speak about config.h.in generated autoheader).
+# Autoreconf does the same (after the first aclocal run).
+sleep 1
 
 
 
@@ -9181,22 +9294,22 @@ $at_traceon; }
   $at_times_p && times >"$at_times_file"
 ) 5>&1 2>&1 7>&- | eval $at_tee_pipe
 read at_status <"$at_status_file"
-#AT_STOP_32
-#AT_START_33
-at_fn_group_banner 33 'demo.at:548' \
-  "hardcoding library path" "                        " 3
+#AT_STOP_33
+#AT_START_34
+at_fn_group_banner 34 'demo.at:548' \
+  "hardcoding library path" "                        " 4
 at_xfail=no
       test no = "$ACLOCAL" && at_xfail=yes
       test no = "$AUTOHEADER" && at_xfail=yes
       test no = "$AUTOMAKE" && at_xfail=yes
       test no = "$AUTOCONF" && at_xfail=yes
 (
-  $as_echo "33. $at_setup_line: testing $at_desc ..."
+  $as_echo "34. $at_setup_line: testing $at_desc ..."
   $at_traceon
 
 
 cat >configure.ac <<'_ATEOF'
-AC_INIT([demo], 2.4.4, bug-libtool@gnu.org)
+AC_INIT([demo], 2.4.6, bug-libtool@gnu.org)
 AC_CONFIG_AUX_DIR([build-aux])
 AC_CONFIG_MACRO_DIRS([m4])
 AM_INIT_AUTOMAKE
@@ -9590,6 +9703,11 @@ at_fn_check_status 0 $at_status "$at_srcdir/demo.at:611"
 $at_failed && at_fn_log_failure
 $at_traceon; }
 
+# After the 'aclocal' run sleep 1 second to guarantee that aclocal.m4 is going
+# to have older timestamp than other autotools later-generated files (concretely
+# for libtool case, we speak about config.h.in generated autoheader).
+# Autoreconf does the same (after the first aclocal run).
+sleep 1
 
 
 
@@ -10028,22 +10146,22 @@ $at_traceon; }
   $at_times_p && times >"$at_times_file"
 ) 5>&1 2>&1 7>&- | eval $at_tee_pipe
 read at_status <"$at_status_file"
-#AT_STOP_33
-#AT_START_34
-at_fn_group_banner 34 'demo.at:714' \
-  "binary relinking at install time" "               " 3
+#AT_STOP_34
+#AT_START_35
+at_fn_group_banner 35 'demo.at:714' \
+  "binary relinking at install time" "               " 4
 at_xfail=no
       test no = "$ACLOCAL" && at_xfail=yes
       test no = "$AUTOHEADER" && at_xfail=yes
       test no = "$AUTOMAKE" && at_xfail=yes
       test no = "$AUTOCONF" && at_xfail=yes
 (
-  $as_echo "34. $at_setup_line: testing $at_desc ..."
+  $as_echo "35. $at_setup_line: testing $at_desc ..."
   $at_traceon
 
 
 cat >configure.ac <<'_ATEOF'
-AC_INIT([demo], 2.4.4, bug-libtool@gnu.org)
+AC_INIT([demo], 2.4.6, bug-libtool@gnu.org)
 AC_CONFIG_AUX_DIR([build-aux])
 AC_CONFIG_MACRO_DIRS([m4])
 AM_INIT_AUTOMAKE
@@ -10377,6 +10495,11 @@ at_fn_check_status 0 $at_status "$at_srcdir/demo.at:719"
 $at_failed && at_fn_log_failure
 $at_traceon; }
 
+# After the 'aclocal' run sleep 1 second to guarantee that aclocal.m4 is going
+# to have older timestamp than other autotools later-generated files (concretely
+# for libtool case, we speak about config.h.in generated autoheader).
+# Autoreconf does the same (after the first aclocal run).
+sleep 1
 
 
 
@@ -10759,22 +10882,22 @@ trap 'func_exit $?' 1 2 3 13 15
   $at_times_p && times >"$at_times_file"
 ) 5>&1 2>&1 7>&- | eval $at_tee_pipe
 read at_status <"$at_status_file"
-#AT_STOP_34
-#AT_START_35
-at_fn_group_banner 35 'demo.at:786' \
-  "uninstalled libraries have priority" "            " 3
+#AT_STOP_35
+#AT_START_36
+at_fn_group_banner 36 'demo.at:786' \
+  "uninstalled libraries have priority" "            " 4
 at_xfail=no
       test no = "$ACLOCAL" && at_xfail=yes
       test no = "$AUTOHEADER" && at_xfail=yes
       test no = "$AUTOMAKE" && at_xfail=yes
       test no = "$AUTOCONF" && at_xfail=yes
 (
-  $as_echo "35. $at_setup_line: testing $at_desc ..."
+  $as_echo "36. $at_setup_line: testing $at_desc ..."
   $at_traceon
 
 
 cat >configure.ac <<'_ATEOF'
-AC_INIT([demo], 2.4.4, bug-libtool@gnu.org)
+AC_INIT([demo], 2.4.6, bug-libtool@gnu.org)
 AC_CONFIG_AUX_DIR([build-aux])
 AC_CONFIG_MACRO_DIRS([m4])
 AM_INIT_AUTOMAKE
@@ -11108,6 +11231,11 @@ at_fn_check_status 0 $at_status "$at_srcdir/demo.at:790"
 $at_failed && at_fn_log_failure
 $at_traceon; }
 
+# After the 'aclocal' run sleep 1 second to guarantee that aclocal.m4 is going
+# to have older timestamp than other autotools later-generated files (concretely
+# for libtool case, we speak about config.h.in generated autoheader).
+# Autoreconf does the same (after the first aclocal run).
+sleep 1
 
 
 
@@ -11353,22 +11481,22 @@ $at_traceon; }
   $at_times_p && times >"$at_times_file"
 ) 5>&1 2>&1 7>&- | eval $at_tee_pipe
 read at_status <"$at_status_file"
-#AT_STOP_35
-#AT_START_36
-at_fn_group_banner 36 'demo.at:809' \
-  "linking with long file names" "                   " 3
+#AT_STOP_36
+#AT_START_37
+at_fn_group_banner 37 'demo.at:809' \
+  "linking with long file names" "                   " 4
 at_xfail=no
       test no = "$ACLOCAL" && at_xfail=yes
       test no = "$AUTOHEADER" && at_xfail=yes
       test no = "$AUTOMAKE" && at_xfail=yes
       test no = "$AUTOCONF" && at_xfail=yes
 (
-  $as_echo "36. $at_setup_line: testing $at_desc ..."
+  $as_echo "37. $at_setup_line: testing $at_desc ..."
   $at_traceon
 
 
 cat >configure.ac <<'_ATEOF'
-AC_INIT([demo], 2.4.4, bug-libtool@gnu.org)
+AC_INIT([demo], 2.4.6, bug-libtool@gnu.org)
 AC_CONFIG_AUX_DIR([build-aux])
 AC_CONFIG_MACRO_DIRS([m4])
 AM_INIT_AUTOMAKE
@@ -11874,6 +12002,11 @@ at_fn_check_status 0 $at_status "$at_srcdir/demo.at:977"
 $at_failed && at_fn_log_failure
 $at_traceon; }
 
+# After the 'aclocal' run sleep 1 second to guarantee that aclocal.m4 is going
+# to have older timestamp than other autotools later-generated files (concretely
+# for libtool case, we speak about config.h.in generated autoheader).
+# Autoreconf does the same (after the first aclocal run).
+sleep 1
 
 
 
@@ -12100,17 +12233,17 @@ $at_traceon; }
   $at_times_p && times >"$at_times_file"
 ) 5>&1 2>&1 7>&- | eval $at_tee_pipe
 read at_status <"$at_status_file"
-#AT_STOP_36
-#AT_START_37
-at_fn_group_banner 37 'pic_flag.at:24' \
-  "override pic_flag at configure time" "            " 3
+#AT_STOP_37
+#AT_START_38
+at_fn_group_banner 38 'pic_flag.at:24' \
+  "override pic_flag at configure time" "            " 4
 at_xfail=no
       test no = "$ACLOCAL" && at_xfail=yes
       test no = "$AUTOHEADER" && at_xfail=yes
       test no = "$AUTOMAKE" && at_xfail=yes
       test no = "$AUTOCONF" && at_xfail=yes
 (
-  $as_echo "37. $at_setup_line: testing $at_desc ..."
+  $as_echo "38. $at_setup_line: testing $at_desc ..."
   $at_traceon
 
 
@@ -12173,7 +12306,7 @@ fi
 
 # Set up a tests/demo.at style project.
 cat >configure.ac <<'_ATEOF'
-AC_INIT([demo], 2.4.4, bug-libtool@gnu.org)
+AC_INIT([demo], 2.4.6, bug-libtool@gnu.org)
 AC_CONFIG_AUX_DIR([build-aux])
 AC_CONFIG_MACRO_DIRS([m4])
 AM_INIT_AUTOMAKE
@@ -12509,6 +12642,11 @@ at_fn_check_status 0 $at_status "$at_srcdir/pic_flag.at:53"
 $at_failed && at_fn_log_failure
 $at_traceon; }
 
+# After the 'aclocal' run sleep 1 second to guarantee that aclocal.m4 is going
+# to have older timestamp than other autotools later-generated files (concretely
+# for libtool case, we speak about config.h.in generated autoheader).
+# Autoreconf does the same (after the first aclocal run).
+sleep 1
 
 
 
@@ -12625,23 +12763,23 @@ $at_traceon; }
   $at_times_p && times >"$at_times_file"
 ) 5>&1 2>&1 7>&- | eval $at_tee_pipe
 read at_status <"$at_status_file"
-#AT_STOP_37
-#AT_START_38
-at_fn_group_banner 38 'with-pic.at:24' \
-  "test --with-pic" "                                " 3
+#AT_STOP_38
+#AT_START_39
+at_fn_group_banner 39 'with-pic.at:24' \
+  "test --with-pic" "                                " 4
 at_xfail=no
       test no = "$ACLOCAL" && at_xfail=yes
       test no = "$AUTOHEADER" && at_xfail=yes
       test no = "$AUTOMAKE" && at_xfail=yes
       test no = "$AUTOCONF" && at_xfail=yes
 (
-  $as_echo "38. $at_setup_line: testing $at_desc ..."
+  $as_echo "39. $at_setup_line: testing $at_desc ..."
   $at_traceon
 
 
 # Set up a tests/demo.at style project.
 cat >configure.ac <<'_ATEOF'
-AC_INIT([demo], 2.4.4, bug-libtool@gnu.org)
+AC_INIT([demo], 2.4.6, bug-libtool@gnu.org)
 AC_CONFIG_AUX_DIR([build-aux])
 AC_CONFIG_MACRO_DIRS([m4])
 AM_INIT_AUTOMAKE
@@ -12977,6 +13115,11 @@ at_fn_check_status 0 $at_status "$at_srcdir/with-pic.at:32"
 $at_failed && at_fn_log_failure
 $at_traceon; }
 
+# After the 'aclocal' run sleep 1 second to guarantee that aclocal.m4 is going
+# to have older timestamp than other autotools later-generated files (concretely
+# for libtool case, we speak about config.h.in generated autoheader).
+# Autoreconf does the same (after the first aclocal run).
+sleep 1
 
 
 
@@ -13266,22 +13409,22 @@ $MAKE clean
   $at_times_p && times >"$at_times_file"
 ) 5>&1 2>&1 7>&- | eval $at_tee_pipe
 read at_status <"$at_status_file"
-#AT_STOP_38
-#AT_START_39
-at_fn_group_banner 39 'cdemo.at:135' \
-  "build and link against a static library" "        " 4
+#AT_STOP_39
+#AT_START_40
+at_fn_group_banner 40 'cdemo.at:135' \
+  "build and link against a static library" "        " 5
 at_xfail=no
       test no = "$ACLOCAL" && at_xfail=yes
       test no = "$AUTOHEADER" && at_xfail=yes
       test no = "$AUTOMAKE" && at_xfail=yes
       test no = "$AUTOCONF" && at_xfail=yes
 (
-  $as_echo "39. $at_setup_line: testing $at_desc ..."
+  $as_echo "40. $at_setup_line: testing $at_desc ..."
   $at_traceon
 
 
 cat >configure.ac <<'_ATEOF'
-AC_INIT([cdemo], 2.4.4, bug-libtool@gnu.org)
+AC_INIT([cdemo], 2.4.6, bug-libtool@gnu.org)
 AC_CONFIG_AUX_DIR([build-aux])
 AC_CONFIG_MACRO_DIRS([m4])
 AM_INIT_AUTOMAKE
@@ -13414,6 +13557,11 @@ at_fn_check_status 0 $at_status "$at_srcdir/cdemo.at:140"
 $at_failed && at_fn_log_failure
 $at_traceon; }
 
+# After the 'aclocal' run sleep 1 second to guarantee that aclocal.m4 is going
+# to have older timestamp than other autotools later-generated files (concretely
+# for libtool case, we speak about config.h.in generated autoheader).
+# Autoreconf does the same (after the first aclocal run).
+sleep 1
 
 
 
@@ -13566,22 +13714,22 @@ $at_traceon; }
   $at_times_p && times >"$at_times_file"
 ) 5>&1 2>&1 7>&- | eval $at_tee_pipe
 read at_status <"$at_status_file"
-#AT_STOP_39
-#AT_START_40
-at_fn_group_banner 40 'cdemo.at:150' \
-  "build and link against a dynamic library" "       " 4
+#AT_STOP_40
+#AT_START_41
+at_fn_group_banner 41 'cdemo.at:150' \
+  "build and link against a dynamic library" "       " 5
 at_xfail=no
       test no = "$ACLOCAL" && at_xfail=yes
       test no = "$AUTOHEADER" && at_xfail=yes
       test no = "$AUTOMAKE" && at_xfail=yes
       test no = "$AUTOCONF" && at_xfail=yes
 (
-  $as_echo "40. $at_setup_line: testing $at_desc ..."
+  $as_echo "41. $at_setup_line: testing $at_desc ..."
   $at_traceon
 
 
 cat >configure.ac <<'_ATEOF'
-AC_INIT([cdemo], 2.4.4, bug-libtool@gnu.org)
+AC_INIT([cdemo], 2.4.6, bug-libtool@gnu.org)
 AC_CONFIG_AUX_DIR([build-aux])
 AC_CONFIG_MACRO_DIRS([m4])
 AM_INIT_AUTOMAKE
@@ -13714,6 +13862,11 @@ at_fn_check_status 0 $at_status "$at_srcdir/cdemo.at:155"
 $at_failed && at_fn_log_failure
 $at_traceon; }
 
+# After the 'aclocal' run sleep 1 second to guarantee that aclocal.m4 is going
+# to have older timestamp than other autotools later-generated files (concretely
+# for libtool case, we speak about config.h.in generated autoheader).
+# Autoreconf does the same (after the first aclocal run).
+sleep 1
 
 
 
@@ -13866,22 +14019,22 @@ $at_traceon; }
   $at_times_p && times >"$at_times_file"
 ) 5>&1 2>&1 7>&- | eval $at_tee_pipe
 read at_status <"$at_status_file"
-#AT_STOP_40
-#AT_START_41
-at_fn_group_banner 41 'cdemo.at:165' \
-  "build both static and dynamic" "                  " 4
+#AT_STOP_41
+#AT_START_42
+at_fn_group_banner 42 'cdemo.at:165' \
+  "build both static and dynamic" "                  " 5
 at_xfail=no
       test no = "$ACLOCAL" && at_xfail=yes
       test no = "$AUTOHEADER" && at_xfail=yes
       test no = "$AUTOMAKE" && at_xfail=yes
       test no = "$AUTOCONF" && at_xfail=yes
 (
-  $as_echo "41. $at_setup_line: testing $at_desc ..."
+  $as_echo "42. $at_setup_line: testing $at_desc ..."
   $at_traceon
 
 
 cat >configure.ac <<'_ATEOF'
-AC_INIT([cdemo], 2.4.4, bug-libtool@gnu.org)
+AC_INIT([cdemo], 2.4.6, bug-libtool@gnu.org)
 AC_CONFIG_AUX_DIR([build-aux])
 AC_CONFIG_MACRO_DIRS([m4])
 AM_INIT_AUTOMAKE
@@ -14014,6 +14167,11 @@ at_fn_check_status 0 $at_status "$at_srcdir/cdemo.at:170"
 $at_failed && at_fn_log_failure
 $at_traceon; }
 
+# After the 'aclocal' run sleep 1 second to guarantee that aclocal.m4 is going
+# to have older timestamp than other autotools later-generated files (concretely
+# for libtool case, we speak about config.h.in generated autoheader).
+# Autoreconf does the same (after the first aclocal run).
+sleep 1
 
 
 
@@ -14166,22 +14324,22 @@ $at_traceon; }
   $at_times_p && times >"$at_times_file"
 ) 5>&1 2>&1 7>&- | eval $at_tee_pipe
 read at_status <"$at_status_file"
-#AT_STOP_41
-#AT_START_42
-at_fn_group_banner 42 'cdemo.at:180' \
-  "allow_undefined_flag" "                           " 4
+#AT_STOP_42
+#AT_START_43
+at_fn_group_banner 43 'cdemo.at:180' \
+  "allow_undefined_flag" "                           " 5
 at_xfail=no
       test no = "$ACLOCAL" && at_xfail=yes
       test no = "$AUTOHEADER" && at_xfail=yes
       test no = "$AUTOMAKE" && at_xfail=yes
       test no = "$AUTOCONF" && at_xfail=yes
 (
-  $as_echo "42. $at_setup_line: testing $at_desc ..."
+  $as_echo "43. $at_setup_line: testing $at_desc ..."
   $at_traceon
 
 
 cat >configure.ac <<'_ATEOF'
-AC_INIT([cdemo], 2.4.4, bug-libtool@gnu.org)
+AC_INIT([cdemo], 2.4.6, bug-libtool@gnu.org)
 AC_CONFIG_AUX_DIR([build-aux])
 AC_CONFIG_MACRO_DIRS([m4])
 AM_INIT_AUTOMAKE
@@ -14314,6 +14472,11 @@ at_fn_check_status 0 $at_status "$at_srcdir/cdemo.at:184"
 $at_failed && at_fn_log_failure
 $at_traceon; }
 
+# After the 'aclocal' run sleep 1 second to guarantee that aclocal.m4 is going
+# to have older timestamp than other autotools later-generated files (concretely
+# for libtool case, we speak about config.h.in generated autoheader).
+# Autoreconf does the same (after the first aclocal run).
+sleep 1
 
 
 
@@ -14455,13 +14618,13 @@ $at_traceon; }
   $at_times_p && times >"$at_times_file"
 ) 5>&1 2>&1 7>&- | eval $at_tee_pipe
 read at_status <"$at_status_file"
-#AT_STOP_42
-#AT_START_43
-at_fn_group_banner 43 'convenience.at:30' \
-  "C convenience archives" "                         " 4
+#AT_STOP_43
+#AT_START_44
+at_fn_group_banner 44 'convenience.at:30' \
+  "C convenience archives" "                         " 5
 at_xfail=no
 (
-  $as_echo "43. $at_setup_line: testing $at_desc ..."
+  $as_echo "44. $at_setup_line: testing $at_desc ..."
   $at_traceon
 
 
@@ -14575,13 +14738,13 @@ done
   $at_times_p && times >"$at_times_file"
 ) 5>&1 2>&1 7>&- | eval $at_tee_pipe
 read at_status <"$at_status_file"
-#AT_STOP_43
-#AT_START_44
-at_fn_group_banner 44 'convenience.at:69' \
-  "C++ convenience archives" "                       " 4
+#AT_STOP_44
+#AT_START_45
+at_fn_group_banner 45 'convenience.at:69' \
+  "C++ convenience archives" "                       " 5
 at_xfail=no
 (
-  $as_echo "44. $at_setup_line: testing $at_desc ..."
+  $as_echo "45. $at_setup_line: testing $at_desc ..."
   $at_traceon
 
 
@@ -14723,13 +14886,13 @@ done
   $at_times_p && times >"$at_times_file"
 ) 5>&1 2>&1 7>&- | eval $at_tee_pipe
 read at_status <"$at_status_file"
-#AT_STOP_44
-#AT_START_45
-at_fn_group_banner 45 'convenience.at:109' \
-  "F77 convenience archives" "                       " 4
+#AT_STOP_45
+#AT_START_46
+at_fn_group_banner 46 'convenience.at:109' \
+  "F77 convenience archives" "                       " 5
 at_xfail=no
 (
-  $as_echo "45. $at_setup_line: testing $at_desc ..."
+  $as_echo "46. $at_setup_line: testing $at_desc ..."
   $at_traceon
 
 
@@ -14879,13 +15042,13 @@ done
   $at_times_p && times >"$at_times_file"
 ) 5>&1 2>&1 7>&- | eval $at_tee_pipe
 read at_status <"$at_status_file"
-#AT_STOP_45
-#AT_START_46
-at_fn_group_banner 46 'convenience.at:169' \
-  "FC convenience archives" "                        " 4
+#AT_STOP_46
+#AT_START_47
+at_fn_group_banner 47 'convenience.at:169' \
+  "FC convenience archives" "                        " 5
 at_xfail=no
 (
-  $as_echo "46. $at_setup_line: testing $at_desc ..."
+  $as_echo "47. $at_setup_line: testing $at_desc ..."
   $at_traceon
 
 
@@ -15055,13 +15218,13 @@ done
   $at_times_p && times >"$at_times_file"
 ) 5>&1 2>&1 7>&- | eval $at_tee_pipe
 read at_status <"$at_status_file"
-#AT_STOP_46
-#AT_START_47
-at_fn_group_banner 47 'convenience.at:229' \
-  "Java convenience archives" "                      " 4
+#AT_STOP_47
+#AT_START_48
+at_fn_group_banner 48 'convenience.at:229' \
+  "Java convenience archives" "                      " 5
 at_xfail=no
 (
-  $as_echo "47. $at_setup_line: testing $at_desc ..."
+  $as_echo "48. $at_setup_line: testing $at_desc ..."
   $at_traceon
 
 
@@ -15261,22 +15424,22 @@ done
   $at_times_p && times >"$at_times_file"
 ) 5>&1 2>&1 7>&- | eval $at_tee_pipe
 read at_status <"$at_status_file"
-#AT_STOP_47
-#AT_START_48
-at_fn_group_banner 48 'depdemo.at:285' \
-  "static library interdependencies" "               " 5
+#AT_STOP_48
+#AT_START_49
+at_fn_group_banner 49 'depdemo.at:285' \
+  "static library interdependencies" "               " 6
 at_xfail=no
       test no = "$ACLOCAL" && at_xfail=yes
       test no = "$AUTOHEADER" && at_xfail=yes
       test no = "$AUTOMAKE" && at_xfail=yes
       test no = "$AUTOCONF" && at_xfail=yes
 (
-  $as_echo "48. $at_setup_line: testing $at_desc ..."
+  $as_echo "49. $at_setup_line: testing $at_desc ..."
   $at_traceon
 
 
 cat >configure.ac <<'_ATEOF'
-AC_INIT([depdemo], 2.4.4, bug-libtool@gnu.org)
+AC_INIT([depdemo], 2.4.6, bug-libtool@gnu.org)
 AC_CONFIG_AUX_DIR([build-aux])
 AC_CONFIG_MACRO_DIRS([m4])
 AM_INIT_AUTOMAKE
@@ -15509,6 +15672,11 @@ at_fn_check_status 0 $at_status "$at_srcdir/depdemo.at:290"
 $at_failed && at_fn_log_failure
 $at_traceon; }
 
+# After the 'aclocal' run sleep 1 second to guarantee that aclocal.m4 is going
+# to have older timestamp than other autotools later-generated files (concretely
+# for libtool case, we speak about config.h.in generated autoheader).
+# Autoreconf does the same (after the first aclocal run).
+sleep 1
 
 
 
@@ -15765,22 +15933,22 @@ $at_traceon; }
   $at_times_p && times >"$at_times_file"
 ) 5>&1 2>&1 7>&- | eval $at_tee_pipe
 read at_status <"$at_status_file"
-#AT_STOP_48
-#AT_START_49
-at_fn_group_banner 49 'depdemo.at:302' \
-  "shared library interdependencies" "               " 5
+#AT_STOP_49
+#AT_START_50
+at_fn_group_banner 50 'depdemo.at:302' \
+  "shared library interdependencies" "               " 6
 at_xfail=no
       test no = "$ACLOCAL" && at_xfail=yes
       test no = "$AUTOHEADER" && at_xfail=yes
       test no = "$AUTOMAKE" && at_xfail=yes
       test no = "$AUTOCONF" && at_xfail=yes
 (
-  $as_echo "49. $at_setup_line: testing $at_desc ..."
+  $as_echo "50. $at_setup_line: testing $at_desc ..."
   $at_traceon
 
 
 cat >configure.ac <<'_ATEOF'
-AC_INIT([depdemo], 2.4.4, bug-libtool@gnu.org)
+AC_INIT([depdemo], 2.4.6, bug-libtool@gnu.org)
 AC_CONFIG_AUX_DIR([build-aux])
 AC_CONFIG_MACRO_DIRS([m4])
 AM_INIT_AUTOMAKE
@@ -16013,6 +16181,11 @@ at_fn_check_status 0 $at_status "$at_srcdir/depdemo.at:307"
 $at_failed && at_fn_log_failure
 $at_traceon; }
 
+# After the 'aclocal' run sleep 1 second to guarantee that aclocal.m4 is going
+# to have older timestamp than other autotools later-generated files (concretely
+# for libtool case, we speak about config.h.in generated autoheader).
+# Autoreconf does the same (after the first aclocal run).
+sleep 1
 
 
 
@@ -16269,22 +16442,22 @@ $at_traceon; }
   $at_times_p && times >"$at_times_file"
 ) 5>&1 2>&1 7>&- | eval $at_tee_pipe
 read at_status <"$at_status_file"
-#AT_STOP_49
-#AT_START_50
-at_fn_group_banner 50 'depdemo.at:319' \
-  "shared and static interdependencies" "            " 5
+#AT_STOP_50
+#AT_START_51
+at_fn_group_banner 51 'depdemo.at:319' \
+  "shared and static interdependencies" "            " 6
 at_xfail=no
       test no = "$ACLOCAL" && at_xfail=yes
       test no = "$AUTOHEADER" && at_xfail=yes
       test no = "$AUTOMAKE" && at_xfail=yes
       test no = "$AUTOCONF" && at_xfail=yes
 (
-  $as_echo "50. $at_setup_line: testing $at_desc ..."
+  $as_echo "51. $at_setup_line: testing $at_desc ..."
   $at_traceon
 
 
 cat >configure.ac <<'_ATEOF'
-AC_INIT([depdemo], 2.4.4, bug-libtool@gnu.org)
+AC_INIT([depdemo], 2.4.6, bug-libtool@gnu.org)
 AC_CONFIG_AUX_DIR([build-aux])
 AC_CONFIG_MACRO_DIRS([m4])
 AM_INIT_AUTOMAKE
@@ -16517,6 +16690,11 @@ at_fn_check_status 0 $at_status "$at_srcdir/depdemo.at:324"
 $at_failed && at_fn_log_failure
 $at_traceon; }
 
+# After the 'aclocal' run sleep 1 second to guarantee that aclocal.m4 is going
+# to have older timestamp than other autotools later-generated files (concretely
+# for libtool case, we speak about config.h.in generated autoheader).
+# Autoreconf does the same (after the first aclocal run).
+sleep 1
 
 
 
@@ -16773,22 +16951,22 @@ $at_traceon; }
   $at_times_p && times >"$at_times_file"
 ) 5>&1 2>&1 7>&- | eval $at_tee_pipe
 read at_status <"$at_status_file"
-#AT_STOP_50
-#AT_START_51
-at_fn_group_banner 51 'depdemo.at:336' \
-  "disable fast install" "                           " 5
+#AT_STOP_51
+#AT_START_52
+at_fn_group_banner 52 'depdemo.at:336' \
+  "disable fast install" "                           " 6
 at_xfail=no
       test no = "$ACLOCAL" && at_xfail=yes
       test no = "$AUTOHEADER" && at_xfail=yes
       test no = "$AUTOMAKE" && at_xfail=yes
       test no = "$AUTOCONF" && at_xfail=yes
 (
-  $as_echo "51. $at_setup_line: testing $at_desc ..."
+  $as_echo "52. $at_setup_line: testing $at_desc ..."
   $at_traceon
 
 
 cat >configure.ac <<'_ATEOF'
-AC_INIT([depdemo], 2.4.4, bug-libtool@gnu.org)
+AC_INIT([depdemo], 2.4.6, bug-libtool@gnu.org)
 AC_CONFIG_AUX_DIR([build-aux])
 AC_CONFIG_MACRO_DIRS([m4])
 AM_INIT_AUTOMAKE
@@ -17021,6 +17199,11 @@ at_fn_check_status 0 $at_status "$at_srcdir/depdemo.at:340"
 $at_failed && at_fn_log_failure
 $at_traceon; }
 
+# After the 'aclocal' run sleep 1 second to guarantee that aclocal.m4 is going
+# to have older timestamp than other autotools later-generated files (concretely
+# for libtool case, we speak about config.h.in generated autoheader).
+# Autoreconf does the same (after the first aclocal run).
+sleep 1
 
 
 
@@ -17263,22 +17446,22 @@ $at_traceon; }
   $at_times_p && times >"$at_times_file"
 ) 5>&1 2>&1 7>&- | eval $at_tee_pipe
 read at_status <"$at_status_file"
-#AT_STOP_51
-#AT_START_52
-at_fn_group_banner 52 'depdemo.at:354' \
-  "binary relinking at install time" "               " 5
+#AT_STOP_52
+#AT_START_53
+at_fn_group_banner 53 'depdemo.at:354' \
+  "binary relinking at install time" "               " 6
 at_xfail=no
       test no = "$ACLOCAL" && at_xfail=yes
       test no = "$AUTOHEADER" && at_xfail=yes
       test no = "$AUTOMAKE" && at_xfail=yes
       test no = "$AUTOCONF" && at_xfail=yes
 (
-  $as_echo "52. $at_setup_line: testing $at_desc ..."
+  $as_echo "53. $at_setup_line: testing $at_desc ..."
   $at_traceon
 
 
 cat >configure.ac <<'_ATEOF'
-AC_INIT([depdemo], 2.4.4, bug-libtool@gnu.org)
+AC_INIT([depdemo], 2.4.6, bug-libtool@gnu.org)
 AC_CONFIG_AUX_DIR([build-aux])
 AC_CONFIG_MACRO_DIRS([m4])
 AM_INIT_AUTOMAKE
@@ -17511,6 +17694,11 @@ at_fn_check_status 0 $at_status "$at_srcdir/depdemo.at:359"
 $at_failed && at_fn_log_failure
 $at_traceon; }
 
+# After the 'aclocal' run sleep 1 second to guarantee that aclocal.m4 is going
+# to have older timestamp than other autotools later-generated files (concretely
+# for libtool case, we speak about config.h.in generated autoheader).
+# Autoreconf does the same (after the first aclocal run).
+sleep 1
 
 
 
@@ -17887,13 +18075,13 @@ trap 'func_exit $?' 1 2 3 13 15
   $at_times_p && times >"$at_times_file"
 ) 5>&1 2>&1 7>&- | eval $at_tee_pipe
 read at_status <"$at_status_file"
-#AT_STOP_52
-#AT_START_53
-at_fn_group_banner 53 'help.at:26' \
-  "standard command line options" "                  " 6
+#AT_STOP_53
+#AT_START_54
+at_fn_group_banner 54 'help.at:26' \
+  "standard command line options" "                  " 7
 at_xfail=no
 (
-  $as_echo "53. $at_setup_line: testing $at_desc ..."
+  $as_echo "54. $at_setup_line: testing $at_desc ..."
   $at_traceon
 
 
@@ -18035,13 +18223,13 @@ $at_traceon; }
   $at_times_p && times >"$at_times_file"
 ) 5>&1 2>&1 7>&- | eval $at_tee_pipe
 read at_status <"$at_status_file"
-#AT_STOP_53
-#AT_START_54
-at_fn_group_banner 54 'help.at:45' \
-  "mode short-hands" "                               " 6
+#AT_STOP_54
+#AT_START_55
+at_fn_group_banner 55 'help.at:45' \
+  "mode short-hands" "                               " 7
 at_xfail=no
 (
-  $as_echo "54. $at_setup_line: testing $at_desc ..."
+  $as_echo "55. $at_setup_line: testing $at_desc ..."
   $at_traceon
 
 
@@ -18274,13 +18462,13 @@ $at_traceon; }
   $at_times_p && times >"$at_times_file"
 ) 5>&1 2>&1 7>&- | eval $at_tee_pipe
 read at_status <"$at_status_file"
-#AT_STOP_54
-#AT_START_55
-at_fn_group_banner 55 'help.at:97' \
-  "debug tracing" "                                  " 6
+#AT_STOP_55
+#AT_START_56
+at_fn_group_banner 56 'help.at:97' \
+  "debug tracing" "                                  " 7
 at_xfail=no
 (
-  $as_echo "55. $at_setup_line: testing $at_desc ..."
+  $as_echo "56. $at_setup_line: testing $at_desc ..."
   $at_traceon
 
 
@@ -18612,13 +18800,13 @@ done
   $at_times_p && times >"$at_times_file"
 ) 5>&1 2>&1 7>&- | eval $at_tee_pipe
 read at_status <"$at_status_file"
-#AT_STOP_55
-#AT_START_56
-at_fn_group_banner 56 'duplicate_members.at:26' \
-  "duplicate members in archive tests" "             " 6
+#AT_STOP_56
+#AT_START_57
+at_fn_group_banner 57 'duplicate_members.at:26' \
+  "duplicate members in archive tests" "             " 7
 at_xfail=no
 (
-  $as_echo "56. $at_setup_line: testing $at_desc ..."
+  $as_echo "57. $at_setup_line: testing $at_desc ..."
   $at_traceon
 
 
@@ -18725,13 +18913,13 @@ $at_traceon; }
   $at_times_p && times >"$at_times_file"
 ) 5>&1 2>&1 7>&- | eval $at_tee_pipe
 read at_status <"$at_status_file"
-#AT_STOP_56
-#AT_START_57
-at_fn_group_banner 57 'duplicate_conv.at:25' \
-  "duplicate convenience archive names" "            " 6
+#AT_STOP_57
+#AT_START_58
+at_fn_group_banner 58 'duplicate_conv.at:25' \
+  "duplicate convenience archive names" "            " 7
 at_xfail=no
 (
-  $as_echo "57. $at_setup_line: testing $at_desc ..."
+  $as_echo "58. $at_setup_line: testing $at_desc ..."
   $at_traceon
 
 
@@ -18959,13 +19147,13 @@ $at_traceon; }
   $at_times_p && times >"$at_times_file"
 ) 5>&1 2>&1 7>&- | eval $at_tee_pipe
 read at_status <"$at_status_file"
-#AT_STOP_57
-#AT_START_58
-at_fn_group_banner 58 'duplicate_deps.at:25' \
-  "preserve duplicate convenience deps" "            " 6
+#AT_STOP_58
+#AT_START_59
+at_fn_group_banner 59 'duplicate_deps.at:25' \
+  "preserve duplicate convenience deps" "            " 7
 at_xfail=yes
 (
-  $as_echo "58. $at_setup_line: testing $at_desc ..."
+  $as_echo "59. $at_setup_line: testing $at_desc ..."
   $at_traceon
 
 
@@ -19073,13 +19261,13 @@ $at_traceon; }
   $at_times_p && times >"$at_times_file"
 ) 5>&1 2>&1 7>&- | eval $at_tee_pipe
 read at_status <"$at_status_file"
-#AT_STOP_58
-#AT_START_59
-at_fn_group_banner 59 'flags.at:116' \
-  "passing CC flags through libtool" "               " 6
+#AT_STOP_59
+#AT_START_60
+at_fn_group_banner 60 'flags.at:116' \
+  "passing CC flags through libtool" "               " 7
 at_xfail=no
 (
-  $as_echo "59. $at_setup_line: testing $at_desc ..."
+  $as_echo "60. $at_setup_line: testing $at_desc ..."
   $at_traceon
 
 
@@ -19260,13 +19448,13 @@ done
   $at_times_p && times >"$at_times_file"
 ) 5>&1 2>&1 7>&- | eval $at_tee_pipe
 read at_status <"$at_status_file"
-#AT_STOP_59
-#AT_START_60
-at_fn_group_banner 60 'flags.at:116' \
-  "passing CXX flags through libtool" "              " 6
+#AT_STOP_60
+#AT_START_61
+at_fn_group_banner 61 'flags.at:116' \
+  "passing CXX flags through libtool" "              " 7
 at_xfail=no
 (
-  $as_echo "60. $at_setup_line: testing $at_desc ..."
+  $as_echo "61. $at_setup_line: testing $at_desc ..."
   $at_traceon
 
 
@@ -19459,13 +19647,13 @@ done
   $at_times_p && times >"$at_times_file"
 ) 5>&1 2>&1 7>&- | eval $at_tee_pipe
 read at_status <"$at_status_file"
-#AT_STOP_60
-#AT_START_61
-at_fn_group_banner 61 'flags.at:116' \
-  "passing F77 flags through libtool" "              " 6
+#AT_STOP_61
+#AT_START_62
+at_fn_group_banner 62 'flags.at:116' \
+  "passing F77 flags through libtool" "              " 7
 at_xfail=no
 (
-  $as_echo "61. $at_setup_line: testing $at_desc ..."
+  $as_echo "62. $at_setup_line: testing $at_desc ..."
   $at_traceon
 
 
@@ -19647,13 +19835,13 @@ done
   $at_times_p && times >"$at_times_file"
 ) 5>&1 2>&1 7>&- | eval $at_tee_pipe
 read at_status <"$at_status_file"
-#AT_STOP_61
-#AT_START_62
-at_fn_group_banner 62 'flags.at:116' \
-  "passing FC flags through libtool" "               " 6
+#AT_STOP_62
+#AT_START_63
+at_fn_group_banner 63 'flags.at:116' \
+  "passing FC flags through libtool" "               " 7
 at_xfail=no
 (
-  $as_echo "62. $at_setup_line: testing $at_desc ..."
+  $as_echo "63. $at_setup_line: testing $at_desc ..."
   $at_traceon
 
 
@@ -19855,13 +20043,13 @@ done
   $at_times_p && times >"$at_times_file"
 ) 5>&1 2>&1 7>&- | eval $at_tee_pipe
 read at_status <"$at_status_file"
-#AT_STOP_62
-#AT_START_63
-at_fn_group_banner 63 'flags.at:116' \
-  "passing GCJ flags through libtool" "              " 6
+#AT_STOP_63
+#AT_START_64
+at_fn_group_banner 64 'flags.at:116' \
+  "passing GCJ flags through libtool" "              " 7
 at_xfail=no
 (
-  $as_echo "63. $at_setup_line: testing $at_desc ..."
+  $as_echo "64. $at_setup_line: testing $at_desc ..."
   $at_traceon
 
 
@@ -20062,13 +20250,13 @@ done
   $at_times_p && times >"$at_times_file"
 ) 5>&1 2>&1 7>&- | eval $at_tee_pipe
 read at_status <"$at_status_file"
-#AT_STOP_63
-#AT_START_64
-at_fn_group_banner 64 'inherited_flags.at:26' \
-  "inherited_linker_flags" "                         " 6
+#AT_STOP_64
+#AT_START_65
+at_fn_group_banner 65 'inherited_flags.at:26' \
+  "inherited_linker_flags" "                         " 7
 at_xfail=no
 (
-  $as_echo "64. $at_setup_line: testing $at_desc ..."
+  $as_echo "65. $at_setup_line: testing $at_desc ..."
   $at_traceon
 
 
@@ -20323,13 +20511,13 @@ $at_traceon; }
   $at_times_p && times >"$at_times_file"
 ) 5>&1 2>&1 7>&- | eval $at_tee_pipe
 read at_status <"$at_status_file"
-#AT_STOP_64
-#AT_START_65
-at_fn_group_banner 65 'link-order.at:27' \
-  "Link order test" "                                " 6
+#AT_STOP_65
+#AT_START_66
+at_fn_group_banner 66 'link-order.at:27' \
+  "Link order test" "                                " 7
 at_xfail=no
 (
-  $as_echo "65. $at_setup_line: testing $at_desc ..."
+  $as_echo "66. $at_setup_line: testing $at_desc ..."
   $at_traceon
 
 
@@ -20506,13 +20694,13 @@ done
   $at_times_p && times >"$at_times_file"
 ) 5>&1 2>&1 7>&- | eval $at_tee_pipe
 read at_status <"$at_status_file"
-#AT_STOP_65
-#AT_START_66
-at_fn_group_banner 66 'link-order2.at:46' \
-  "Link order of deplibs" "                          " 6
+#AT_STOP_66
+#AT_START_67
+at_fn_group_banner 67 'link-order2.at:46' \
+  "Link order of deplibs" "                          " 7
 at_xfail=no
 (
-  $as_echo "66. $at_setup_line: testing $at_desc ..."
+  $as_echo "67. $at_setup_line: testing $at_desc ..."
   $at_traceon
 
 
@@ -20711,13 +20899,13 @@ $at_traceon; }
   $at_times_p && times >"$at_times_file"
 ) 5>&1 2>&1 7>&- | eval $at_tee_pipe
 read at_status <"$at_status_file"
-#AT_STOP_66
-#AT_START_67
-at_fn_group_banner 67 'fail.at:28' \
-  "Failure tests" "                                  " 6
+#AT_STOP_67
+#AT_START_68
+at_fn_group_banner 68 'fail.at:28' \
+  "Failure tests" "                                  " 7
 at_xfail=no
 (
-  $as_echo "67. $at_setup_line: testing $at_desc ..."
+  $as_echo "68. $at_setup_line: testing $at_desc ..."
   $at_traceon
 
 
@@ -20970,13 +21158,13 @@ $at_traceon; }
   $at_times_p && times >"$at_times_file"
 ) 5>&1 2>&1 7>&- | eval $at_tee_pipe
 read at_status <"$at_status_file"
-#AT_STOP_67
-#AT_START_68
-at_fn_group_banner 68 'shlibpath.at:25' \
-  "shlibpath_overrides_runpath" "                    " 6
+#AT_STOP_68
+#AT_START_69
+at_fn_group_banner 69 'shlibpath.at:25' \
+  "shlibpath_overrides_runpath" "                    " 7
 at_xfail=no
 (
-  $as_echo "68. $at_setup_line: testing $at_desc ..."
+  $as_echo "69. $at_setup_line: testing $at_desc ..."
   $at_traceon
 
 
@@ -21115,13 +21303,13 @@ $at_traceon; }
   $at_times_p && times >"$at_times_file"
 ) 5>&1 2>&1 7>&- | eval $at_tee_pipe
 read at_status <"$at_status_file"
-#AT_STOP_68
-#AT_START_69
-at_fn_group_banner 69 'runpath-in-lalib.at:25' \
-  "Runpath in libtool library files" "               " 6
+#AT_STOP_69
+#AT_START_70
+at_fn_group_banner 70 'runpath-in-lalib.at:25' \
+  "Runpath in libtool library files" "               " 7
 at_xfail=no
 (
-  $as_echo "69. $at_setup_line: testing $at_desc ..."
+  $as_echo "70. $at_setup_line: testing $at_desc ..."
   $at_traceon
 
 
@@ -21264,13 +21452,13 @@ $at_traceon; }
   $at_times_p && times >"$at_times_file"
 ) 5>&1 2>&1 7>&- | eval $at_tee_pipe
 read at_status <"$at_status_file"
-#AT_STOP_69
-#AT_START_70
-at_fn_group_banner 70 'static.at:68' \
-  "static linking flags for programs" "              " 6
+#AT_STOP_70
+#AT_START_71
+at_fn_group_banner 71 'static.at:68' \
+  "static linking flags for programs" "              " 7
 at_xfail=no
 (
-  $as_echo "70. $at_setup_line: testing $at_desc ..."
+  $as_echo "71. $at_setup_line: testing $at_desc ..."
   $at_traceon
 
 
@@ -21805,7 +21993,10 @@ $at_traceon; }
   echo "### test whether non-libtool library liba3 was linked statically"
   func_move_libs a3 $prefix3 $prefix1 $prefix2
   func_test_exec $all_static `$per_deplib && echo 3 13 23 31 123 123a`
-  func_test_exec_fail -static -static-libtool-libs `$per_deplib && echo 1 2 12`
+  # no '-static-libtool-libs' flag below, because some hosts such as
+  # Cray prefer static libs by default.
+  # and doesn't exercise anything not already tested above:
+  func_test_exec_fail -static `$per_deplib && echo 1 2 12`
   func_restore_libs a3 $prefix3
 
   cd ..
@@ -21815,13 +22006,13 @@ done
   $at_times_p && times >"$at_times_file"
 ) 5>&1 2>&1 7>&- | eval $at_tee_pipe
 read at_status <"$at_status_file"
-#AT_STOP_70
-#AT_START_71
-at_fn_group_banner 71 'static.at:356' \
-  "ccache -all-static" "                             " 6
+#AT_STOP_71
+#AT_START_72
+at_fn_group_banner 72 'static.at:359' \
+  "ccache -all-static" "                             " 7
 at_xfail=no
 (
-  $as_echo "71. $at_setup_line: testing $at_desc ..."
+  $as_echo "72. $at_setup_line: testing $at_desc ..."
   $at_traceon
 
 
@@ -21842,28 +22033,28 @@ _ATEOF
 
 
 { set +x
-$as_echo "$at_srcdir/static.at:372: \$CC \$CPPFLAGS \$CFLAGS -c a.c"
-at_fn_check_prepare_dynamic "$CC $CPPFLAGS $CFLAGS -c a.c" "static.at:372"
+$as_echo "$at_srcdir/static.at:375: \$CC \$CPPFLAGS \$CFLAGS -c a.c"
+at_fn_check_prepare_dynamic "$CC $CPPFLAGS $CFLAGS -c a.c" "static.at:375"
 ( $at_check_trace; $CC $CPPFLAGS $CFLAGS -c a.c
 ) >>"$at_stdout" 2>>"$at_stderr" 5>&-
 at_status=$? at_failed=false
 $at_check_filter
 echo stderr:; cat "$at_stderr"
 echo stdout:; cat "$at_stdout"
-at_fn_check_status 0 $at_status "$at_srcdir/static.at:372"
+at_fn_check_status 0 $at_status "$at_srcdir/static.at:375"
 $at_failed && at_fn_log_failure
 $at_traceon; }
 
 { set +x
-$as_echo "$at_srcdir/static.at:374: \$LIBTOOL --mode=link --tag=CC ./ccache \$CC \$CFLAGS \$LDFLAGS -all-static a.\$OBJEXT -o a\$EXEEXT"
-at_fn_check_prepare_dynamic "$LIBTOOL --mode=link --tag=CC ./ccache $CC $CFLAGS $LDFLAGS -all-static a.$OBJEXT -o a$EXEEXT" "static.at:374"
+$as_echo "$at_srcdir/static.at:377: \$LIBTOOL --mode=link --tag=CC ./ccache \$CC \$CFLAGS \$LDFLAGS -all-static a.\$OBJEXT -o a\$EXEEXT"
+at_fn_check_prepare_dynamic "$LIBTOOL --mode=link --tag=CC ./ccache $CC $CFLAGS $LDFLAGS -all-static a.$OBJEXT -o a$EXEEXT" "static.at:377"
 ( $at_check_trace; $LIBTOOL --mode=link --tag=CC ./ccache $CC $CFLAGS $LDFLAGS -all-static a.$OBJEXT -o a$EXEEXT
 ) >>"$at_stdout" 2>>"$at_stderr" 5>&-
 at_status=$? at_failed=false
 $at_check_filter
 echo stderr:; cat "$at_stderr"
 echo stdout:; cat "$at_stdout"
-at_fn_check_status 0 $at_status "$at_srcdir/static.at:374"
+at_fn_check_status 0 $at_status "$at_srcdir/static.at:377"
 $at_failed && at_fn_log_failure
 $at_traceon; }
 
@@ -21872,13 +22063,13 @@ $at_traceon; }
   $at_times_p && times >"$at_times_file"
 ) 5>&1 2>&1 7>&- | eval $at_tee_pipe
 read at_status <"$at_status_file"
-#AT_STOP_71
-#AT_START_72
-at_fn_group_banner 72 'export.at:25' \
-  "Export test" "                                    " 6
+#AT_STOP_72
+#AT_START_73
+at_fn_group_banner 73 'export.at:25' \
+  "Export test" "                                    " 7
 at_xfail=no
 (
-  $as_echo "72. $at_setup_line: testing $at_desc ..."
+  $as_echo "73. $at_setup_line: testing $at_desc ..."
   $at_traceon
 
 
@@ -22250,13 +22441,13 @@ $at_traceon; }
   $at_times_p && times >"$at_times_file"
 ) 5>&1 2>&1 7>&- | eval $at_tee_pipe
 read at_status <"$at_status_file"
-#AT_STOP_72
-#AT_START_73
-at_fn_group_banner 73 'export-def.at:25' \
-  "export from a DLL with a .def file" "             " 6
+#AT_STOP_73
+#AT_START_74
+at_fn_group_banner 74 'export-def.at:25' \
+  "export from a DLL with a .def file" "             " 7
 at_xfail=no
 (
-  $as_echo "73. $at_setup_line: testing $at_desc ..."
+  $as_echo "74. $at_setup_line: testing $at_desc ..."
   $at_traceon
 
 
@@ -22469,13 +22660,13 @@ done
   $at_times_p && times >"$at_times_file"
 ) 5>&1 2>&1 7>&- | eval $at_tee_pipe
 read at_status <"$at_status_file"
-#AT_STOP_73
-#AT_START_74
-at_fn_group_banner 74 'search-path.at:24' \
-  "sys_lib_search_path" "                            " 6
+#AT_STOP_74
+#AT_START_75
+at_fn_group_banner 75 'search-path.at:24' \
+  "sys_lib_search_path" "                            " 7
 at_xfail=no
 (
-  $as_echo "74. $at_setup_line: testing $at_desc ..."
+  $as_echo "75. $at_setup_line: testing $at_desc ..."
   $at_traceon
 
 
@@ -22540,13 +22731,13 @@ fi
   $at_times_p && times >"$at_times_file"
 ) 5>&1 2>&1 7>&- | eval $at_tee_pipe
 read at_status <"$at_status_file"
-#AT_STOP_74
-#AT_START_75
-at_fn_group_banner 75 'search-path.at:62' \
-  "sys_lib_search_path on w32" "                     " 6
+#AT_STOP_75
+#AT_START_76
+at_fn_group_banner 76 'search-path.at:62' \
+  "sys_lib_search_path on w32" "                     " 7
 at_xfail=no
 (
-  $as_echo "75. $at_setup_line: testing $at_desc ..."
+  $as_echo "76. $at_setup_line: testing $at_desc ..."
   $at_traceon
 
 
@@ -22636,13 +22827,13 @@ $at_traceon; }
   $at_times_p && times >"$at_times_file"
 ) 5>&1 2>&1 7>&- | eval $at_tee_pipe
 read at_status <"$at_status_file"
-#AT_STOP_75
-#AT_START_76
-at_fn_group_banner 76 'indirect_deps.at:25' \
-  "indirect convenience" "                           " 6
+#AT_STOP_76
+#AT_START_77
+at_fn_group_banner 77 'indirect_deps.at:25' \
+  "indirect convenience" "                           " 7
 at_xfail=no
 (
-  $as_echo "76. $at_setup_line: testing $at_desc ..."
+  $as_echo "77. $at_setup_line: testing $at_desc ..."
   $at_traceon
 
 
@@ -22749,13 +22940,13 @@ done
   $at_times_p && times >"$at_times_file"
 ) 5>&1 2>&1 7>&- | eval $at_tee_pipe
 read at_status <"$at_status_file"
-#AT_STOP_76
-#AT_START_77
-at_fn_group_banner 77 'indirect_deps.at:71' \
-  "indirect uninstalled" "                           " 6
+#AT_STOP_77
+#AT_START_78
+at_fn_group_banner 78 'indirect_deps.at:71' \
+  "indirect uninstalled" "                           " 7
 at_xfail=no
 (
-  $as_echo "77. $at_setup_line: testing $at_desc ..."
+  $as_echo "78. $at_setup_line: testing $at_desc ..."
   $at_traceon
 
 
@@ -22867,14 +23058,14 @@ done
   $at_times_p && times >"$at_times_file"
 ) 5>&1 2>&1 7>&- | eval $at_tee_pipe
 read at_status <"$at_status_file"
-#AT_STOP_77
-#AT_START_78
-at_fn_group_banner 78 'archive-in-archive.at:26' \
-  "static library contains static library" "         " 6
+#AT_STOP_78
+#AT_START_79
+at_fn_group_banner 79 'archive-in-archive.at:26' \
+  "static library contains static library" "         " 7
 at_xfail=no
       case $AR in ar-lib\ * | *[/\\]ar-lib\ *) false;; *) :;; esac && at_xfail=yes
 (
-  $as_echo "78. $at_setup_line: testing $at_desc ..."
+  $as_echo "79. $at_setup_line: testing $at_desc ..."
   $at_traceon
 
 
@@ -22975,13 +23166,13 @@ $at_traceon; }
   $at_times_p && times >"$at_times_file"
 ) 5>&1 2>&1 7>&- | eval $at_tee_pipe
 read at_status <"$at_status_file"
-#AT_STOP_78
-#AT_START_79
-at_fn_group_banner 79 'exeext.at:26' \
-  "both of -o prog and -o prog\$EXEEXT work" "        " 6
+#AT_STOP_79
+#AT_START_80
+at_fn_group_banner 80 'exeext.at:26' \
+  "both of -o prog and -o prog\$EXEEXT work" "        " 7
 at_xfail=no
 (
-  $as_echo "79. $at_setup_line: testing $at_desc ..."
+  $as_echo "80. $at_setup_line: testing $at_desc ..."
   $at_traceon
 
 
@@ -23077,13 +23268,13 @@ $at_traceon; }
   $at_times_p && times >"$at_times_file"
 ) 5>&1 2>&1 7>&- | eval $at_tee_pipe
 read at_status <"$at_status_file"
-#AT_STOP_79
-#AT_START_80
-at_fn_group_banner 80 'execute-mode.at:25' \
-  "execute mode" "                                   " 6
+#AT_STOP_80
+#AT_START_81
+at_fn_group_banner 81 'execute-mode.at:25' \
+  "execute mode" "                                   " 7
 at_xfail=no
 (
-  $as_echo "80. $at_setup_line: testing $at_desc ..."
+  $as_echo "81. $at_setup_line: testing $at_desc ..."
   $at_traceon
 
 
@@ -23734,13 +23925,13 @@ $at_traceon; }
   $at_times_p && times >"$at_times_file"
 ) 5>&1 2>&1 7>&- | eval $at_tee_pipe
 read at_status <"$at_status_file"
-#AT_STOP_80
-#AT_START_81
-at_fn_group_banner 81 'bindir.at:64' \
-  "bindir basic lib test" "                          " 6
+#AT_STOP_81
+#AT_START_82
+at_fn_group_banner 82 'bindir.at:64' \
+  "bindir basic lib test" "                          " 7
 at_xfail=no
 (
-  $as_echo "81. $at_setup_line: testing $at_desc ..."
+  $as_echo "82. $at_setup_line: testing $at_desc ..."
   $at_traceon
 
 
@@ -23992,13 +24183,13 @@ func_restore_path
   $at_times_p && times >"$at_times_file"
 ) 5>&1 2>&1 7>&- | eval $at_tee_pipe
 read at_status <"$at_status_file"
-#AT_STOP_81
-#AT_START_82
-at_fn_group_banner 82 'bindir.at:173' \
-  "bindir install tests" "                           " 6
+#AT_STOP_82
+#AT_START_83
+at_fn_group_banner 83 'bindir.at:173' \
+  "bindir install tests" "                           " 7
 at_xfail=no
 (
-  $as_echo "82. $at_setup_line: testing $at_desc ..."
+  $as_echo "83. $at_setup_line: testing $at_desc ..."
   $at_traceon
 
 
@@ -24444,13 +24635,13 @@ done
   $at_times_p && times >"$at_times_file"
 ) 5>&1 2>&1 7>&- | eval $at_tee_pipe
 read at_status <"$at_status_file"
-#AT_STOP_82
-#AT_START_83
-at_fn_group_banner 83 'cwrapper.at:25' \
-  "cwrapper for uninstalled executables" "           " 6
+#AT_STOP_83
+#AT_START_84
+at_fn_group_banner 84 'cwrapper.at:25' \
+  "cwrapper for uninstalled executables" "           " 7
 at_xfail=no
 (
-  $as_echo "83. $at_setup_line: testing $at_desc ..."
+  $as_echo "84. $at_setup_line: testing $at_desc ..."
   $at_traceon
 
 
@@ -24822,13 +25013,13 @@ done
   $at_times_p && times >"$at_times_file"
 ) 5>&1 2>&1 7>&- | eval $at_tee_pipe
 read at_status <"$at_status_file"
-#AT_STOP_83
-#AT_START_84
-at_fn_group_banner 84 'cwrapper.at:138' \
-  "cwrapper string length" "                         " 6
+#AT_STOP_84
+#AT_START_85
+at_fn_group_banner 85 'cwrapper.at:138' \
+  "cwrapper string length" "                         " 7
 at_xfail=no
 (
-  $as_echo "84. $at_setup_line: testing $at_desc ..."
+  $as_echo "85. $at_setup_line: testing $at_desc ..."
   $at_traceon
 
 
@@ -24974,13 +25165,13 @@ $at_traceon; }
   $at_times_p && times >"$at_times_file"
 ) 5>&1 2>&1 7>&- | eval $at_tee_pipe
 read at_status <"$at_status_file"
-#AT_STOP_84
-#AT_START_85
-at_fn_group_banner 85 'cwrapper.at:201' \
-  "cwrapper and installed shared libraries" "        " 6
+#AT_STOP_85
+#AT_START_86
+at_fn_group_banner 86 'cwrapper.at:201' \
+  "cwrapper and installed shared libraries" "        " 7
 at_xfail=no
 (
-  $as_echo "85. $at_setup_line: testing $at_desc ..."
+  $as_echo "86. $at_setup_line: testing $at_desc ..."
   $at_traceon
 
 
@@ -25182,13 +25373,13 @@ $at_traceon; }
   $at_times_p && times >"$at_times_file"
 ) 5>&1 2>&1 7>&- | eval $at_tee_pipe
 read at_status <"$at_status_file"
-#AT_STOP_85
-#AT_START_86
-at_fn_group_banner 86 'deplib-in-subdir.at:34' \
-  "deplib in subdir" "                               " 6
+#AT_STOP_86
+#AT_START_87
+at_fn_group_banner 87 'deplib-in-subdir.at:34' \
+  "deplib in subdir" "                               " 7
 at_xfail=no
 (
-  $as_echo "86. $at_setup_line: testing $at_desc ..."
+  $as_echo "87. $at_setup_line: testing $at_desc ..."
   $at_traceon
 
 
@@ -25594,13 +25785,13 @@ done
   $at_times_p && times >"$at_times_file"
 ) 5>&1 2>&1 7>&- | eval $at_tee_pipe
 read at_status <"$at_status_file"
-#AT_STOP_86
-#AT_START_87
-at_fn_group_banner 87 'infer-tag.at:30' \
-  "inferred tag" "                                   " 6
+#AT_STOP_87
+#AT_START_88
+at_fn_group_banner 88 'infer-tag.at:30' \
+  "inferred tag" "                                   " 7
 at_xfail=no
 (
-  $as_echo "87. $at_setup_line: testing $at_desc ..."
+  $as_echo "88. $at_setup_line: testing $at_desc ..."
   $at_traceon
 
 
@@ -25628,13 +25819,13 @@ $at_traceon; }
   $at_times_p && times >"$at_times_file"
 ) 5>&1 2>&1 7>&- | eval $at_tee_pipe
 read at_status <"$at_status_file"
-#AT_STOP_87
-#AT_START_88
-at_fn_group_banner 88 'infer-tag.at:42' \
-  "CXX inferred tag" "                               " 6
+#AT_STOP_88
+#AT_START_89
+at_fn_group_banner 89 'infer-tag.at:42' \
+  "CXX inferred tag" "                               " 7
 at_xfail=no
 (
-  $as_echo "88. $at_setup_line: testing $at_desc ..."
+  $as_echo "89. $at_setup_line: testing $at_desc ..."
   $at_traceon
 
 
@@ -25690,13 +25881,13 @@ $at_traceon; }
   $at_times_p && times >"$at_times_file"
 ) 5>&1 2>&1 7>&- | eval $at_tee_pipe
 read at_status <"$at_status_file"
-#AT_STOP_88
-#AT_START_89
-at_fn_group_banner 89 'infer-tag.at:55' \
-  "F77 inferred tag" "                               " 6
+#AT_STOP_89
+#AT_START_90
+at_fn_group_banner 90 'infer-tag.at:55' \
+  "F77 inferred tag" "                               " 7
 at_xfail=no
 (
-  $as_echo "89. $at_setup_line: testing $at_desc ..."
+  $as_echo "90. $at_setup_line: testing $at_desc ..."
   $at_traceon
 
 
@@ -25741,13 +25932,13 @@ $at_traceon; }
   $at_times_p && times >"$at_times_file"
 ) 5>&1 2>&1 7>&- | eval $at_tee_pipe
 read at_status <"$at_status_file"
-#AT_STOP_89
-#AT_START_90
-at_fn_group_banner 90 'infer-tag.at:69' \
-  "FC inferred tag" "                                " 6
+#AT_STOP_90
+#AT_START_91
+at_fn_group_banner 91 'infer-tag.at:69' \
+  "FC inferred tag" "                                " 7
 at_xfail=no
 (
-  $as_echo "90. $at_setup_line: testing $at_desc ..."
+  $as_echo "91. $at_setup_line: testing $at_desc ..."
   $at_traceon
 
 
@@ -25812,13 +26003,13 @@ $at_traceon; }
   $at_times_p && times >"$at_times_file"
 ) 5>&1 2>&1 7>&- | eval $at_tee_pipe
 read at_status <"$at_status_file"
-#AT_STOP_90
-#AT_START_91
-at_fn_group_banner 91 'infer-tag.at:83' \
-  "GCJ inferred tag" "                               " 6
+#AT_STOP_91
+#AT_START_92
+at_fn_group_banner 92 'infer-tag.at:83' \
+  "GCJ inferred tag" "                               " 7
 at_xfail=no
 (
-  $as_echo "91. $at_setup_line: testing $at_desc ..."
+  $as_echo "92. $at_setup_line: testing $at_desc ..."
   $at_traceon
 
 
@@ -25885,13 +26076,13 @@ $at_traceon; }
   $at_times_p && times >"$at_times_file"
 ) 5>&1 2>&1 7>&- | eval $at_tee_pipe
 read at_status <"$at_status_file"
-#AT_STOP_91
-#AT_START_92
-at_fn_group_banner 92 'localization.at:24' \
-  "localized compiler messages" "                    " 6
+#AT_STOP_92
+#AT_START_93
+at_fn_group_banner 93 'localization.at:24' \
+  "localized compiler messages" "                    " 7
 at_xfail=no
 (
-  $as_echo "92. $at_setup_line: testing $at_desc ..."
+  $as_echo "93. $at_setup_line: testing $at_desc ..."
   $at_traceon
 
 
@@ -26074,13 +26265,13 @@ $at_traceon; }
   $at_times_p && times >"$at_times_file"
 ) 5>&1 2>&1 7>&- | eval $at_tee_pipe
 read at_status <"$at_status_file"
-#AT_STOP_92
-#AT_START_93
-at_fn_group_banner 93 'nocase.at:26' \
-  "nocase library search" "                          " 6
+#AT_STOP_93
+#AT_START_94
+at_fn_group_banner 94 'nocase.at:26' \
+  "nocase library search" "                          " 7
 at_xfail=no
 (
-  $as_echo "93. $at_setup_line: testing $at_desc ..."
+  $as_echo "94. $at_setup_line: testing $at_desc ..."
   $at_traceon
 
 
@@ -26222,13 +26413,13 @@ $at_traceon; }
   $at_times_p && times >"$at_times_file"
 ) 5>&1 2>&1 7>&- | eval $at_tee_pipe
 read at_status <"$at_status_file"
-#AT_STOP_93
-#AT_START_94
-at_fn_group_banner 94 'install.at:25' \
-  "Install tests" "                                  " 6
+#AT_STOP_94
+#AT_START_95
+at_fn_group_banner 95 'install.at:25' \
+  "Install tests" "                                  " 7
 at_xfail=no
 (
-  $as_echo "94. $at_setup_line: testing $at_desc ..."
+  $as_echo "95. $at_setup_line: testing $at_desc ..."
   $at_traceon
 
 
@@ -26341,13 +26532,13 @@ $at_traceon; }
   $at_times_p && times >"$at_times_file"
 ) 5>&1 2>&1 7>&- | eval $at_tee_pipe
 read at_status <"$at_status_file"
-#AT_STOP_94
-#AT_START_95
-at_fn_group_banner 95 'versioning.at:24' \
-  "versioning" "                                     " 6
+#AT_STOP_95
+#AT_START_96
+at_fn_group_banner 96 'versioning.at:24' \
+  "versioning" "                                     " 7
 at_xfail=no
 (
-  $as_echo "95. $at_setup_line: testing $at_desc ..."
+  $as_echo "96. $at_setup_line: testing $at_desc ..."
   $at_traceon
 
 
@@ -26933,15 +27124,15 @@ test_installed
   $at_times_p && times >"$at_times_file"
 ) 5>&1 2>&1 7>&- | eval $at_tee_pipe
 read at_status <"$at_status_file"
-#AT_STOP_95
-#AT_START_96
-at_fn_group_banner 96 'destdir.at:48' \
-  "Simple DESTDIR install" "                         " 7
+#AT_STOP_96
+#AT_START_97
+at_fn_group_banner 97 'destdir.at:48' \
+  "Simple DESTDIR install" "                         " 8
 at_xfail=no
       eval `$LIBTOOL --config | $GREP '^fast_install='`
            case $fast_install in no) :;; *) false;; esac && at_xfail=yes
 (
-  $as_echo "96. $at_setup_line: testing $at_desc ..."
+  $as_echo "97. $at_setup_line: testing $at_desc ..."
   $at_traceon
 
 
@@ -27048,15 +27239,15 @@ $at_traceon; }
   $at_times_p && times >"$at_times_file"
 ) 5>&1 2>&1 7>&- | eval $at_tee_pipe
 read at_status <"$at_status_file"
-#AT_STOP_96
-#AT_START_97
-at_fn_group_banner 97 'destdir.at:75' \
-  "DESTDIR with in-package deplibs" "                " 7
+#AT_STOP_97
+#AT_START_98
+at_fn_group_banner 98 'destdir.at:75' \
+  "DESTDIR with in-package deplibs" "                " 8
 at_xfail=no
       eval `$LIBTOOL --config | $GREP '^fast_install='`
            case $fast_install in no) :;; *) false;; esac && at_xfail=yes
 (
-  $as_echo "97. $at_setup_line: testing $at_desc ..."
+  $as_echo "98. $at_setup_line: testing $at_desc ..."
   $at_traceon
 
 
@@ -27257,14 +27448,14 @@ fi
   $at_times_p && times >"$at_times_file"
 ) 5>&1 2>&1 7>&- | eval $at_tee_pipe
 read at_status <"$at_status_file"
-#AT_STOP_97
-#AT_START_98
-at_fn_group_banner 98 'old-m4-iface.at:41' \
-  "AM_PROG_LIBTOOL" "                                " 8
+#AT_STOP_98
+#AT_START_99
+at_fn_group_banner 99 'old-m4-iface.at:41' \
+  "AM_PROG_LIBTOOL" "                                " 9
 at_xfail=no
       test no = "$AUTOCONF" && at_xfail=yes
 (
-  $as_echo "98. $at_setup_line: testing $at_desc ..."
+  $as_echo "99. $at_setup_line: testing $at_desc ..."
   $at_traceon
 
 
@@ -27481,15 +27672,15 @@ $at_traceon; }
   $at_times_p && times >"$at_times_file"
 ) 5>&1 2>&1 7>&- | eval $at_tee_pipe
 read at_status <"$at_status_file"
-#AT_STOP_98
-#AT_START_99
-at_fn_group_banner 99 'old-m4-iface.at:113' \
-  "AC_WITH_LTDL" "                                   " 8
+#AT_STOP_99
+#AT_START_100
+at_fn_group_banner 100 'old-m4-iface.at:113' \
+  "AC_WITH_LTDL" "                                   " 9
 at_xfail=no
       test no = "$ACLOCAL" && at_xfail=yes
       test no = "$AUTOCONF" && at_xfail=yes
 (
-  $as_echo "99. $at_setup_line: testing $at_desc ..."
+  $as_echo "100. $at_setup_line: testing $at_desc ..."
   $at_traceon
 
 
@@ -27626,6 +27817,11 @@ at_fn_check_status 0 $at_status "$at_srcdir/old-m4-iface.at:162"
 $at_failed && at_fn_log_failure
 $at_traceon; }
 
+# After the 'aclocal' run sleep 1 second to guarantee that aclocal.m4 is going
+# to have older timestamp than other autotools later-generated files (concretely
+# for libtool case, we speak about config.h.in generated autoheader).
+# Autoreconf does the same (after the first aclocal run).
+sleep 1
 
 
 
@@ -27700,18 +27896,18 @@ $at_traceon; }
   $at_times_p && times >"$at_times_file"
 ) 5>&1 2>&1 7>&- | eval $at_tee_pipe
 read at_status <"$at_status_file"
-#AT_STOP_99
-#AT_START_100
-at_fn_group_banner 100 'old-m4-iface.at:173' \
-  "AC_CONFIG_MACRO_DIR" "                            " 8
+#AT_STOP_100
+#AT_START_101
+at_fn_group_banner 101 'old-m4-iface.at:173' \
+  "AC_CONFIG_MACRO_DIR" "                            " 9
 at_xfail=no
 (
-  $as_echo "100. $at_setup_line: testing $at_desc ..."
+  $as_echo "101. $at_setup_line: testing $at_desc ..."
   $at_traceon
 
 
 cat >configure.ac <<'_ATEOF'
-AC_INIT([libtoolize-demo], 2.4.4, bug-libtool@gnu.org)
+AC_INIT([libtoolize-demo], 2.4.6, bug-libtool@gnu.org)
 AC_CONFIG_AUX_DIR([build-aux])
 AC_CONFIG_MACRO_DIR([m4])
 LT_INIT
@@ -27759,22 +27955,22 @@ $at_traceon; }
   $at_times_p && times >"$at_times_file"
 ) 5>&1 2>&1 7>&- | eval $at_tee_pipe
 read at_status <"$at_status_file"
-#AT_STOP_100
-#AT_START_101
-at_fn_group_banner 101 'old-ltdl-iface.at:35' \
-  "Makefile.inc" "                                   " 9
+#AT_STOP_101
+#AT_START_102
+at_fn_group_banner 102 'old-ltdl-iface.at:35' \
+  "Makefile.inc" "                                   " 10
 at_xfail=no
       test no = "$ACLOCAL" && at_xfail=yes
       test no = "$AUTOHEADER" && at_xfail=yes
       test no = "$AUTOMAKE" && at_xfail=yes
       test no = "$AUTOCONF" && at_xfail=yes
 (
-  $as_echo "101. $at_setup_line: testing $at_desc ..."
+  $as_echo "102. $at_setup_line: testing $at_desc ..."
   $at_traceon
 
 
 cat >configure.in <<'_ATEOF'
-AC_INIT([old-ltdl-iface-demo], 2.4.4, bug-libtool@gnu.org)
+AC_INIT([old-ltdl-iface-demo], 2.4.6, bug-libtool@gnu.org)
 AC_CONFIG_MACRO_DIRS([m4])
 AC_CONFIG_LIBOBJ_DIR([ltdl])
 LT_CONFIG_LTDL_DIR([ltdl])
@@ -27937,6 +28133,11 @@ at_fn_check_status 0 $at_status "$at_srcdir/old-ltdl-iface.at:134"
 $at_failed && at_fn_log_failure
 $at_traceon; }
 
+# After the 'aclocal' run sleep 1 second to guarantee that aclocal.m4 is going
+# to have older timestamp than other autotools later-generated files (concretely
+# for libtool case, we speak about config.h.in generated autoheader).
+# Autoreconf does the same (after the first aclocal run).
+sleep 1
 
 
 
@@ -28057,21 +28258,21 @@ $at_traceon; }
   $at_times_p && times >"$at_times_file"
 ) 5>&1 2>&1 7>&- | eval $at_tee_pipe
 read at_status <"$at_status_file"
-#AT_STOP_101
-#AT_START_102
-at_fn_group_banner 102 'am-subdir.at:33' \
-  "C subdir-objects" "                               " 10
+#AT_STOP_102
+#AT_START_103
+at_fn_group_banner 103 'am-subdir.at:33' \
+  "C subdir-objects" "                               " 11
 at_xfail=no
       test no = "$ACLOCAL" && at_xfail=yes
       test no = "$AUTOMAKE" && at_xfail=yes
       test no = "$AUTOCONF" && at_xfail=yes
 (
-  $as_echo "102. $at_setup_line: testing $at_desc ..."
+  $as_echo "103. $at_setup_line: testing $at_desc ..."
   $at_traceon
 
 
 cat >configure.ac <<'_ATEOF'
-AC_INIT([subdir-demo], 2.4.4, bug-libtool@gnu.org)
+AC_INIT([subdir-demo], 2.4.6, bug-libtool@gnu.org)
 AM_INIT_AUTOMAKE
 LT_INIT([win32-dll])
 AC_PROG_CC
@@ -28144,6 +28345,11 @@ at_fn_check_status 0 $at_status "$at_srcdir/am-subdir.at:78"
 $at_failed && at_fn_log_failure
 $at_traceon; }
 
+# After the 'aclocal' run sleep 1 second to guarantee that aclocal.m4 is going
+# to have older timestamp than other autotools later-generated files (concretely
+# for libtool case, we speak about config.h.in generated autoheader).
+# Autoreconf does the same (after the first aclocal run).
+sleep 1
 
 
 
@@ -28274,16 +28480,16 @@ $at_traceon; }
   $at_times_p && times >"$at_times_file"
 ) 5>&1 2>&1 7>&- | eval $at_tee_pipe
 read at_status <"$at_status_file"
-#AT_STOP_102
-#AT_START_103
-at_fn_group_banner 103 'am-subdir.at:93' \
-  "C++ subdir-objects" "                             " 10
+#AT_STOP_103
+#AT_START_104
+at_fn_group_banner 104 'am-subdir.at:93' \
+  "C++ subdir-objects" "                             " 11
 at_xfail=no
       test no = "$ACLOCAL" && at_xfail=yes
       test no = "$AUTOMAKE" && at_xfail=yes
       test no = "$AUTOCONF" && at_xfail=yes
 (
-  $as_echo "103. $at_setup_line: testing $at_desc ..."
+  $as_echo "104. $at_setup_line: testing $at_desc ..."
   $at_traceon
 
 
@@ -28316,7 +28522,7 @@ $at_traceon; }
 
 
 cat >configure.ac <<'_ATEOF'
-AC_INIT([subdir-demo], 2.4.4, bug-libtool@gnu.org)
+AC_INIT([subdir-demo], 2.4.6, bug-libtool@gnu.org)
 AM_INIT_AUTOMAKE
 AC_PROG_CC
 AM_PROG_CC_C_O
@@ -28397,6 +28603,11 @@ at_fn_check_status 0 $at_status "$at_srcdir/am-subdir.at:146"
 $at_failed && at_fn_log_failure
 $at_traceon; }
 
+# After the 'aclocal' run sleep 1 second to guarantee that aclocal.m4 is going
+# to have older timestamp than other autotools later-generated files (concretely
+# for libtool case, we speak about config.h.in generated autoheader).
+# Autoreconf does the same (after the first aclocal run).
+sleep 1
 
 
 
@@ -28501,13 +28712,13 @@ $at_traceon; }
   $at_times_p && times >"$at_times_file"
 ) 5>&1 2>&1 7>&- | eval $at_tee_pipe
 read at_status <"$at_status_file"
-#AT_STOP_103
-#AT_START_104
-at_fn_group_banner 104 'lt_dlexit.at:30' \
-  "lt_dlexit unloading libs" "                       " 11
+#AT_STOP_104
+#AT_START_105
+at_fn_group_banner 105 'lt_dlexit.at:30' \
+  "lt_dlexit unloading libs" "                       " 12
 at_xfail=no
 (
-  $as_echo "104. $at_setup_line: testing $at_desc ..."
+  $as_echo "105. $at_setup_line: testing $at_desc ..."
   $at_traceon
 
 
@@ -28717,13 +28928,13 @@ done
   $at_times_p && times >"$at_times_file"
 ) 5>&1 2>&1 7>&- | eval $at_tee_pipe
 read at_status <"$at_status_file"
-#AT_STOP_104
-#AT_START_105
-at_fn_group_banner 105 'lt_dladvise.at:28' \
-  "lt_dlopenadvise library loading" "                " 11
+#AT_STOP_105
+#AT_START_106
+at_fn_group_banner 106 'lt_dladvise.at:28' \
+  "lt_dlopenadvise library loading" "                " 12
 at_xfail=no
 (
-  $as_echo "105. $at_setup_line: testing $at_desc ..."
+  $as_echo "106. $at_setup_line: testing $at_desc ..."
   $at_traceon
 
 
@@ -29173,13 +29384,13 @@ $at_traceon; }
   $at_times_p && times >"$at_times_file"
 ) 5>&1 2>&1 7>&- | eval $at_tee_pipe
 read at_status <"$at_status_file"
-#AT_STOP_105
-#AT_START_106
-at_fn_group_banner 106 'lt_dlopen.at:23' \
-  "lt_dlopen error messages" "                       " 11
+#AT_STOP_106
+#AT_START_107
+at_fn_group_banner 107 'lt_dlopen.at:23' \
+  "lt_dlopen error messages" "                       " 12
 at_xfail=yes
 (
-  $as_echo "106. $at_setup_line: testing $at_desc ..."
+  $as_echo "107. $at_setup_line: testing $at_desc ..."
   $at_traceon
 
 
@@ -29375,13 +29586,13 @@ $at_traceon; }
   $at_times_p && times >"$at_times_file"
 ) 5>&1 2>&1 7>&- | eval $at_tee_pipe
 read at_status <"$at_status_file"
-#AT_STOP_106
-#AT_START_107
-at_fn_group_banner 107 'lt_dlopen_a.at:23' \
-  "lt_dlopen archive" "                              " 11
+#AT_STOP_107
+#AT_START_108
+at_fn_group_banner 108 'lt_dlopen_a.at:23' \
+  "lt_dlopen archive" "                              " 12
 at_xfail=no
 (
-  $as_echo "107. $at_setup_line: testing $at_desc ..."
+  $as_echo "108. $at_setup_line: testing $at_desc ..."
   $at_traceon
 
 
@@ -29556,13 +29767,13 @@ $at_traceon; }
   $at_times_p && times >"$at_times_file"
 ) 5>&1 2>&1 7>&- | eval $at_tee_pipe
 read at_status <"$at_status_file"
-#AT_STOP_107
-#AT_START_108
-at_fn_group_banner 108 'lt_dlopenext.at:23' \
-  "lt_dlopenext error messages" "                    " 11
+#AT_STOP_108
+#AT_START_109
+at_fn_group_banner 109 'lt_dlopenext.at:23' \
+  "lt_dlopenext error messages" "                    " 12
 at_xfail=no
 (
-  $as_echo "108. $at_setup_line: testing $at_desc ..."
+  $as_echo "109. $at_setup_line: testing $at_desc ..."
   $at_traceon
 
 
@@ -29939,13 +30150,13 @@ done
   $at_times_p && times >"$at_times_file"
 ) 5>&1 2>&1 7>&- | eval $at_tee_pipe
 read at_status <"$at_status_file"
-#AT_STOP_108
-#AT_START_109
-at_fn_group_banner 109 'ltdl-libdir.at:23' \
-  "libdir of installed modules" "                    " 11
+#AT_STOP_109
+#AT_START_110
+at_fn_group_banner 110 'ltdl-libdir.at:23' \
+  "libdir of installed modules" "                    " 12
 at_xfail=no
 (
-  $as_echo "109. $at_setup_line: testing $at_desc ..."
+  $as_echo "110. $at_setup_line: testing $at_desc ..."
   $at_traceon
 
 
@@ -30154,13 +30365,13 @@ $at_traceon; }
   $at_times_p && times >"$at_times_file"
 ) 5>&1 2>&1 7>&- | eval $at_tee_pipe
 read at_status <"$at_status_file"
-#AT_STOP_109
-#AT_START_110
-at_fn_group_banner 110 'ltdl-api.at:25' \
-  "ltdl API" "                                       " 11
+#AT_STOP_110
+#AT_START_111
+at_fn_group_banner 111 'ltdl-api.at:25' \
+  "ltdl API" "                                       " 12
 at_xfail=no
 (
-  $as_echo "110. $at_setup_line: testing $at_desc ..."
+  $as_echo "111. $at_setup_line: testing $at_desc ..."
   $at_traceon
 
 
@@ -30227,13 +30438,13 @@ $at_traceon; }
   $at_times_p && times >"$at_times_file"
 ) 5>&1 2>&1 7>&- | eval $at_tee_pipe
 read at_status <"$at_status_file"
-#AT_STOP_110
-#AT_START_111
-at_fn_group_banner 111 'dlloader-api.at:23' \
-  "dlloader API" "                                   " 11
+#AT_STOP_111
+#AT_START_112
+at_fn_group_banner 112 'dlloader-api.at:23' \
+  "dlloader API" "                                   " 12
 at_xfail=no
 (
-  $as_echo "111. $at_setup_line: testing $at_desc ..."
+  $as_echo "112. $at_setup_line: testing $at_desc ..."
   $at_traceon
 
 
@@ -30744,13 +30955,13 @@ $at_traceon; }
   $at_times_p && times >"$at_times_file"
 ) 5>&1 2>&1 7>&- | eval $at_tee_pipe
 read at_status <"$at_status_file"
-#AT_STOP_111
-#AT_START_112
-at_fn_group_banner 112 'loadlibrary.at:23' \
-  "loadlibrary error messages" "                     " 11
+#AT_STOP_112
+#AT_START_113
+at_fn_group_banner 113 'loadlibrary.at:23' \
+  "loadlibrary error messages" "                     " 12
 at_xfail=no
 (
-  $as_echo "112. $at_setup_line: testing $at_desc ..."
+  $as_echo "113. $at_setup_line: testing $at_desc ..."
   $at_traceon
 
 
@@ -31144,13 +31355,13 @@ $at_traceon; }
   $at_times_p && times >"$at_times_file"
 ) 5>&1 2>&1 7>&- | eval $at_tee_pipe
 read at_status <"$at_status_file"
-#AT_STOP_112
-#AT_START_113
-at_fn_group_banner 113 'lalib-syntax.at:24' \
-  "syntax of .la files" "                            " 11
+#AT_STOP_113
+#AT_START_114
+at_fn_group_banner 114 'lalib-syntax.at:24' \
+  "syntax of .la files" "                            " 12
 at_xfail=yes
 (
-  $as_echo "113. $at_setup_line: testing $at_desc ..."
+  $as_echo "114. $at_setup_line: testing $at_desc ..."
   $at_traceon
 
 
@@ -31359,13 +31570,13 @@ done
   $at_times_p && times >"$at_times_file"
 ) 5>&1 2>&1 7>&- | eval $at_tee_pipe
 read at_status <"$at_status_file"
-#AT_STOP_113
-#AT_START_114
-at_fn_group_banner 114 'resident.at:27' \
-  "resident modules" "                               " 11
+#AT_STOP_114
+#AT_START_115
+at_fn_group_banner 115 'resident.at:27' \
+  "resident modules" "                               " 12
 at_xfail=no
 (
-  $as_echo "114. $at_setup_line: testing $at_desc ..."
+  $as_echo "115. $at_setup_line: testing $at_desc ..."
   $at_traceon
 
 
@@ -31578,13 +31789,13 @@ $at_traceon; }
   $at_times_p && times >"$at_times_file"
 ) 5>&1 2>&1 7>&- | eval $at_tee_pipe
 read at_status <"$at_status_file"
-#AT_STOP_114
-#AT_START_115
-at_fn_group_banner 115 'slist.at:24' \
-  "SList functionality" "                            " 11
+#AT_STOP_115
+#AT_START_116
+at_fn_group_banner 116 'slist.at:24' \
+  "SList functionality" "                            " 12
 at_xfail=no
 (
-  $as_echo "115. $at_setup_line: testing $at_desc ..."
+  $as_echo "116. $at_setup_line: testing $at_desc ..."
   $at_traceon
 
 
@@ -31785,13 +31996,13 @@ $at_traceon; }
   $at_times_p && times >"$at_times_file"
 ) 5>&1 2>&1 7>&- | eval $at_tee_pipe
 read at_status <"$at_status_file"
-#AT_STOP_115
-#AT_START_116
-at_fn_group_banner 116 'need_lib_prefix.at:25' \
-  "enforced lib prefix" "                            " 11
+#AT_STOP_116
+#AT_START_117
+at_fn_group_banner 117 'need_lib_prefix.at:25' \
+  "enforced lib prefix" "                            " 12
 at_xfail=no
 (
-  $as_echo "116. $at_setup_line: testing $at_desc ..."
+  $as_echo "117. $at_setup_line: testing $at_desc ..."
   $at_traceon
 
 
@@ -32062,22 +32273,22 @@ $at_traceon; }
   $at_times_p && times >"$at_times_file"
 ) 5>&1 2>&1 7>&- | eval $at_tee_pipe
 read at_status <"$at_status_file"
-#AT_STOP_116
-#AT_START_117
-at_fn_group_banner 117 'mdemo.at:625' \
-  "dynamically ltdl preload static modules" "        " 12
+#AT_STOP_117
+#AT_START_118
+at_fn_group_banner 118 'mdemo.at:625' \
+  "dynamically ltdl preload static modules" "        " 13
 at_xfail=no
       test no = "$ACLOCAL" && at_xfail=yes
       test no = "$AUTOHEADER" && at_xfail=yes
       test no = "$AUTOMAKE" && at_xfail=yes
       test no = "$AUTOCONF" && at_xfail=yes
 (
-  $as_echo "117. $at_setup_line: testing $at_desc ..."
+  $as_echo "118. $at_setup_line: testing $at_desc ..."
   $at_traceon
 
 
 cat >configure.ac <<_EOT_
-AC_INIT([mdemo], 2.4.4, bug-libtool@gnu.org)
+AC_INIT([mdemo], 2.4.6, bug-libtool@gnu.org)
 AC_CONFIG_AUX_DIR([build-aux])
 AC_CONFIG_MACRO_DIRS([m4])
 LT_CONFIG_LTDL_DIR([libltdl])
@@ -32664,6 +32875,11 @@ at_fn_check_status 0 $at_status "$at_srcdir/mdemo.at:630"
 $at_failed && at_fn_log_failure
 $at_traceon; }
 
+# After the 'aclocal' run sleep 1 second to guarantee that aclocal.m4 is going
+# to have older timestamp than other autotools later-generated files (concretely
+# for libtool case, we speak about config.h.in generated autoheader).
+# Autoreconf does the same (after the first aclocal run).
+sleep 1
 
 
 
@@ -32944,22 +33160,22 @@ $at_traceon; }
   $at_times_p && times >"$at_times_file"
 ) 5>&1 2>&1 7>&- | eval $at_tee_pipe
 read at_status <"$at_status_file"
-#AT_STOP_117
-#AT_START_118
-at_fn_group_banner 118 'mdemo.at:642' \
-  "dynamically ltdl load a shared module" "          " 12
+#AT_STOP_118
+#AT_START_119
+at_fn_group_banner 119 'mdemo.at:642' \
+  "dynamically ltdl load a shared module" "          " 13
 at_xfail=no
       test no = "$ACLOCAL" && at_xfail=yes
       test no = "$AUTOHEADER" && at_xfail=yes
       test no = "$AUTOMAKE" && at_xfail=yes
       test no = "$AUTOCONF" && at_xfail=yes
 (
-  $as_echo "118. $at_setup_line: testing $at_desc ..."
+  $as_echo "119. $at_setup_line: testing $at_desc ..."
   $at_traceon
 
 
 cat >configure.ac <<_EOT_
-AC_INIT([mdemo], 2.4.4, bug-libtool@gnu.org)
+AC_INIT([mdemo], 2.4.6, bug-libtool@gnu.org)
 AC_CONFIG_AUX_DIR([build-aux])
 AC_CONFIG_MACRO_DIRS([m4])
 LT_CONFIG_LTDL_DIR([libltdl])
@@ -33546,6 +33762,11 @@ at_fn_check_status 0 $at_status "$at_srcdir/mdemo.at:647"
 $at_failed && at_fn_log_failure
 $at_traceon; }
 
+# After the 'aclocal' run sleep 1 second to guarantee that aclocal.m4 is going
+# to have older timestamp than other autotools later-generated files (concretely
+# for libtool case, we speak about config.h.in generated autoheader).
+# Autoreconf does the same (after the first aclocal run).
+sleep 1
 
 
 
@@ -33826,22 +34047,22 @@ $at_traceon; }
   $at_times_p && times >"$at_times_file"
 ) 5>&1 2>&1 7>&- | eval $at_tee_pipe
 read at_status <"$at_status_file"
-#AT_STOP_118
-#AT_START_119
-at_fn_group_banner 119 'mdemo.at:659' \
-  "ltdl load shared and static modules" "            " 12
+#AT_STOP_119
+#AT_START_120
+at_fn_group_banner 120 'mdemo.at:659' \
+  "ltdl load shared and static modules" "            " 13
 at_xfail=no
       test no = "$ACLOCAL" && at_xfail=yes
       test no = "$AUTOHEADER" && at_xfail=yes
       test no = "$AUTOMAKE" && at_xfail=yes
       test no = "$AUTOCONF" && at_xfail=yes
 (
-  $as_echo "119. $at_setup_line: testing $at_desc ..."
+  $as_echo "120. $at_setup_line: testing $at_desc ..."
   $at_traceon
 
 
 cat >configure.ac <<_EOT_
-AC_INIT([mdemo], 2.4.4, bug-libtool@gnu.org)
+AC_INIT([mdemo], 2.4.6, bug-libtool@gnu.org)
 AC_CONFIG_AUX_DIR([build-aux])
 AC_CONFIG_MACRO_DIRS([m4])
 LT_CONFIG_LTDL_DIR([libltdl])
@@ -34428,6 +34649,11 @@ at_fn_check_status 0 $at_status "$at_srcdir/mdemo.at:664"
 $at_failed && at_fn_log_failure
 $at_traceon; }
 
+# After the 'aclocal' run sleep 1 second to guarantee that aclocal.m4 is going
+# to have older timestamp than other autotools later-generated files (concretely
+# for libtool case, we speak about config.h.in generated autoheader).
+# Autoreconf does the same (after the first aclocal run).
+sleep 1
 
 
 
@@ -34708,22 +34934,22 @@ $at_traceon; }
   $at_times_p && times >"$at_times_file"
 ) 5>&1 2>&1 7>&- | eval $at_tee_pipe
 read at_status <"$at_status_file"
-#AT_STOP_119
-#AT_START_120
-at_fn_group_banner 120 'mdemo.at:676' \
-  "ltdl dryrun" "                                    " 12
+#AT_STOP_120
+#AT_START_121
+at_fn_group_banner 121 'mdemo.at:676' \
+  "ltdl dryrun" "                                    " 13
 at_xfail=no
       test no = "$ACLOCAL" && at_xfail=yes
       test no = "$AUTOHEADER" && at_xfail=yes
       test no = "$AUTOMAKE" && at_xfail=yes
       test no = "$AUTOCONF" && at_xfail=yes
 (
-  $as_echo "120. $at_setup_line: testing $at_desc ..."
+  $as_echo "121. $at_setup_line: testing $at_desc ..."
   $at_traceon
 
 
 cat >configure.ac <<_EOT_
-AC_INIT([mdemo], 2.4.4, bug-libtool@gnu.org)
+AC_INIT([mdemo], 2.4.6, bug-libtool@gnu.org)
 AC_CONFIG_AUX_DIR([build-aux])
 AC_CONFIG_MACRO_DIRS([m4])
 LT_CONFIG_LTDL_DIR([libltdl])
@@ -35310,6 +35536,11 @@ at_fn_check_status 0 $at_status "$at_srcdir/mdemo.at:680"
 $at_failed && at_fn_log_failure
 $at_traceon; }
 
+# After the 'aclocal' run sleep 1 second to guarantee that aclocal.m4 is going
+# to have older timestamp than other autotools later-generated files (concretely
+# for libtool case, we speak about config.h.in generated autoheader).
+# Autoreconf does the same (after the first aclocal run).
+sleep 1
 
 
 
@@ -35740,22 +35971,22 @@ $at_traceon; }
   $at_times_p && times >"$at_times_file"
 ) 5>&1 2>&1 7>&- | eval $at_tee_pipe
 read at_status <"$at_status_file"
-#AT_STOP_120
-#AT_START_121
-at_fn_group_banner 121 'mdemo.at:777' \
-  "link with library that loads ltdl modules" "      " 12
+#AT_STOP_121
+#AT_START_122
+at_fn_group_banner 122 'mdemo.at:777' \
+  "link with library that loads ltdl modules" "      " 13
 at_xfail=no
       test no = "$ACLOCAL" && at_xfail=yes
       test no = "$AUTOHEADER" && at_xfail=yes
       test no = "$AUTOMAKE" && at_xfail=yes
       test no = "$AUTOCONF" && at_xfail=yes
 (
-  $as_echo "121. $at_setup_line: testing $at_desc ..."
+  $as_echo "122. $at_setup_line: testing $at_desc ..."
   $at_traceon
 
 
 cat >configure.ac <<_EOT_
-AC_INIT([mdemo], 2.4.4, bug-libtool@gnu.org)
+AC_INIT([mdemo], 2.4.6, bug-libtool@gnu.org)
 AC_CONFIG_AUX_DIR([build-aux])
 AC_CONFIG_MACRO_DIRS([m4])
 LT_CONFIG_LTDL_DIR([libltdl])
@@ -36405,6 +36636,11 @@ at_fn_check_status 0 $at_status "$at_srcdir/mdemo.at:841"
 $at_failed && at_fn_log_failure
 $at_traceon; }
 
+# After the 'aclocal' run sleep 1 second to guarantee that aclocal.m4 is going
+# to have older timestamp than other autotools later-generated files (concretely
+# for libtool case, we speak about config.h.in generated autoheader).
+# Autoreconf does the same (after the first aclocal run).
+sleep 1
 
 
 
@@ -36580,13 +36816,13 @@ $at_traceon; }
   $at_times_p && times >"$at_times_file"
 ) 5>&1 2>&1 7>&- | eval $at_tee_pipe
 read at_status <"$at_status_file"
-#AT_STOP_121
-#AT_START_122
-at_fn_group_banner 122 'standalone.at:31' \
-  "compiling softlinked libltdl" "                   " 13
+#AT_STOP_122
+#AT_START_123
+at_fn_group_banner 123 'standalone.at:31' \
+  "compiling softlinked libltdl" "                   " 14
 at_xfail=no
 (
-  $as_echo "122. $at_setup_line: testing $at_desc ..."
+  $as_echo "123. $at_setup_line: testing $at_desc ..."
   $at_traceon
 
 
@@ -36658,13 +36894,13 @@ $at_traceon; }
   $at_times_p && times >"$at_times_file"
 ) 5>&1 2>&1 7>&- | eval $at_tee_pipe
 read at_status <"$at_status_file"
-#AT_STOP_122
-#AT_START_123
-at_fn_group_banner 123 'standalone.at:46' \
-  "compiling copied libltdl" "                       " 13
+#AT_STOP_123
+#AT_START_124
+at_fn_group_banner 124 'standalone.at:46' \
+  "compiling copied libltdl" "                       " 14
 at_xfail=no
 (
-  $as_echo "123. $at_setup_line: testing $at_desc ..."
+  $as_echo "124. $at_setup_line: testing $at_desc ..."
   $at_traceon
 
 
@@ -36736,13 +36972,13 @@ $at_traceon; }
   $at_times_p && times >"$at_times_file"
 ) 5>&1 2>&1 7>&- | eval $at_tee_pipe
 read at_status <"$at_status_file"
-#AT_STOP_123
-#AT_START_124
-at_fn_group_banner 124 'standalone.at:61' \
-  "installable libltdl" "                            " 13
+#AT_STOP_124
+#AT_START_125
+at_fn_group_banner 125 'standalone.at:61' \
+  "installable libltdl" "                            " 14
 at_xfail=no
 (
-  $as_echo "124. $at_setup_line: testing $at_desc ..."
+  $as_echo "125. $at_setup_line: testing $at_desc ..."
   $at_traceon
 
 
@@ -36829,13 +37065,13 @@ $at_traceon; }
   $at_times_p && times >"$at_times_file"
 ) 5>&1 2>&1 7>&- | eval $at_tee_pipe
 read at_status <"$at_status_file"
-#AT_STOP_124
-#AT_START_125
-at_fn_group_banner 125 'standalone.at:79' \
-  "linking libltdl without autotools" "              " 13
+#AT_STOP_125
+#AT_START_126
+at_fn_group_banner 126 'standalone.at:79' \
+  "linking libltdl without autotools" "              " 14
 at_xfail=no
 (
-  $as_echo "125. $at_setup_line: testing $at_desc ..."
+  $as_echo "126. $at_setup_line: testing $at_desc ..."
   $at_traceon
 
 
@@ -36996,21 +37232,21 @@ $at_traceon; }
   $at_times_p && times >"$at_times_file"
 ) 5>&1 2>&1 7>&- | eval $at_tee_pipe
 read at_status <"$at_status_file"
-#AT_STOP_125
-#AT_START_126
-at_fn_group_banner 126 'subproject.at:57' \
-  "compiling softlinked libltdl" "                   " 14
+#AT_STOP_126
+#AT_START_127
+at_fn_group_banner 127 'subproject.at:57' \
+  "compiling softlinked libltdl" "                   " 15
 at_xfail=no
       test no = "$ACLOCAL" && at_xfail=yes
       test no = "$AUTOMAKE" && at_xfail=yes
       test no = "$AUTOCONF" && at_xfail=yes
 (
-  $as_echo "126. $at_setup_line: testing $at_desc ..."
+  $as_echo "127. $at_setup_line: testing $at_desc ..."
   $at_traceon
 
 
 cat >configure.ac <<'_ATEOF'
-AC_INIT([subproject-demo], 2.4.4, bug-libtool@gnu.org)
+AC_INIT([subproject-demo], 2.4.6, bug-libtool@gnu.org)
 LT_CONFIG_LTDL_DIR([sub/ltdl])
 AC_CONFIG_AUX_DIR([sub/ltdl/config])
 AC_CONFIG_MACRO_DIRS([sub/ltdl/m4])
@@ -37061,6 +37297,11 @@ at_fn_check_status 0 $at_status "$at_srcdir/subproject.at:62"
 $at_failed && at_fn_log_failure
 $at_traceon; }
 
+# After the 'aclocal' run sleep 1 second to guarantee that aclocal.m4 is going
+# to have older timestamp than other autotools later-generated files (concretely
+# for libtool case, we speak about config.h.in generated autoheader).
+# Autoreconf does the same (after the first aclocal run).
+sleep 1
 
 
 
@@ -37163,21 +37404,21 @@ $at_traceon; }
   $at_times_p && times >"$at_times_file"
 ) 5>&1 2>&1 7>&- | eval $at_tee_pipe
 read at_status <"$at_status_file"
-#AT_STOP_126
-#AT_START_127
-at_fn_group_banner 127 'subproject.at:73' \
-  "compiling copied libltdl" "                       " 14
+#AT_STOP_127
+#AT_START_128
+at_fn_group_banner 128 'subproject.at:73' \
+  "compiling copied libltdl" "                       " 15
 at_xfail=no
       test no = "$ACLOCAL" && at_xfail=yes
       test no = "$AUTOMAKE" && at_xfail=yes
       test no = "$AUTOCONF" && at_xfail=yes
 (
-  $as_echo "127. $at_setup_line: testing $at_desc ..."
+  $as_echo "128. $at_setup_line: testing $at_desc ..."
   $at_traceon
 
 
 cat >configure.ac <<'_ATEOF'
-AC_INIT([subproject-demo], 2.4.4, bug-libtool@gnu.org)
+AC_INIT([subproject-demo], 2.4.6, bug-libtool@gnu.org)
 LT_CONFIG_LTDL_DIR([sub/ltdl])
 AC_CONFIG_AUX_DIR([sub/ltdl/config])
 AC_CONFIG_MACRO_DIRS([sub/ltdl/m4])
@@ -37228,6 +37469,11 @@ at_fn_check_status 0 $at_status "$at_srcdir/subproject.at:78"
 $at_failed && at_fn_log_failure
 $at_traceon; }
 
+# After the 'aclocal' run sleep 1 second to guarantee that aclocal.m4 is going
+# to have older timestamp than other autotools later-generated files (concretely
+# for libtool case, we speak about config.h.in generated autoheader).
+# Autoreconf does the same (after the first aclocal run).
+sleep 1
 
 
 
@@ -37330,23 +37576,23 @@ $at_traceon; }
   $at_times_p && times >"$at_times_file"
 ) 5>&1 2>&1 7>&- | eval $at_tee_pipe
 read at_status <"$at_status_file"
-#AT_STOP_127
-#AT_START_128
-at_fn_group_banner 128 'subproject.at:89' \
-  "installable libltdl" "                            " 14
+#AT_STOP_128
+#AT_START_129
+at_fn_group_banner 129 'subproject.at:89' \
+  "installable libltdl" "                            " 15
 at_xfail=no
       test no = "$ACLOCAL" && at_xfail=yes
       test no = "$AUTOMAKE" && at_xfail=yes
       test no = "$AUTOCONF" && at_xfail=yes
 (
-  $as_echo "128. $at_setup_line: testing $at_desc ..."
+  $as_echo "129. $at_setup_line: testing $at_desc ..."
   $at_traceon
 
 
 prefix=`pwd`/_inst
 
 cat >configure.ac <<'_ATEOF'
-AC_INIT([subproject-demo], 2.4.4, bug-libtool@gnu.org)
+AC_INIT([subproject-demo], 2.4.6, bug-libtool@gnu.org)
 LT_CONFIG_LTDL_DIR([sub/ltdl])
 AC_CONFIG_AUX_DIR([sub/ltdl/config])
 AC_CONFIG_MACRO_DIRS([sub/ltdl/m4])
@@ -37397,6 +37643,11 @@ at_fn_check_status 0 $at_status "$at_srcdir/subproject.at:97"
 $at_failed && at_fn_log_failure
 $at_traceon; }
 
+# After the 'aclocal' run sleep 1 second to guarantee that aclocal.m4 is going
+# to have older timestamp than other autotools later-generated files (concretely
+# for libtool case, we speak about config.h.in generated autoheader).
+# Autoreconf does the same (after the first aclocal run).
+sleep 1
 
 
 
@@ -37512,13 +37763,13 @@ $at_traceon; }
   $at_times_p && times >"$at_times_file"
 ) 5>&1 2>&1 7>&- | eval $at_tee_pipe
 read at_status <"$at_status_file"
-#AT_STOP_128
-#AT_START_129
-at_fn_group_banner 129 'subproject.at:109' \
-  "linking libltdl without autotools" "              " 14
+#AT_STOP_129
+#AT_START_130
+at_fn_group_banner 130 'subproject.at:109' \
+  "linking libltdl without autotools" "              " 15
 at_xfail=no
 (
-  $as_echo "129. $at_setup_line: testing $at_desc ..."
+  $as_echo "130. $at_setup_line: testing $at_desc ..."
   $at_traceon
 
 
@@ -37664,22 +37915,22 @@ $at_traceon; }
   $at_times_p && times >"$at_times_file"
 ) 5>&1 2>&1 7>&- | eval $at_tee_pipe
 read at_status <"$at_status_file"
-#AT_STOP_129
-#AT_START_130
-at_fn_group_banner 130 'nonrecursive.at:79' \
-  "compiling softlinked libltdl" "                   " 15
+#AT_STOP_130
+#AT_START_131
+at_fn_group_banner 131 'nonrecursive.at:79' \
+  "compiling softlinked libltdl" "                   " 16
 at_xfail=no
       test no = "$ACLOCAL" && at_xfail=yes
       test no = "$AUTOHEADER" && at_xfail=yes
       test no = "$AUTOMAKE" && at_xfail=yes
       test no = "$AUTOCONF" && at_xfail=yes
 (
-  $as_echo "130. $at_setup_line: testing $at_desc ..."
+  $as_echo "131. $at_setup_line: testing $at_desc ..."
   $at_traceon
 
 
 cat >configure.ac <<'_ATEOF'
-AC_INIT([subdirectory-demo], 2.4.4, bug-libtool@gnu.org)
+AC_INIT([subdirectory-demo], 2.4.6, bug-libtool@gnu.org)
 LT_CONFIG_LTDL_DIR([ltdl])
 AC_CONFIG_AUX_DIR([ltdl/config])
 AC_CONFIG_MACRO_DIRS([ltdl/m4])
@@ -37770,6 +38021,11 @@ at_fn_check_status 0 $at_status "$at_srcdir/nonrecursive.at:92"
 $at_failed && at_fn_log_failure
 $at_traceon; }
 
+# After the 'aclocal' run sleep 1 second to guarantee that aclocal.m4 is going
+# to have older timestamp than other autotools later-generated files (concretely
+# for libtool case, we speak about config.h.in generated autoheader).
+# Autoreconf does the same (after the first aclocal run).
+sleep 1
 
 
 
@@ -37887,22 +38143,22 @@ $at_traceon; }
   $at_times_p && times >"$at_times_file"
 ) 5>&1 2>&1 7>&- | eval $at_tee_pipe
 read at_status <"$at_status_file"
-#AT_STOP_130
-#AT_START_131
-at_fn_group_banner 131 'nonrecursive.at:103' \
-  "compiling copied libltdl" "                       " 15
+#AT_STOP_131
+#AT_START_132
+at_fn_group_banner 132 'nonrecursive.at:103' \
+  "compiling copied libltdl" "                       " 16
 at_xfail=no
       test no = "$ACLOCAL" && at_xfail=yes
       test no = "$AUTOHEADER" && at_xfail=yes
       test no = "$AUTOMAKE" && at_xfail=yes
       test no = "$AUTOCONF" && at_xfail=yes
 (
-  $as_echo "131. $at_setup_line: testing $at_desc ..."
+  $as_echo "132. $at_setup_line: testing $at_desc ..."
   $at_traceon
 
 
 cat >configure.ac <<'_ATEOF'
-AC_INIT([subdirectory-demo], 2.4.4, bug-libtool@gnu.org)
+AC_INIT([subdirectory-demo], 2.4.6, bug-libtool@gnu.org)
 LT_CONFIG_LTDL_DIR([ltdl])
 AC_CONFIG_AUX_DIR([ltdl/config])
 AC_CONFIG_MACRO_DIRS([ltdl/m4])
@@ -37993,6 +38249,11 @@ at_fn_check_status 0 $at_status "$at_srcdir/nonrecursive.at:116"
 $at_failed && at_fn_log_failure
 $at_traceon; }
 
+# After the 'aclocal' run sleep 1 second to guarantee that aclocal.m4 is going
+# to have older timestamp than other autotools later-generated files (concretely
+# for libtool case, we speak about config.h.in generated autoheader).
+# Autoreconf does the same (after the first aclocal run).
+sleep 1
 
 
 
@@ -38110,22 +38371,22 @@ $at_traceon; }
   $at_times_p && times >"$at_times_file"
 ) 5>&1 2>&1 7>&- | eval $at_tee_pipe
 read at_status <"$at_status_file"
-#AT_STOP_131
-#AT_START_132
-at_fn_group_banner 132 'nonrecursive.at:127' \
-  "installable libltdl" "                            " 15
+#AT_STOP_132
+#AT_START_133
+at_fn_group_banner 133 'nonrecursive.at:127' \
+  "installable libltdl" "                            " 16
 at_xfail=no
       test no = "$ACLOCAL" && at_xfail=yes
       test no = "$AUTOHEADER" && at_xfail=yes
       test no = "$AUTOMAKE" && at_xfail=yes
       test no = "$AUTOCONF" && at_xfail=yes
 (
-  $as_echo "132. $at_setup_line: testing $at_desc ..."
+  $as_echo "133. $at_setup_line: testing $at_desc ..."
   $at_traceon
 
 
 cat >configure.ac <<'_ATEOF'
-AC_INIT([subdirectory-demo], 2.4.4, bug-libtool@gnu.org)
+AC_INIT([subdirectory-demo], 2.4.6, bug-libtool@gnu.org)
 LT_CONFIG_LTDL_DIR([ltdl])
 AC_CONFIG_AUX_DIR([ltdl/config])
 AC_CONFIG_MACRO_DIRS([ltdl/m4])
@@ -38218,6 +38479,11 @@ at_fn_check_status 0 $at_status "$at_srcdir/nonrecursive.at:142"
 $at_failed && at_fn_log_failure
 $at_traceon; }
 
+# After the 'aclocal' run sleep 1 second to guarantee that aclocal.m4 is going
+# to have older timestamp than other autotools later-generated files (concretely
+# for libtool case, we speak about config.h.in generated autoheader).
+# Autoreconf does the same (after the first aclocal run).
+sleep 1
 
 
 
@@ -38348,19 +38614,19 @@ $at_traceon; }
   $at_times_p && times >"$at_times_file"
 ) 5>&1 2>&1 7>&- | eval $at_tee_pipe
 read at_status <"$at_status_file"
-#AT_STOP_132
-#AT_START_133
-at_fn_group_banner 133 'recursive.at:60' \
-  "compiling softlinked libltdl" "                   " 16
+#AT_STOP_133
+#AT_START_134
+at_fn_group_banner 134 'recursive.at:60' \
+  "compiling softlinked libltdl" "                   " 17
 at_xfail=no
       case ,$AUTORECONF,$AUTOCONF,$AUTOHEADER,$ACLOCAL,$AUTOMAKE, in *,no,*) :;; *) false;; esac && at_xfail=yes
 (
-  $as_echo "133. $at_setup_line: testing $at_desc ..."
+  $as_echo "134. $at_setup_line: testing $at_desc ..."
   $at_traceon
 
 
 cat >configure.ac <<'_ATEOF'
-AC_INIT([subdirectory-demo], 2.4.4, bug-libtool@gnu.org)
+AC_INIT([subdirectory-demo], 2.4.6, bug-libtool@gnu.org)
 LT_CONFIG_LTDL_DIR([ltdl])
 AC_CONFIG_AUX_DIR([ltdl/config])
 AC_CONFIG_MACRO_DIRS([ltdl/m4])
@@ -38490,19 +38756,19 @@ $at_traceon; }
   $at_times_p && times >"$at_times_file"
 ) 5>&1 2>&1 7>&- | eval $at_tee_pipe
 read at_status <"$at_status_file"
-#AT_STOP_133
-#AT_START_134
-at_fn_group_banner 134 'recursive.at:80' \
-  "compiling copied libltdl" "                       " 16
+#AT_STOP_134
+#AT_START_135
+at_fn_group_banner 135 'recursive.at:80' \
+  "compiling copied libltdl" "                       " 17
 at_xfail=no
       case ,$AUTORECONF,$AUTOCONF,$AUTOHEADER,$ACLOCAL,$AUTOMAKE, in *,no,*) :;; *) false;; esac && at_xfail=yes
 (
-  $as_echo "134. $at_setup_line: testing $at_desc ..."
+  $as_echo "135. $at_setup_line: testing $at_desc ..."
   $at_traceon
 
 
 cat >configure.ac <<'_ATEOF'
-AC_INIT([subdirectory-demo], 2.4.4, bug-libtool@gnu.org)
+AC_INIT([subdirectory-demo], 2.4.6, bug-libtool@gnu.org)
 LT_CONFIG_LTDL_DIR([ltdl])
 AC_CONFIG_AUX_DIR([ltdl/config])
 AC_CONFIG_MACRO_DIRS([ltdl/m4])
@@ -38632,19 +38898,19 @@ $at_traceon; }
   $at_times_p && times >"$at_times_file"
 ) 5>&1 2>&1 7>&- | eval $at_tee_pipe
 read at_status <"$at_status_file"
-#AT_STOP_134
-#AT_START_135
-at_fn_group_banner 135 'recursive.at:100' \
-  "installable libltdl" "                            " 16
+#AT_STOP_135
+#AT_START_136
+at_fn_group_banner 136 'recursive.at:100' \
+  "installable libltdl" "                            " 17
 at_xfail=no
       case ,$AUTORECONF,$AUTOCONF,$AUTOHEADER,$ACLOCAL,$AUTOMAKE, in *,no,*) :;; *) false;; esac && at_xfail=yes
 (
-  $as_echo "135. $at_setup_line: testing $at_desc ..."
+  $as_echo "136. $at_setup_line: testing $at_desc ..."
   $at_traceon
 
 
 cat >configure.ac <<'_ATEOF'
-AC_INIT([subdirectory-demo], 2.4.4, bug-libtool@gnu.org)
+AC_INIT([subdirectory-demo], 2.4.6, bug-libtool@gnu.org)
 LT_CONFIG_LTDL_DIR([ltdl])
 AC_CONFIG_AUX_DIR([ltdl/config])
 AC_CONFIG_MACRO_DIRS([ltdl/m4])
@@ -38789,17 +39055,17 @@ $at_traceon; }
   $at_times_p && times >"$at_times_file"
 ) 5>&1 2>&1 7>&- | eval $at_tee_pipe
 read at_status <"$at_status_file"
-#AT_STOP_135
-#AT_START_136
-at_fn_group_banner 136 'tagdemo.at:338' \
-  "static library" "                                 " 17
+#AT_STOP_136
+#AT_START_137
+at_fn_group_banner 137 'tagdemo.at:338' \
+  "static library" "                                 " 18
 at_xfail=no
       test no = "$ACLOCAL" && at_xfail=yes
       test no = "$AUTOHEADER" && at_xfail=yes
       test no = "$AUTOMAKE" && at_xfail=yes
       test no = "$AUTOCONF" && at_xfail=yes
 (
-  $as_echo "136. $at_setup_line: testing $at_desc ..."
+  $as_echo "137. $at_setup_line: testing $at_desc ..."
   $at_traceon
 
 
@@ -38834,7 +39100,7 @@ $at_traceon; }
 
 
 cat >configure.ac <<'_ATEOF'
-AC_INIT([tagdemo], 2.4.4, bug-libtool@gnu.org)
+AC_INIT([tagdemo], 2.4.6, bug-libtool@gnu.org)
 AC_CONFIG_AUX_DIR([build-aux])
 AC_CONFIG_MACRO_DIRS([m4])
 AC_CANONICAL_TARGET
@@ -39171,6 +39437,11 @@ at_fn_check_status 0 $at_status "$at_srcdir/tagdemo.at:343"
 $at_failed && at_fn_log_failure
 $at_traceon; }
 
+# After the 'aclocal' run sleep 1 second to guarantee that aclocal.m4 is going
+# to have older timestamp than other autotools later-generated files (concretely
+# for libtool case, we speak about config.h.in generated autoheader).
+# Autoreconf does the same (after the first aclocal run).
+sleep 1
 
 
 
@@ -39323,17 +39594,17 @@ $at_traceon; }
   $at_times_p && times >"$at_times_file"
 ) 5>&1 2>&1 7>&- | eval $at_tee_pipe
 read at_status <"$at_status_file"
-#AT_STOP_136
-#AT_START_137
-at_fn_group_banner 137 'tagdemo.at:353' \
-  "shared library" "                                 " 17
+#AT_STOP_137
+#AT_START_138
+at_fn_group_banner 138 'tagdemo.at:353' \
+  "shared library" "                                 " 18
 at_xfail=no
       test no = "$ACLOCAL" && at_xfail=yes
       test no = "$AUTOHEADER" && at_xfail=yes
       test no = "$AUTOMAKE" && at_xfail=yes
       test no = "$AUTOCONF" && at_xfail=yes
 (
-  $as_echo "137. $at_setup_line: testing $at_desc ..."
+  $as_echo "138. $at_setup_line: testing $at_desc ..."
   $at_traceon
 
 
@@ -39368,7 +39639,7 @@ $at_traceon; }
 
 
 cat >configure.ac <<'_ATEOF'
-AC_INIT([tagdemo], 2.4.4, bug-libtool@gnu.org)
+AC_INIT([tagdemo], 2.4.6, bug-libtool@gnu.org)
 AC_CONFIG_AUX_DIR([build-aux])
 AC_CONFIG_MACRO_DIRS([m4])
 AC_CANONICAL_TARGET
@@ -39705,6 +39976,11 @@ at_fn_check_status 0 $at_status "$at_srcdir/tagdemo.at:358"
 $at_failed && at_fn_log_failure
 $at_traceon; }
 
+# After the 'aclocal' run sleep 1 second to guarantee that aclocal.m4 is going
+# to have older timestamp than other autotools later-generated files (concretely
+# for libtool case, we speak about config.h.in generated autoheader).
+# Autoreconf does the same (after the first aclocal run).
+sleep 1
 
 
 
@@ -39857,17 +40133,17 @@ $at_traceon; }
   $at_times_p && times >"$at_times_file"
 ) 5>&1 2>&1 7>&- | eval $at_tee_pipe
 read at_status <"$at_status_file"
-#AT_STOP_137
-#AT_START_138
-at_fn_group_banner 138 'tagdemo.at:368' \
-  "shared and static together" "                     " 17
+#AT_STOP_138
+#AT_START_139
+at_fn_group_banner 139 'tagdemo.at:368' \
+  "shared and static together" "                     " 18
 at_xfail=no
       test no = "$ACLOCAL" && at_xfail=yes
       test no = "$AUTOHEADER" && at_xfail=yes
       test no = "$AUTOMAKE" && at_xfail=yes
       test no = "$AUTOCONF" && at_xfail=yes
 (
-  $as_echo "138. $at_setup_line: testing $at_desc ..."
+  $as_echo "139. $at_setup_line: testing $at_desc ..."
   $at_traceon
 
 
@@ -39902,7 +40178,7 @@ $at_traceon; }
 
 
 cat >configure.ac <<'_ATEOF'
-AC_INIT([tagdemo], 2.4.4, bug-libtool@gnu.org)
+AC_INIT([tagdemo], 2.4.6, bug-libtool@gnu.org)
 AC_CONFIG_AUX_DIR([build-aux])
 AC_CONFIG_MACRO_DIRS([m4])
 AC_CANONICAL_TARGET
@@ -40239,6 +40515,11 @@ at_fn_check_status 0 $at_status "$at_srcdir/tagdemo.at:373"
 $at_failed && at_fn_log_failure
 $at_traceon; }
 
+# After the 'aclocal' run sleep 1 second to guarantee that aclocal.m4 is going
+# to have older timestamp than other autotools later-generated files (concretely
+# for libtool case, we speak about config.h.in generated autoheader).
+# Autoreconf does the same (after the first aclocal run).
+sleep 1
 
 
 
@@ -40391,17 +40672,17 @@ $at_traceon; }
   $at_times_p && times >"$at_times_file"
 ) 5>&1 2>&1 7>&- | eval $at_tee_pipe
 read at_status <"$at_status_file"
-#AT_STOP_138
-#AT_START_139
-at_fn_group_banner 139 'tagdemo.at:383' \
-  "allow_undefined_flag" "                           " 17
+#AT_STOP_139
+#AT_START_140
+at_fn_group_banner 140 'tagdemo.at:383' \
+  "allow_undefined_flag" "                           " 18
 at_xfail=no
       test no = "$ACLOCAL" && at_xfail=yes
       test no = "$AUTOHEADER" && at_xfail=yes
       test no = "$AUTOMAKE" && at_xfail=yes
       test no = "$AUTOCONF" && at_xfail=yes
 (
-  $as_echo "139. $at_setup_line: testing $at_desc ..."
+  $as_echo "140. $at_setup_line: testing $at_desc ..."
   $at_traceon
 
 
@@ -40436,7 +40717,7 @@ $at_traceon; }
 
 
 cat >configure.ac <<'_ATEOF'
-AC_INIT([tagdemo], 2.4.4, bug-libtool@gnu.org)
+AC_INIT([tagdemo], 2.4.6, bug-libtool@gnu.org)
 AC_CONFIG_AUX_DIR([build-aux])
 AC_CONFIG_MACRO_DIRS([m4])
 AC_CANONICAL_TARGET
@@ -40773,6 +41054,11 @@ at_fn_check_status 0 $at_status "$at_srcdir/tagdemo.at:388"
 $at_failed && at_fn_log_failure
 $at_traceon; }
 
+# After the 'aclocal' run sleep 1 second to guarantee that aclocal.m4 is going
+# to have older timestamp than other autotools later-generated files (concretely
+# for libtool case, we speak about config.h.in generated autoheader).
+# Autoreconf does the same (after the first aclocal run).
+sleep 1
 
 
 
@@ -40910,13 +41196,13 @@ $at_traceon; }
   $at_times_p && times >"$at_times_file"
 ) 5>&1 2>&1 7>&- | eval $at_tee_pipe
 read at_status <"$at_status_file"
-#AT_STOP_139
-#AT_START_140
-at_fn_group_banner 140 'template.at:28' \
-  "simple template test" "                           " 18
+#AT_STOP_140
+#AT_START_141
+at_fn_group_banner 141 'template.at:28' \
+  "simple template test" "                           " 19
 at_xfail=no
 (
-  $as_echo "140. $at_setup_line: testing $at_desc ..."
+  $as_echo "141. $at_setup_line: testing $at_desc ..."
   $at_traceon
 
 
@@ -41105,13 +41391,13 @@ $at_traceon; }
   $at_times_p && times >"$at_times_file"
 ) 5>&1 2>&1 7>&- | eval $at_tee_pipe
 read at_status <"$at_status_file"
-#AT_STOP_140
-#AT_START_141
-at_fn_group_banner 141 'template.at:127' \
-  "template test with subdirs" "                     " 18
+#AT_STOP_141
+#AT_START_142
+at_fn_group_banner 142 'template.at:127' \
+  "template test with subdirs" "                     " 19
 at_xfail=no
 (
-  $as_echo "141. $at_setup_line: testing $at_desc ..."
+  $as_echo "142. $at_setup_line: testing $at_desc ..."
   $at_traceon
 
 
@@ -41636,13 +41922,13 @@ $at_traceon; }
   $at_times_p && times >"$at_times_file"
 ) 5>&1 2>&1 7>&- | eval $at_tee_pipe
 read at_status <"$at_status_file"
-#AT_STOP_141
-#AT_START_142
-at_fn_group_banner 142 'ctor.at:27' \
-  "C++ static constructors" "                        " 19
+#AT_STOP_142
+#AT_START_143
+at_fn_group_banner 143 'ctor.at:27' \
+  "C++ static constructors" "                        " 20
 at_xfail=no
 (
-  $as_echo "142. $at_setup_line: testing $at_desc ..."
+  $as_echo "143. $at_setup_line: testing $at_desc ..."
   $at_traceon
 
 
@@ -41784,13 +42070,13 @@ $at_traceon; }
   $at_times_p && times >"$at_times_file"
 ) 5>&1 2>&1 7>&- | eval $at_tee_pipe
 read at_status <"$at_status_file"
-#AT_STOP_142
-#AT_START_143
-at_fn_group_banner 143 'exceptions.at:24' \
-  "C++ exception handling" "                         " 19
+#AT_STOP_143
+#AT_START_144
+at_fn_group_banner 144 'exceptions.at:24' \
+  "C++ exception handling" "                         " 20
 at_xfail=no
 (
-  $as_echo "143. $at_setup_line: testing $at_desc ..."
+  $as_echo "144. $at_setup_line: testing $at_desc ..."
   $at_traceon
 
 
@@ -42351,20 +42637,20 @@ $at_traceon; }
   $at_times_p && times >"$at_times_file"
 ) 5>&1 2>&1 7>&- | eval $at_tee_pipe
 read at_status <"$at_status_file"
-#AT_STOP_143
-#AT_START_144
-at_fn_group_banner 144 'early-libtool.at:32' \
-  "config.status" "                                  " 20
+#AT_STOP_144
+#AT_START_145
+at_fn_group_banner 145 'early-libtool.at:32' \
+  "config.status" "                                  " 21
 at_xfail=no
       test no = "$ACLOCAL" && at_xfail=yes
       test no = "$AUTOCONF" && at_xfail=yes
 (
-  $as_echo "144. $at_setup_line: testing $at_desc ..."
+  $as_echo "145. $at_setup_line: testing $at_desc ..."
   $at_traceon
 
 
 cat >configure.ac <<'_ATEOF'
-AC_INIT([libtool-demo], 2.4.4, bug-libtool@gnu.org)
+AC_INIT([libtool-demo], 2.4.6, bug-libtool@gnu.org)
 AC_CONFIG_MACRO_DIRS([m4])
 LT_INIT
 AC_CONFIG_FILES([Makefile])
@@ -42468,6 +42754,11 @@ at_fn_check_status 0 $at_status "$at_srcdir/early-libtool.at:109"
 $at_failed && at_fn_log_failure
 $at_traceon; }
 
+# After the 'aclocal' run sleep 1 second to guarantee that aclocal.m4 is going
+# to have older timestamp than other autotools later-generated files (concretely
+# for libtool case, we speak about config.h.in generated autoheader).
+# Autoreconf does the same (after the first aclocal run).
+sleep 1
 
 
 
@@ -42565,20 +42856,20 @@ $at_traceon; }
   $at_times_p && times >"$at_times_file"
 ) 5>&1 2>&1 7>&- | eval $at_tee_pipe
 read at_status <"$at_status_file"
-#AT_STOP_144
-#AT_START_145
-at_fn_group_banner 145 'early-libtool.at:126' \
-  "config.lt" "                                      " 20
+#AT_STOP_145
+#AT_START_146
+at_fn_group_banner 146 'early-libtool.at:126' \
+  "config.lt" "                                      " 21
 at_xfail=no
       test no = "$ACLOCAL" && at_xfail=yes
       test no = "$AUTOCONF" && at_xfail=yes
 (
-  $as_echo "145. $at_setup_line: testing $at_desc ..."
+  $as_echo "146. $at_setup_line: testing $at_desc ..."
   $at_traceon
 
 
 cat >configure.ac <<'_ATEOF'
-AC_INIT([libtool-demo], 2.4.4, bug-libtool@gnu.org)
+AC_INIT([libtool-demo], 2.4.6, bug-libtool@gnu.org)
 AC_CONFIG_MACRO_DIRS([m4])
 LT_INIT
 LT_OUTPUT
@@ -42695,6 +42986,11 @@ at_fn_check_status 0 $at_status "$at_srcdir/early-libtool.at:216"
 $at_failed && at_fn_log_failure
 $at_traceon; }
 
+# After the 'aclocal' run sleep 1 second to guarantee that aclocal.m4 is going
+# to have older timestamp than other autotools later-generated files (concretely
+# for libtool case, we speak about config.h.in generated autoheader).
+# Autoreconf does the same (after the first aclocal run).
+sleep 1
 
 
 
@@ -42808,15 +43104,15 @@ $at_traceon; }
   $at_times_p && times >"$at_times_file"
 ) 5>&1 2>&1 7>&- | eval $at_tee_pipe
 read at_status <"$at_status_file"
-#AT_STOP_145
-#AT_START_146
-at_fn_group_banner 146 'no-executables.at:25' \
-  "AC_NO_EXECUTABLES" "                              " 21
+#AT_STOP_146
+#AT_START_147
+at_fn_group_banner 147 'no-executables.at:25' \
+  "AC_NO_EXECUTABLES" "                              " 22
 at_xfail=no
       test no = "$ACLOCAL" && at_xfail=yes
       test no = "$AUTOCONF" && at_xfail=yes
 (
-  $as_echo "146. $at_setup_line: testing $at_desc ..."
+  $as_echo "147. $at_setup_line: testing $at_desc ..."
   $at_traceon
 
 
@@ -42896,6 +43192,11 @@ at_fn_check_status 0 $at_status "$at_srcdir/no-executables.at:75"
 $at_failed && at_fn_log_failure
 $at_traceon; }
 
+# After the 'aclocal' run sleep 1 second to guarantee that aclocal.m4 is going
+# to have older timestamp than other autotools later-generated files (concretely
+# for libtool case, we speak about config.h.in generated autoheader).
+# Autoreconf does the same (after the first aclocal run).
+sleep 1
 
 
 
@@ -42953,10 +43254,10 @@ $at_traceon; }
   $at_times_p && times >"$at_times_file"
 ) 5>&1 2>&1 7>&- | eval $at_tee_pipe
 read at_status <"$at_status_file"
-#AT_STOP_146
-#AT_START_147
-at_fn_group_banner 147 'deplibs-ident.at:33' \
-  "build tree relpaths" "                            " 22
+#AT_STOP_147
+#AT_START_148
+at_fn_group_banner 148 'deplibs-ident.at:33' \
+  "build tree relpaths" "                            " 23
 at_xfail=no
           eval `$LIBTOOL --config | $EGREP '^hardcode_(direct|direct_absolute|action)='`
     case $hardcode_action,$hardcode_direct,$hardcode_direct_absolute in
@@ -42965,7 +43266,7 @@ at_xfail=no
       *) false;;
     esac && at_xfail=yes
 (
-  $as_echo "147. $at_setup_line: testing $at_desc ..."
+  $as_echo "148. $at_setup_line: testing $at_desc ..."
   $at_traceon
 
 
@@ -43091,17 +43392,17 @@ $at_traceon; }
   $at_times_p && times >"$at_times_file"
 ) 5>&1 2>&1 7>&- | eval $at_tee_pipe
 read at_status <"$at_status_file"
-#AT_STOP_147
-#AT_START_148
-at_fn_group_banner 148 'configure-iface.at:102' \
-  "installable libltdl" "                            " 23
+#AT_STOP_148
+#AT_START_149
+at_fn_group_banner 149 'configure-iface.at:102' \
+  "installable libltdl" "                            " 24
 at_xfail=no
       test no = "$ACLOCAL" && at_xfail=yes
       test no = "$AUTOHEADER" && at_xfail=yes
       test no = "$AUTOMAKE" && at_xfail=yes
       test no = "$AUTOCONF" && at_xfail=yes
 (
-  $as_echo "148. $at_setup_line: testing $at_desc ..."
+  $as_echo "149. $at_setup_line: testing $at_desc ..."
   $at_traceon
 
 
@@ -43180,7 +43481,7 @@ esac
 
 
 cat >configure.ac <<'_ATEOF'
-AC_INIT([installable-ltdl-demo], 2.4.4, bug-libtool@gnu.org)
+AC_INIT([installable-ltdl-demo], 2.4.6, bug-libtool@gnu.org)
 AC_CONFIG_AUX_DIR([libltdl/config])
 AC_CONFIG_MACRO_DIRS([libltdl/m4])
 AC_CONFIG_HEADERS([config.h:config.hin])
@@ -43245,6 +43546,11 @@ at_fn_check_status 0 $at_status "$at_srcdir/configure-iface.at:145"
 $at_failed && at_fn_log_failure
 $at_traceon; }
 
+# After the 'aclocal' run sleep 1 second to guarantee that aclocal.m4 is going
+# to have older timestamp than other autotools later-generated files (concretely
+# for libtool case, we speak about config.h.in generated autoheader).
+# Autoreconf does the same (after the first aclocal run).
+sleep 1
 
 
 
@@ -43392,17 +43698,17 @@ $at_traceon; }
   $at_times_p && times >"$at_times_file"
 ) 5>&1 2>&1 7>&- | eval $at_tee_pipe
 read at_status <"$at_status_file"
-#AT_STOP_148
-#AT_START_149
-at_fn_group_banner 149 'configure-iface.at:162' \
-  "--with-ltdl-include/lib" "                        " 23
+#AT_STOP_149
+#AT_START_150
+at_fn_group_banner 150 'configure-iface.at:162' \
+  "--with-ltdl-include/lib" "                        " 24
 at_xfail=no
       test no = "$ACLOCAL" && at_xfail=yes
       test no = "$AUTOHEADER" && at_xfail=yes
       test no = "$AUTOMAKE" && at_xfail=yes
       test no = "$AUTOCONF" && at_xfail=yes
 (
-  $as_echo "149. $at_setup_line: testing $at_desc ..."
+  $as_echo "150. $at_setup_line: testing $at_desc ..."
   $at_traceon
 
 
@@ -43552,7 +43858,7 @@ esac
 
 
 cat >configure.ac <<'_ATEOF'
-AC_INIT([configure-iface-demo], 2.4.4, bug-libtool@gnu.org)
+AC_INIT([configure-iface-demo], 2.4.6, bug-libtool@gnu.org)
 AC_CONFIG_MACRO_DIRS([_inst/aclocal])
 AC_CONFIG_HEADERS([config.h:config.hin])
 AM_INIT_AUTOMAKE([foreign])
@@ -43624,6 +43930,11 @@ at_fn_check_status 0 $at_status "$at_srcdir/configure-iface.at:229"
 $at_failed && at_fn_log_failure
 $at_traceon; }
 
+# After the 'aclocal' run sleep 1 second to guarantee that aclocal.m4 is going
+# to have older timestamp than other autotools later-generated files (concretely
+# for libtool case, we speak about config.h.in generated autoheader).
+# Autoreconf does the same (after the first aclocal run).
+sleep 1
 
 
 
@@ -43746,17 +44057,17 @@ $at_traceon; }
   $at_times_p && times >"$at_times_file"
 ) 5>&1 2>&1 7>&- | eval $at_tee_pipe
 read at_status <"$at_status_file"
-#AT_STOP_149
-#AT_START_150
-at_fn_group_banner 150 'configure-iface.at:243' \
-  "--with-included-ltdl" "                           " 23
+#AT_STOP_150
+#AT_START_151
+at_fn_group_banner 151 'configure-iface.at:243' \
+  "--with-included-ltdl" "                           " 24
 at_xfail=no
       test no = "$ACLOCAL" && at_xfail=yes
       test no = "$AUTOHEADER" && at_xfail=yes
       test no = "$AUTOMAKE" && at_xfail=yes
       test no = "$AUTOCONF" && at_xfail=yes
 (
-  $as_echo "150. $at_setup_line: testing $at_desc ..."
+  $as_echo "151. $at_setup_line: testing $at_desc ..."
   $at_traceon
 
 
@@ -43835,7 +44146,7 @@ esac
 
 
 cat >configure.ac <<'_ATEOF'
-AC_INIT([configure-iface-demo], 2.4.4, bug-libtool@gnu.org)
+AC_INIT([configure-iface-demo], 2.4.6, bug-libtool@gnu.org)
 AC_CONFIG_AUX_DIR([libltdl/config])
 AC_CONFIG_MACRO_DIRS([libltdl/m4])
 AC_CONFIG_HEADERS([config.h:config.hin])
@@ -43897,6 +44208,11 @@ at_fn_check_status 0 $at_status "$at_srcdir/configure-iface.at:283"
 $at_failed && at_fn_log_failure
 $at_traceon; }
 
+# After the 'aclocal' run sleep 1 second to guarantee that aclocal.m4 is going
+# to have older timestamp than other autotools later-generated files (concretely
+# for libtool case, we speak about config.h.in generated autoheader).
+# Autoreconf does the same (after the first aclocal run).
+sleep 1
 
 
 
@@ -44050,15 +44366,15 @@ $at_traceon; }
   $at_times_p && times >"$at_times_file"
 ) 5>&1 2>&1 7>&- | eval $at_tee_pipe
 read at_status <"$at_status_file"
-#AT_STOP_150
-#AT_START_151
-at_fn_group_banner 151 'configure-iface.at:304' \
-  "convenience libltdl" "                            " 23
+#AT_STOP_151
+#AT_START_152
+at_fn_group_banner 152 'configure-iface.at:304' \
+  "convenience libltdl" "                            " 24
 at_xfail=no
       test no = "$ACLOCAL" && at_xfail=yes
       test no = "$AUTOCONF" && at_xfail=yes
 (
-  $as_echo "151. $at_setup_line: testing $at_desc ..."
+  $as_echo "152. $at_setup_line: testing $at_desc ..."
   $at_traceon
 
 
@@ -44106,6 +44422,11 @@ at_fn_check_status 0 $at_status "$at_srcdir/configure-iface.at:321"
 $at_failed && at_fn_log_failure
 $at_traceon; }
 
+# After the 'aclocal' run sleep 1 second to guarantee that aclocal.m4 is going
+# to have older timestamp than other autotools later-generated files (concretely
+# for libtool case, we speak about config.h.in generated autoheader).
+# Autoreconf does the same (after the first aclocal run).
+sleep 1
 
 
 
@@ -44174,10 +44495,10 @@ $at_traceon; }
   $at_times_p && times >"$at_times_file"
 ) 5>&1 2>&1 7>&- | eval $at_tee_pipe
 read at_status <"$at_status_file"
-#AT_STOP_151
-#AT_START_152
-at_fn_group_banner 152 'f77demo.at:296' \
-  "static library" "                                 " 24
+#AT_STOP_152
+#AT_START_153
+at_fn_group_banner 153 'f77demo.at:296' \
+  "static library" "                                 " 25
 at_xfail=no
       test no = "$AUTOHEADER" && at_xfail=yes
       test no = "$ACLOCAL" && at_xfail=yes
@@ -44185,7 +44506,7 @@ at_xfail=no
       test no = "$AUTOMAKE" && at_xfail=yes
       test no = "$AUTOCONF" && at_xfail=yes
 (
-  $as_echo "152. $at_setup_line: testing $at_desc ..."
+  $as_echo "153. $at_setup_line: testing $at_desc ..."
   $at_traceon
 
 
@@ -44211,7 +44532,7 @@ $at_traceon; }
 
 
 cat >configure.ac <<'_ATEOF'
-AC_INIT([f77demo], 2.4.4, bug-libtool@gnu.org)
+AC_INIT([f77demo], 2.4.6, bug-libtool@gnu.org)
 AC_CONFIG_AUX_DIR([build-aux])
 AM_INIT_AUTOMAKE
 AC_PROG_CC
@@ -44465,6 +44786,11 @@ at_fn_check_status 0 $at_status "$at_srcdir/f77demo.at:304"
 $at_failed && at_fn_log_failure
 $at_traceon; }
 
+# After the 'aclocal' run sleep 1 second to guarantee that aclocal.m4 is going
+# to have older timestamp than other autotools later-generated files (concretely
+# for libtool case, we speak about config.h.in generated autoheader).
+# Autoreconf does the same (after the first aclocal run).
+sleep 1
 
 
 
@@ -44700,10 +45026,10 @@ $at_traceon; }
   $at_times_p && times >"$at_times_file"
 ) 5>&1 2>&1 7>&- | eval $at_tee_pipe
 read at_status <"$at_status_file"
-#AT_STOP_152
-#AT_START_153
-at_fn_group_banner 153 'f77demo.at:314' \
-  "shared library" "                                 " 24
+#AT_STOP_153
+#AT_START_154
+at_fn_group_banner 154 'f77demo.at:314' \
+  "shared library" "                                 " 25
 at_xfail=no
       test no = "$AUTOHEADER" && at_xfail=yes
       test no = "$ACLOCAL" && at_xfail=yes
@@ -44711,7 +45037,7 @@ at_xfail=no
       test no = "$AUTOMAKE" && at_xfail=yes
       test no = "$AUTOCONF" && at_xfail=yes
 (
-  $as_echo "153. $at_setup_line: testing $at_desc ..."
+  $as_echo "154. $at_setup_line: testing $at_desc ..."
   $at_traceon
 
 
@@ -44734,7 +45060,7 @@ $at_traceon; }
 
 
 cat >configure.ac <<'_ATEOF'
-AC_INIT([f77demo], 2.4.4, bug-libtool@gnu.org)
+AC_INIT([f77demo], 2.4.6, bug-libtool@gnu.org)
 AC_CONFIG_AUX_DIR([build-aux])
 AM_INIT_AUTOMAKE
 AC_PROG_CC
@@ -44988,6 +45314,11 @@ at_fn_check_status 0 $at_status "$at_srcdir/f77demo.at:319"
 $at_failed && at_fn_log_failure
 $at_traceon; }
 
+# After the 'aclocal' run sleep 1 second to guarantee that aclocal.m4 is going
+# to have older timestamp than other autotools later-generated files (concretely
+# for libtool case, we speak about config.h.in generated autoheader).
+# Autoreconf does the same (after the first aclocal run).
+sleep 1
 
 
 
@@ -45223,10 +45554,10 @@ $at_traceon; }
   $at_times_p && times >"$at_times_file"
 ) 5>&1 2>&1 7>&- | eval $at_tee_pipe
 read at_status <"$at_status_file"
-#AT_STOP_153
-#AT_START_154
-at_fn_group_banner 154 'f77demo.at:329' \
-  "shared and static together" "                     " 24
+#AT_STOP_154
+#AT_START_155
+at_fn_group_banner 155 'f77demo.at:329' \
+  "shared and static together" "                     " 25
 at_xfail=no
       test no = "$AUTOHEADER" && at_xfail=yes
       test no = "$ACLOCAL" && at_xfail=yes
@@ -45234,7 +45565,7 @@ at_xfail=no
       test no = "$AUTOMAKE" && at_xfail=yes
       test no = "$AUTOCONF" && at_xfail=yes
 (
-  $as_echo "154. $at_setup_line: testing $at_desc ..."
+  $as_echo "155. $at_setup_line: testing $at_desc ..."
   $at_traceon
 
 
@@ -45257,7 +45588,7 @@ $at_traceon; }
 
 
 cat >configure.ac <<'_ATEOF'
-AC_INIT([f77demo], 2.4.4, bug-libtool@gnu.org)
+AC_INIT([f77demo], 2.4.6, bug-libtool@gnu.org)
 AC_CONFIG_AUX_DIR([build-aux])
 AM_INIT_AUTOMAKE
 AC_PROG_CC
@@ -45511,6 +45842,11 @@ at_fn_check_status 0 $at_status "$at_srcdir/f77demo.at:334"
 $at_failed && at_fn_log_failure
 $at_traceon; }
 
+# After the 'aclocal' run sleep 1 second to guarantee that aclocal.m4 is going
+# to have older timestamp than other autotools later-generated files (concretely
+# for libtool case, we speak about config.h.in generated autoheader).
+# Autoreconf does the same (after the first aclocal run).
+sleep 1
 
 
 
@@ -45746,10 +46082,10 @@ $at_traceon; }
   $at_times_p && times >"$at_times_file"
 ) 5>&1 2>&1 7>&- | eval $at_tee_pipe
 read at_status <"$at_status_file"
-#AT_STOP_154
-#AT_START_155
-at_fn_group_banner 155 'fcdemo.at:310' \
-  "static library" "                                 " 25
+#AT_STOP_155
+#AT_START_156
+at_fn_group_banner 156 'fcdemo.at:310' \
+  "static library" "                                 " 26
 at_xfail=no
       test no = "$AUTOHEADER" && at_xfail=yes
       test no = "$ACLOCAL" && at_xfail=yes
@@ -45757,7 +46093,7 @@ at_xfail=no
       test no = "$AUTOMAKE" && at_xfail=yes
       test no = "$AUTOCONF" && at_xfail=yes
 (
-  $as_echo "155. $at_setup_line: testing $at_desc ..."
+  $as_echo "156. $at_setup_line: testing $at_desc ..."
   $at_traceon
 
 
@@ -45803,7 +46139,7 @@ $at_traceon; }
 
 
 cat >configure.ac <<'_ATEOF'
-AC_INIT([fcdemo], 2.4.4, bug-libtool@gnu.org)
+AC_INIT([fcdemo], 2.4.6, bug-libtool@gnu.org)
 AC_CONFIG_AUX_DIR([build-aux])
 AM_INIT_AUTOMAKE
 AC_PROG_CC
@@ -46071,6 +46407,11 @@ at_fn_check_status 0 $at_status "$at_srcdir/fcdemo.at:318"
 $at_failed && at_fn_log_failure
 $at_traceon; }
 
+# After the 'aclocal' run sleep 1 second to guarantee that aclocal.m4 is going
+# to have older timestamp than other autotools later-generated files (concretely
+# for libtool case, we speak about config.h.in generated autoheader).
+# Autoreconf does the same (after the first aclocal run).
+sleep 1
 
 
 
@@ -46306,10 +46647,10 @@ $at_traceon; }
   $at_times_p && times >"$at_times_file"
 ) 5>&1 2>&1 7>&- | eval $at_tee_pipe
 read at_status <"$at_status_file"
-#AT_STOP_155
-#AT_START_156
-at_fn_group_banner 156 'fcdemo.at:328' \
-  "shared library" "                                 " 25
+#AT_STOP_156
+#AT_START_157
+at_fn_group_banner 157 'fcdemo.at:328' \
+  "shared library" "                                 " 26
 at_xfail=no
       test no = "$AUTOHEADER" && at_xfail=yes
       test no = "$ACLOCAL" && at_xfail=yes
@@ -46317,7 +46658,7 @@ at_xfail=no
       test no = "$AUTOMAKE" && at_xfail=yes
       test no = "$AUTOCONF" && at_xfail=yes
 (
-  $as_echo "156. $at_setup_line: testing $at_desc ..."
+  $as_echo "157. $at_setup_line: testing $at_desc ..."
   $at_traceon
 
 
@@ -46360,7 +46701,7 @@ $at_traceon; }
 
 
 cat >configure.ac <<'_ATEOF'
-AC_INIT([fcdemo], 2.4.4, bug-libtool@gnu.org)
+AC_INIT([fcdemo], 2.4.6, bug-libtool@gnu.org)
 AC_CONFIG_AUX_DIR([build-aux])
 AM_INIT_AUTOMAKE
 AC_PROG_CC
@@ -46628,6 +46969,11 @@ at_fn_check_status 0 $at_status "$at_srcdir/fcdemo.at:333"
 $at_failed && at_fn_log_failure
 $at_traceon; }
 
+# After the 'aclocal' run sleep 1 second to guarantee that aclocal.m4 is going
+# to have older timestamp than other autotools later-generated files (concretely
+# for libtool case, we speak about config.h.in generated autoheader).
+# Autoreconf does the same (after the first aclocal run).
+sleep 1
 
 
 
@@ -46863,10 +47209,10 @@ $at_traceon; }
   $at_times_p && times >"$at_times_file"
 ) 5>&1 2>&1 7>&- | eval $at_tee_pipe
 read at_status <"$at_status_file"
-#AT_STOP_156
-#AT_START_157
-at_fn_group_banner 157 'fcdemo.at:343' \
-  "shared and static together" "                     " 25
+#AT_STOP_157
+#AT_START_158
+at_fn_group_banner 158 'fcdemo.at:343' \
+  "shared and static together" "                     " 26
 at_xfail=no
       test no = "$AUTOHEADER" && at_xfail=yes
       test no = "$ACLOCAL" && at_xfail=yes
@@ -46874,7 +47220,7 @@ at_xfail=no
       test no = "$AUTOMAKE" && at_xfail=yes
       test no = "$AUTOCONF" && at_xfail=yes
 (
-  $as_echo "157. $at_setup_line: testing $at_desc ..."
+  $as_echo "158. $at_setup_line: testing $at_desc ..."
   $at_traceon
 
 
@@ -46917,7 +47263,7 @@ $at_traceon; }
 
 
 cat >configure.ac <<'_ATEOF'
-AC_INIT([fcdemo], 2.4.4, bug-libtool@gnu.org)
+AC_INIT([fcdemo], 2.4.6, bug-libtool@gnu.org)
 AC_CONFIG_AUX_DIR([build-aux])
 AM_INIT_AUTOMAKE
 AC_PROG_CC
@@ -47185,6 +47531,11 @@ at_fn_check_status 0 $at_status "$at_srcdir/fcdemo.at:348"
 $at_failed && at_fn_log_failure
 $at_traceon; }
 
+# After the 'aclocal' run sleep 1 second to guarantee that aclocal.m4 is going
+# to have older timestamp than other autotools later-generated files (concretely
+# for libtool case, we speak about config.h.in generated autoheader).
+# Autoreconf does the same (after the first aclocal run).
+sleep 1
 
 
 
@@ -47420,13 +47771,13 @@ $at_traceon; }
   $at_times_p && times >"$at_times_file"
 ) 5>&1 2>&1 7>&- | eval $at_tee_pipe
 read at_status <"$at_status_file"
-#AT_STOP_157
-#AT_START_158
-at_fn_group_banner 158 'darwin.at:26' \
-  "darwin fat compile" "                             " 26
+#AT_STOP_158
+#AT_START_159
+at_fn_group_banner 159 'darwin.at:26' \
+  "darwin fat compile" "                             " 27
 at_xfail=no
 (
-  $as_echo "158. $at_setup_line: testing $at_desc ..."
+  $as_echo "159. $at_setup_line: testing $at_desc ..."
   $at_traceon
 
 noskip=:
@@ -47614,13 +47965,13 @@ PATH=$save_PATH
   $at_times_p && times >"$at_times_file"
 ) 5>&1 2>&1 7>&- | eval $at_tee_pipe
 read at_status <"$at_status_file"
-#AT_STOP_158
-#AT_START_159
-at_fn_group_banner 159 'darwin.at:103' \
-  "darwin concurrent library extraction" "           " 26
+#AT_STOP_159
+#AT_START_160
+at_fn_group_banner 160 'darwin.at:103' \
+  "darwin concurrent library extraction" "           " 27
 at_xfail=no
 (
-  $as_echo "159. $at_setup_line: testing $at_desc ..."
+  $as_echo "160. $at_setup_line: testing $at_desc ..."
   $at_traceon
 
 
@@ -47750,10 +48101,10 @@ $at_traceon; }
   $at_times_p && times >"$at_times_file"
 ) 5>&1 2>&1 7>&- | eval $at_tee_pipe
 read at_status <"$at_status_file"
-#AT_STOP_159
-#AT_START_160
-at_fn_group_banner 160 'darwin.at:152' \
-  "darwin gdb debug information" "                   " 26
+#AT_STOP_160
+#AT_START_161
+at_fn_group_banner 161 'darwin.at:152' \
+  "darwin gdb debug information" "                   " 27
 at_xfail=no
 
 eval "`$LIBTOOL --config | $EGREP '^(whole_archive_flag_spec)='`"
@@ -47762,7 +48113,7 @@ case $whole_archive_flag_spec:$host_os in
 *) false ;;
 esac  && at_xfail=yes
 (
-  $as_echo "160. $at_setup_line: testing $at_desc ..."
+  $as_echo "161. $at_setup_line: testing $at_desc ..."
   $at_traceon
 
 
@@ -47946,19 +48297,19 @@ $at_traceon; }
   $at_times_p && times >"$at_times_file"
 ) 5>&1 2>&1 7>&- | eval $at_tee_pipe
 read at_status <"$at_status_file"
-#AT_STOP_160
-#AT_START_161
-at_fn_group_banner 161 'darwin.at:208' \
-  "darwin ld warnings changing configure results" "  " 26
+#AT_STOP_161
+#AT_START_162
+at_fn_group_banner 162 'darwin.at:208' \
+  "darwin ld warnings changing configure results" "  " 27
 at_xfail=no
       case ,$AUTORECONF,$AUTOCONF,$AUTOHEADER,$ACLOCAL,$AUTOMAKE, in *,no,*) :;; *) false;; esac && at_xfail=yes
 (
-  $as_echo "161. $at_setup_line: testing $at_desc ..."
+  $as_echo "162. $at_setup_line: testing $at_desc ..."
   $at_traceon
 
 
 cat >configure.ac <<'_ATEOF'
-AC_INIT([ld-stderr], 2.4.4, bug-libtool@gnu.org)
+AC_INIT([ld-stderr], 2.4.6, bug-libtool@gnu.org)
 AC_CONFIG_MACRO_DIRS([m4])
 AM_INIT_AUTOMAKE([foreign])
 AC_PROG_CC
@@ -48071,13 +48422,13 @@ $at_traceon; }
   $at_times_p && times >"$at_times_file"
 ) 5>&1 2>&1 7>&- | eval $at_tee_pipe
 read at_status <"$at_status_file"
-#AT_STOP_161
-#AT_START_162
-at_fn_group_banner 162 'darwin.at:232' \
-  "darwin can lt_dlopen .dylib and .so files" "      " 26
+#AT_STOP_162
+#AT_START_163
+at_fn_group_banner 163 'darwin.at:232' \
+  "darwin can lt_dlopen .dylib and .so files" "      " 27
 at_xfail=no
 (
-  $as_echo "162. $at_setup_line: testing $at_desc ..."
+  $as_echo "163. $at_setup_line: testing $at_desc ..."
   $at_traceon
 
 
@@ -48486,13 +48837,13 @@ done
   $at_times_p && times >"$at_times_file"
 ) 5>&1 2>&1 7>&- | eval $at_tee_pipe
 read at_status <"$at_status_file"
-#AT_STOP_162
-#AT_START_163
-at_fn_group_banner 163 'dumpbin-symbols.at:25' \
-  "dumpbin -symbols section hiding" "                " 27
+#AT_STOP_163
+#AT_START_164
+at_fn_group_banner 164 'dumpbin-symbols.at:25' \
+  "dumpbin -symbols section hiding" "                " 28
 at_xfail=no
 (
-  $as_echo "163. $at_setup_line: testing $at_desc ..."
+  $as_echo "164. $at_setup_line: testing $at_desc ..."
   $at_traceon
 
 
@@ -48646,13 +48997,13 @@ $at_traceon; }
   $at_times_p && times >"$at_times_file"
 ) 5>&1 2>&1 7>&- | eval $at_tee_pipe
 read at_status <"$at_status_file"
-#AT_STOP_163
-#AT_START_164
-at_fn_group_banner 164 'deplibs-mingw.at:27' \
-  "deplibs without file command" "                   " 27
+#AT_STOP_164
+#AT_START_165
+at_fn_group_banner 165 'deplibs-mingw.at:27' \
+  "deplibs without file command" "                   " 28
 at_xfail=no
 (
-  $as_echo "164. $at_setup_line: testing $at_desc ..."
+  $as_echo "165. $at_setup_line: testing $at_desc ..."
   $at_traceon
 
 
@@ -48821,10 +49172,10 @@ done
   $at_times_p && times >"$at_times_file"
 ) 5>&1 2>&1 7>&- | eval $at_tee_pipe
 read at_status <"$at_status_file"
-#AT_STOP_164
-#AT_START_165
-at_fn_group_banner 165 'sysroot.at:203' \
-  "-L=.../lib -l" "                                  " 28
+#AT_STOP_165
+#AT_START_166
+at_fn_group_banner 166 'sysroot.at:203' \
+  "-L=.../lib -l" "                                  " 29
 at_xfail=no
       test no = "$ACLOCAL" && at_xfail=yes
       test no = "$AUTOMAKE" && at_xfail=yes
@@ -48836,7 +49187,7 @@ at_xfail=no
       test no = "$AUTOMAKE" && at_xfail=yes
       test no = "$AUTOCONF" && at_xfail=yes
 (
-  $as_echo "165. $at_setup_line: testing $at_desc ..."
+  $as_echo "166. $at_setup_line: testing $at_desc ..."
   $at_traceon
 
 
@@ -49022,6 +49373,11 @@ at_fn_check_status 0 $at_status "$at_srcdir/sysroot.at:203"
 $at_failed && at_fn_log_failure
 $at_traceon; }
 
+# After the 'aclocal' run sleep 1 second to guarantee that aclocal.m4 is going
+# to have older timestamp than other autotools later-generated files (concretely
+# for libtool case, we speak about config.h.in generated autoheader).
+# Autoreconf does the same (after the first aclocal run).
+sleep 1
 
 
 
@@ -49210,6 +49566,11 @@ at_fn_check_status 0 $at_status "$at_srcdir/sysroot.at:203"
 $at_failed && at_fn_log_failure
 $at_traceon; }
 
+# After the 'aclocal' run sleep 1 second to guarantee that aclocal.m4 is going
+# to have older timestamp than other autotools later-generated files (concretely
+# for libtool case, we speak about config.h.in generated autoheader).
+# Autoreconf does the same (after the first aclocal run).
+sleep 1
 
 
 
@@ -49397,6 +49758,11 @@ at_fn_check_status 0 $at_status "$at_srcdir/sysroot.at:203"
 $at_failed && at_fn_log_failure
 $at_traceon; }
 
+# After the 'aclocal' run sleep 1 second to guarantee that aclocal.m4 is going
+# to have older timestamp than other autotools later-generated files (concretely
+# for libtool case, we speak about config.h.in generated autoheader).
+# Autoreconf does the same (after the first aclocal run).
+sleep 1
 
 
 
@@ -49570,10 +49936,10 @@ cd ..
   $at_times_p && times >"$at_times_file"
 ) 5>&1 2>&1 7>&- | eval $at_tee_pipe
 read at_status <"$at_status_file"
-#AT_STOP_165
-#AT_START_166
-at_fn_group_banner 166 'sysroot.at:204' \
-  "-L SYSROOT/.../lib -l" "                          " 28
+#AT_STOP_166
+#AT_START_167
+at_fn_group_banner 167 'sysroot.at:204' \
+  "-L SYSROOT/.../lib -l" "                          " 29
 at_xfail=no
       test no = "$ACLOCAL" && at_xfail=yes
       test no = "$AUTOMAKE" && at_xfail=yes
@@ -49585,7 +49951,7 @@ at_xfail=no
       test no = "$AUTOMAKE" && at_xfail=yes
       test no = "$AUTOCONF" && at_xfail=yes
 (
-  $as_echo "166. $at_setup_line: testing $at_desc ..."
+  $as_echo "167. $at_setup_line: testing $at_desc ..."
   $at_traceon
 
 
@@ -49771,6 +50137,11 @@ at_fn_check_status 0 $at_status "$at_srcdir/sysroot.at:204"
 $at_failed && at_fn_log_failure
 $at_traceon; }
 
+# After the 'aclocal' run sleep 1 second to guarantee that aclocal.m4 is going
+# to have older timestamp than other autotools later-generated files (concretely
+# for libtool case, we speak about config.h.in generated autoheader).
+# Autoreconf does the same (after the first aclocal run).
+sleep 1
 
 
 
@@ -49959,6 +50330,11 @@ at_fn_check_status 0 $at_status "$at_srcdir/sysroot.at:204"
 $at_failed && at_fn_log_failure
 $at_traceon; }
 
+# After the 'aclocal' run sleep 1 second to guarantee that aclocal.m4 is going
+# to have older timestamp than other autotools later-generated files (concretely
+# for libtool case, we speak about config.h.in generated autoheader).
+# Autoreconf does the same (after the first aclocal run).
+sleep 1
 
 
 
@@ -50146,6 +50522,11 @@ at_fn_check_status 0 $at_status "$at_srcdir/sysroot.at:204"
 $at_failed && at_fn_log_failure
 $at_traceon; }
 
+# After the 'aclocal' run sleep 1 second to guarantee that aclocal.m4 is going
+# to have older timestamp than other autotools later-generated files (concretely
+# for libtool case, we speak about config.h.in generated autoheader).
+# Autoreconf does the same (after the first aclocal run).
+sleep 1
 
 
 
@@ -50319,10 +50700,10 @@ cd ..
   $at_times_p && times >"$at_times_file"
 ) 5>&1 2>&1 7>&- | eval $at_tee_pipe
 read at_status <"$at_status_file"
-#AT_STOP_166
-#AT_START_167
-at_fn_group_banner 167 'sysroot.at:205' \
-  "SYSROOT/.../*.la" "                               " 28
+#AT_STOP_167
+#AT_START_168
+at_fn_group_banner 168 'sysroot.at:205' \
+  "SYSROOT/.../*.la" "                               " 29
 at_xfail=no
       test no = "$ACLOCAL" && at_xfail=yes
       test no = "$AUTOMAKE" && at_xfail=yes
@@ -50334,7 +50715,7 @@ at_xfail=no
       test no = "$AUTOMAKE" && at_xfail=yes
       test no = "$AUTOCONF" && at_xfail=yes
 (
-  $as_echo "167. $at_setup_line: testing $at_desc ..."
+  $as_echo "168. $at_setup_line: testing $at_desc ..."
   $at_traceon
 
 
@@ -50520,6 +50901,11 @@ at_fn_check_status 0 $at_status "$at_srcdir/sysroot.at:205"
 $at_failed && at_fn_log_failure
 $at_traceon; }
 
+# After the 'aclocal' run sleep 1 second to guarantee that aclocal.m4 is going
+# to have older timestamp than other autotools later-generated files (concretely
+# for libtool case, we speak about config.h.in generated autoheader).
+# Autoreconf does the same (after the first aclocal run).
+sleep 1
 
 
 
@@ -50708,6 +51094,11 @@ at_fn_check_status 0 $at_status "$at_srcdir/sysroot.at:205"
 $at_failed && at_fn_log_failure
 $at_traceon; }
 
+# After the 'aclocal' run sleep 1 second to guarantee that aclocal.m4 is going
+# to have older timestamp than other autotools later-generated files (concretely
+# for libtool case, we speak about config.h.in generated autoheader).
+# Autoreconf does the same (after the first aclocal run).
+sleep 1
 
 
 
@@ -50895,6 +51286,11 @@ at_fn_check_status 0 $at_status "$at_srcdir/sysroot.at:205"
 $at_failed && at_fn_log_failure
 $at_traceon; }
 
+# After the 'aclocal' run sleep 1 second to guarantee that aclocal.m4 is going
+# to have older timestamp than other autotools later-generated files (concretely
+# for libtool case, we speak about config.h.in generated autoheader).
+# Autoreconf does the same (after the first aclocal run).
+sleep 1
 
 
 
@@ -51068,13 +51464,13 @@ cd ..
   $at_times_p && times >"$at_times_file"
 ) 5>&1 2>&1 7>&- | eval $at_tee_pipe
 read at_status <"$at_status_file"
-#AT_STOP_167
-#AT_START_168
-at_fn_group_banner 168 'stresstest.at:31' \
-  "Link option thorough search test" "               " 29
+#AT_STOP_168
+#AT_START_169
+at_fn_group_banner 169 'stresstest.at:31' \
+  "Link option thorough search test" "               " 30
 at_xfail=no
 (
-  $as_echo "168. $at_setup_line: testing $at_desc ..."
+  $as_echo "169. $at_setup_line: testing $at_desc ..."
   $at_traceon
 
 
@@ -51472,13 +51868,13 @@ done
   $at_times_p && times >"$at_times_file"
 ) 5>&1 2>&1 7>&- | eval $at_tee_pipe
 read at_status <"$at_status_file"
-#AT_STOP_168
-#AT_START_169
-at_fn_group_banner 169 'cmdline_wrap.at:28' \
-  "Run tests with low max_cmd_len" "                 " 29
+#AT_STOP_169
+#AT_START_170
+at_fn_group_banner 170 'cmdline_wrap.at:28' \
+  "Run tests with low max_cmd_len" "                 " 30
 at_xfail=no
 (
-  $as_echo "169. $at_setup_line: testing $at_desc ..."
+  $as_echo "170. $at_setup_line: testing $at_desc ..."
   $at_traceon
 
 
@@ -51528,4 +51924,4 @@ $at_traceon; }
   $at_times_p && times >"$at_times_file"
 ) 5>&1 2>&1 7>&- | eval $at_tee_pipe
 read at_status <"$at_status_file"
-#AT_STOP_169
+#AT_STOP_170
