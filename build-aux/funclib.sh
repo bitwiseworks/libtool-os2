@@ -1291,7 +1291,7 @@ func_lt_ver ()
 {
     $debug_cmd
 
-    test "x$1" = x`func_sort_ver "$1" "$2" | $SED 1q`
+    test "x$1" = "x`func_sort_ver "$1" "$2" | $SED 1q`"
 }
 
 
