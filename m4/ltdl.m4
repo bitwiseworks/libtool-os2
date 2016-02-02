@@ -765,19 +765,32 @@ _LT_EOF
   if AC_TRY_EVAL(ac_compile); then
     # Now try to grab the symbols.
     ac_nlist=conftest.nm
-    if AC_TRY_EVAL(NM conftest.$ac_objext \| $lt_cv_sys_global_symbol_pipe \> $ac_nlist) && test -s "$ac_nlist"; then
+    case $host_os in
+    os2*)
+      # Use emxexp instead of nm to cover the -Zomf case
+      ac_nm="emxexp conftest.$ac_objext > $ac_nlist"
+      ac_nm_grep_uscore='^[[    ]]*"\?_nm_test_func'
+      ac_nm_grep_no_uscore='^[[    ]]*"\?nm_test_func'
+      ;;
+    *)
+      ac_nm="$NM conftest.$ac_objext | $lt_cv_sys_global_symbol_pipe > $ac_nlist"
+      ac_nm_grep_uscore='^. _nm_test_func'
+      ac_nm_grep_no_uscore='^. nm_test_func'
+      ;;
+    esac
+    if AC_TRY_EVAL(ac_nm) && test -s "$ac_nlist"; then
       # See whether the symbols have a leading underscore.
-      if grep '^. _nm_test_func' "$ac_nlist" >/dev/null; then
+      if grep "$ac_nm_grep_uscore" "$ac_nlist" >/dev/null; then
         lt_cv_sys_symbol_underscore=yes
       else
-        if grep '^. nm_test_func ' "$ac_nlist" >/dev/null; then
+        if grep "$ac_nm_grep_no_uscore" "$ac_nlist" >/dev/null; then
 	  :
         else
 	  echo "configure: cannot find nm_test_func in $ac_nlist" >&AS_MESSAGE_LOG_FD
         fi
       fi
     else
-      echo "configure: cannot run $lt_cv_sys_global_symbol_pipe" >&AS_MESSAGE_LOG_FD
+      echo "configure: cannot run $ac_nm" >&AS_MESSAGE_LOG_FD
     fi
   else
     echo "configure: failed program was:" >&AS_MESSAGE_LOG_FD
