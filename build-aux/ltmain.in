@@ -4648,7 +4648,6 @@ func_mode_link ()
     module=no
     no_install=no
     objs=
-    os2dllname=
     non_pic_objects=
     precious_files_regex=
     prefer_static_libs=no
@@ -4906,16 +4905,6 @@ func_mode_link ()
 	  prev=
 	  continue
 	  ;;
-	os2dllname)
-	  os2dllname=$arg
-	  prev=
-	  continue
-	  ;;
-	shortname)
-	  shortname_cmds='$ECHO '"$arg"' | cut -b -$(( 8-${#release}-${#versuffix} ))'
-	  prev=
-	  continue
-	  ;;
 	precious_regex)
 	  precious_files_regex=$arg
 	  prev=
@@ -4945,6 +4934,11 @@ func_mode_link ()
 	    *) func_append xrpath " $arg" ;;
 	    esac
 	  fi
+	  prev=
+	  continue
+	  ;;
+	shortname)
+	  shortname_cmds='$ECHO '"$arg"' | cut -b -$(( 8-${#release}-${#versuffix} ))'
 	  prev=
 	  continue
 	  ;;
@@ -5225,16 +5219,6 @@ func_mode_link ()
 	continue
 	;;
 
-      -os2dllname)
-	prev=os2dllname
-	continue
-	;;
-
-      -shortname | -os2dllname)
-	prev=shortname
-	continue
-	;;
-
       -o) prev=output ;;
 
       -precious-files-regex)
@@ -5280,6 +5264,11 @@ func_mode_link ()
 
       -shared)
 	# The effects of -shared are defined in a previous loop.
+	continue
+	;;
+
+      -shortname | -os2dllname)
+	prev=shortname
 	continue
 	;;
 

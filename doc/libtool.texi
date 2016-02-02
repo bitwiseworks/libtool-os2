@@ -1531,13 +1531,6 @@ Create @var{output-file} from the specified objects and libraries.
 @item -objectlist @var{file}
 Use a list of object files found in @var{file} to specify objects.
 
-@item -shortname @var{name}
-Use @var{name} as the DLL name (effective only on OS/2). This is necessary
-when the default algorithm that chops the library name to fit into
-the obligatory 8.3 file name format, produces an inappropriate result.
-For historical reasons, the @code{-os2dllname} option is also recognized
-that acts as an alias for this option (but do not use it in new code).
-
 @item -precious-files-regex @var{regex}
 Prevents removal of files from the temporary output directory whose
 names match this regular expression.  You might specify @samp{\.bbg?$}
@@ -1573,6 +1566,13 @@ If @var{output-file} is a library, then only create a shared library.
 In the later case, libtool will signal an error if it was configured
 with @option{--disable-shared}, or if the host does not support shared
 libraries.
+
+@item -shortname @var{name}
+Use @var{name} as the DLL name (effective only on OS/2). This is necessary
+when the default algorithm that chops the library name to fit into
+the obligatory 8.3 file name format, produces an inappropriate result.
+For historical reasons, the @code{-os2dllname} option is also recognized
+that acts as an alias for this option (but do not use it in new code).
 
 @item -shrext @var{suffix}
 If @var{output-file} is a libtool library, replace the system's standard
