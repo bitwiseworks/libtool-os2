@@ -5833,6 +5833,10 @@ _LT_EOF
       _LT_TAGVAR(hardcode_minus_L, $1)=yes
       _LT_TAGVAR(allow_undefined_flag, $1)=unsupported
       _LT_TAGVAR(file_list_spec, $1)='@'
+      if test "$AR" = emxomfar ; then
+          # set libext to lib (OMF format) as expected by some tools in OMF mode
+        libext=lib
+      fi
       shrext_cmds=.dll
       _LT_TAGVAR(export_symbols_cmds, $1)='emxexp $libobjs $convenience | $SED -n -e '\''/^[[	 ]]*\(;.*\)\?$/n; s/^[[	 ]]*"\?_\([[^	 "]]\+\)"\?\(\([[	 ]]*\(;.*\)\?\)\|\([[	 ]]\+.\+\)\)$/\1/p'\'' | sort | uniq > $export_symbols'
       _LT_TAGVAR(archive_cmds, $1)='\$ECHO "LIBRARY ${realname%%$shared_ext} INITINSTANCE TERMINSTANCE" > $output_objdir/${realname%%$shared_ext}.def~
@@ -6702,6 +6706,10 @@ if test yes != "$_lt_caught_CXX_error"; then
         _LT_TAGVAR(hardcode_minus_L, $1)=yes
         _LT_TAGVAR(allow_undefined_flag, $1)=unsupported
         _LT_TAGVAR(file_list_spec, $1)='@'
+        if test "$AR" = emxomfar ; then
+          # set libext to lib (OMF format) as expected by some tools in OMF mode
+          libext=lib
+        fi
         shrext_cmds=.dll
         _LT_TAGVAR(archive_cmds, $1)='\$ECHO "LIBRARY ${realname%%$shared_ext} INITINSTANCE TERMINSTANCE" > $output_objdir/${realname%%$shared_ext}.def~
 	  \$ECHO "DESCRIPTION \"$libname\"" >> $output_objdir/${realname%%$shared_ext}.def~
