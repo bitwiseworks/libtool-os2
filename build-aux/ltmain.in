@@ -1827,6 +1827,7 @@ The following components of LINK-COMMAND are treated specially:
   -o OUTPUT-FILE    create OUTPUT-FILE from the specified objects
   -objectlist FILE  use a list of object files found in FILE to specify objects
   -shortname NAME   override DLL name (effective only on OS/2)
+  -buildlevel DESC  buildlevel string for the def file (effective only on OS/2)
   -precious-files-regex REGEX
                     don't remove output files matching REGEX
   -release RELEASE  specify package release information
@@ -4942,6 +4943,11 @@ func_mode_link ()
 	  prev=
 	  continue
 	  ;;
+	buildlevel)
+	  buildlevel=$arg
+	  prev=
+	  continue
+	  ;;
 	shrext)
 	  shrext_cmds=$arg
 	  prev=
@@ -5269,6 +5275,11 @@ func_mode_link ()
 
       -shortname | -os2dllname)
 	prev=shortname
+	continue
+	;;
+
+      -buildlevel)
+	prev=buildlevel
 	continue
 	;;
 

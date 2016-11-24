@@ -5131,13 +5131,13 @@ _LT_EOF
       shrext_cmds=.dll
       _LT_TAGVAR(export_symbols_cmds, $1)='emxexp $libobjs $convenience | $SED -n -e '\''/^[[	 ]]*\(;.*\)\?$/n; s/^[[	 ]]*"\?_\([[^	 "]]\+\)"\?\(\([[	 ]]*\(;.*\)\?\)\|\([[	 ]]\+.\+\)\)$/\1/p'\'' | sort | uniq > $export_symbols'
       _LT_TAGVAR(archive_cmds, $1)='\$ECHO "LIBRARY ${realname%%$shared_ext} INITINSTANCE TERMINSTANCE" > $output_objdir/${realname%%$shared_ext}.def~
-	\$ECHO "DESCRIPTION \"$libname\"" >> $output_objdir/${realname%%$shared_ext}.def~
+	\$ECHO "DESCRIPTION \"${buildlevel}${buildlevel:+@@}$libname\"" >> $output_objdir/${realname%%$shared_ext}.def~
 	\$ECHO "DATA MULTIPLE NONSHARED" >> $output_objdir/${realname%%$shared_ext}.def~
 	\$ECHO EXPORTS >> $output_objdir/${realname%%$shared_ext}.def~
 	emxexp $libobjs $convenience | $SED /"_DLL_InitTerm"/d >> $output_objdir/${realname%%$shared_ext}.def~
 	$CC -Zdll -Zomf -o $lib $libobjs $deplibs $compiler_flags $output_objdir/${realname%%$shared_ext}.def'
       _LT_TAGVAR(archive_expsym_cmds, $1)='\$ECHO "LIBRARY ${realname%%$shared_ext} INITINSTANCE TERMINSTANCE" > $output_objdir/${realname%%$shared_ext}.def~
-	\$ECHO "DESCRIPTION \"$libname\"" >> $output_objdir/${realname%%$shared_ext}.def~
+	\$ECHO "DESCRIPTION \"${buildlevel}${buildlevel:+@@}$libname\"" >> $output_objdir/${realname%%$shared_ext}.def~
 	\$ECHO "DATA MULTIPLE NONSHARED" >> $output_objdir/${realname%%$shared_ext}.def~
 	\$ECHO EXPORTS >> $output_objdir/${realname%%$shared_ext}.def~
 	prefix_cmds="$SED"~
@@ -5840,13 +5840,13 @@ _LT_EOF
       shrext_cmds=.dll
       _LT_TAGVAR(export_symbols_cmds, $1)='emxexp $libobjs $convenience | $SED -n -e '\''/^[[	 ]]*\(;.*\)\?$/n; s/^[[	 ]]*"\?_\([[^	 "]]\+\)"\?\(\([[	 ]]*\(;.*\)\?\)\|\([[	 ]]\+.\+\)\)$/\1/p'\'' | sort | uniq > $export_symbols'
       _LT_TAGVAR(archive_cmds, $1)='\$ECHO "LIBRARY ${realname%%$shared_ext} INITINSTANCE TERMINSTANCE" > $output_objdir/${realname%%$shared_ext}.def~
-	\$ECHO "DESCRIPTION \"$libname\"" >> $output_objdir/${realname%%$shared_ext}.def~
+	\$ECHO "DESCRIPTION \"${buildlevel}${buildlevel:+@@}$libname\"" >> $output_objdir/${realname%%$shared_ext}.def~
 	\$ECHO "DATA MULTIPLE NONSHARED" >> $output_objdir/${realname%%$shared_ext}.def~
 	\$ECHO EXPORTS >> $output_objdir/${realname%%$shared_ext}.def~
 	emxexp $libobjs $convenience | $SED /"_DLL_InitTerm"/d >> $output_objdir/${realname%%$shared_ext}.def~
 	$CC -Zdll -Zomf -o $lib $libobjs $deplibs $compiler_flags $output_objdir/${realname%%$shared_ext}.def'
       _LT_TAGVAR(archive_expsym_cmds, $1)='\$ECHO "LIBRARY ${realname%%$shared_ext} INITINSTANCE TERMINSTANCE" > $output_objdir/${realname%%$shared_ext}.def~
-	\$ECHO "DESCRIPTION \"$libname\"" >> $output_objdir/${realname%%$shared_ext}.def~
+	\$ECHO "DESCRIPTION \"${buildlevel}${buildlevel:+@@}$libname\"" >> $output_objdir/${realname%%$shared_ext}.def~
 	\$ECHO "DATA MULTIPLE NONSHARED" >> $output_objdir/${realname%%$shared_ext}.def~
 	\$ECHO EXPORTS >> $output_objdir/${realname%%$shared_ext}.def~
 	prefix_cmds="$SED"~
@@ -6712,13 +6712,13 @@ if test yes != "$_lt_caught_CXX_error"; then
         fi
         shrext_cmds=.dll
         _LT_TAGVAR(archive_cmds, $1)='\$ECHO "LIBRARY ${realname%%$shared_ext} INITINSTANCE TERMINSTANCE" > $output_objdir/${realname%%$shared_ext}.def~
-	  \$ECHO "DESCRIPTION \"$libname\"" >> $output_objdir/${realname%%$shared_ext}.def~
+	  \$ECHO "DESCRIPTION \"${buildlevel}${buildlevel:+@@}$libname\"" >> $output_objdir/${realname%%$shared_ext}.def~
 	  \$ECHO "DATA MULTIPLE NONSHARED" >> $output_objdir/${realname%%$shared_ext}.def~
 	  \$ECHO EXPORTS >> $output_objdir/${realname%%$shared_ext}.def~
 	  emxexp $libobjs | $SED /"_DLL_InitTerm"/d >> $output_objdir/${realname%%$shared_ext}.def~
 	  $CC -Zdll -Zomf -o $lib $libobjs $deplibs $compiler_flags $output_objdir/${realname%%$shared_ext}.def'
         _LT_TAGVAR(archive_expsym_cmds, $1)='\$ECHO "LIBRARY ${realname%%$shared_ext} INITINSTANCE TERMINSTANCE" > $output_objdir/${realname%%$shared_ext}.def~
-	  \$ECHO "DESCRIPTION \"$libname\"" >> $output_objdir/${realname%%$shared_ext}.def~
+	  \$ECHO "DESCRIPTION \"${buildlevel}${buildlevel:+@@}$libname\"" >> $output_objdir/${realname%%$shared_ext}.def~
 	  \$ECHO "DATA MULTIPLE NONSHARED" >> $output_objdir/${realname%%$shared_ext}.def~
 	  \$ECHO EXPORTS >> $output_objdir/${realname%%$shared_ext}.def~
 	  prefix_cmds="$SED"~
