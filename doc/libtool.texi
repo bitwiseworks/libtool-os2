@@ -1459,6 +1459,18 @@ On other systems, @option{-bindir} is ignored.  The default value used
 is @file{@var{libdir}/../bin} for libraries installed to
 @file{@var{libdir}}.  You should not use @option{-bindir} for modules.
 
+@item -buildlevel @var{str}
+Use @var{str} as the OS/2 LAN component-style version string (effective
+only on OS/2).  This string will be embedded into the DESCRIPTION field
+of a shared library (DLL) built by Libtool.  It may be then read by the
+standard OS/2 BLDLEVEL tool to obtain the library vendor, version,
+build date/time and machine information.  The format of this string is
+rather strict and is described elsewhere.  You may also set the
+@code{LT_BUILDLEVEL} environment variable at Libtool invocation time
+to provide a default value for this option (which is handy in cases
+when this information is gathered dynamically at software package build
+time and should be shared between all libraries in the package).
+
 @item -dlopen @var{file}
 Same as @option{-dlpreopen @var{file}}, if native dlopening is not
 supported on the host platform (@pxref{Dlopened modules}) or if
@@ -1568,7 +1580,7 @@ with @option{--disable-shared}, or if the host does not support shared
 libraries.
 
 @item -shortname @var{name}
-Use @var{name} as the DLL name (effective only on OS/2). This is necessary
+Use @var{name} as the DLL name (effective only on OS/2).  This is necessary
 when the default algorithm that chops the library name to fit into
 the obligatory 8.3 file name format, produces an inappropriate result.
 For historical reasons, the @code{-os2dllname} option is also recognized
@@ -2441,6 +2453,14 @@ colons;
 With no dangling colons, the heuristically determined paths will be
 ignored entirely.
 @end itemize
+@end defvar
+
+@defvar LT_BUILDLEVEL
+Libtool link mode environment variable that provides a default value
+for the @option{-buildlevel} option (i.e. when it is not explicitly
+specified on the command line).  This is handy in cases when it is
+necessary to pass build information (e.g. the build machine) dynamically
+at library build time.  Only meaningful for OS/2.
 @end defvar
 
 With 1.3 era libtool, if you wanted to know any details of what
