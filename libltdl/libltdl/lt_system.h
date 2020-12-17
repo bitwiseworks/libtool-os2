@@ -130,6 +130,9 @@ or obtained by writing to the Free Software Foundation, Inc.,
    separator when it is set. */
 # define LT_DIRSEP_CHAR		'\\'
 # define LT_PATHSEP_CHAR	';'
+#elif defined(__OS2__)
+# define LT_DIRSEP_CHAR		'\\'
+# define LT_PATHSEP_CHAR	';'
 #else
 # define LT_PATHSEP_CHAR	':'
 #endif
@@ -140,7 +143,7 @@ or obtained by writing to the Free Software Foundation, Inc.,
 
 /* fopen() mode flags for reading a text file */
 #undef	LT_READTEXT_MODE
-#if defined __WINDOWS__ || defined __CYGWIN__
+#if defined __WINDOWS__ || defined __CYGWIN__ || defined __OS2__
 #  define LT_READTEXT_MODE "rt"
 #else
 #  define LT_READTEXT_MODE "r"

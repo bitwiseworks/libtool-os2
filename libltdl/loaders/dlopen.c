@@ -68,7 +68,7 @@ get_vtable (lt_user_data loader_data)
   if (vtable && !vtable->name)
     {
       vtable->name		= "lt_dlopen";
-#if defined DLSYM_USCORE
+#if defined DLSYM_USCORE || defined __OS2__
       vtable->sym_prefix	= "_";
 #endif
       vtable->module_open	= vm_open;
