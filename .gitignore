@@ -1,0 +1,26 @@
+INSTALL
+git rm   Makefile.in
+git rm   aclocal.m4
+git rm   build-aux/compile
+git rm   build-aux/config.guess
+git rm   build-aux/config.sub
+build-aux/depcomp
+build-aux/install-sh
+build-aux/ltmain.sh
+build-aux/mdate-sh
+build-aux/missing
+build-aux/texinfo.tex
+configure
+doc/libtool.1
+doc/libtool.info
+doc/libtool.info-1
+doc/libtool.info-2
+doc/libtoolize.1
+doc/notes.txt
+doc/stamp-vti
+doc/version.texi
+libltdl/Makefile.am
+libltdl/Makefile.in
+libltdl/aclocal.m4
+libltdl/configure
+m4/ltversion.m4
