@@ -552,7 +552,7 @@ as_tr_sh="eval sed '$as_sed_sh'" # deprecated
 
 
 
-SHELL=${CONFIG_SHELL-/bin/sh}
+SHELL=${CONFIG_SHELL-${UNIXROOT:+/@unixroot/usr}/bin/sh}
 
 # How were we run?
 at_cli_args="$@"

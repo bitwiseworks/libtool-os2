@@ -267,7 +267,7 @@ test -z "$GREP" && {
 : ${MKDIR="mkdir"}
 : ${MV="mv -f"}
 : ${RM="rm -f"}
-: ${SHELL="${CONFIG_SHELL-/bin/sh}"}
+: ${SHELL="${CONFIG_SHELL-${UNIXROOT:+/@unixroot/usr}/bin/sh}"}
 
 
 ## -------------------- ##
