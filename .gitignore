@@ -1,15 +1,18 @@
+autom4te.cache/
 INSTALL
-git rm   Makefile.in
-git rm   aclocal.m4
-git rm   build-aux/compile
-git rm   build-aux/config.guess
-git rm   build-aux/config.sub
+Makefile.in
+aclocal.m4
+build-aux/compile
+build-aux/config.guess
+build-aux/config.sub
 build-aux/depcomp
 build-aux/install-sh
 build-aux/ltmain.sh
 build-aux/mdate-sh
 build-aux/missing
+build-aux/test-driver
 build-aux/texinfo.tex
+config-h.in
 configure
 doc/libtool.1
 doc/libtool.info
@@ -19,8 +22,10 @@ doc/libtoolize.1
 doc/notes.txt
 doc/stamp-vti
 doc/version.texi
+gnulib-tests/Makefile.in
 libltdl/Makefile.am
 libltdl/Makefile.in
 libltdl/aclocal.m4
 libltdl/configure
+libltdl/config-h.in
 m4/ltversion.m4
