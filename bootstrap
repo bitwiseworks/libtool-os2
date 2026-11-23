@@ -363,6 +363,7 @@ func_executable_p ()
 # $_G_path_prog_max characters.
 func_path_progs ()
 {
+    func_path_progs_result=
     _G_progs_list=$1
     _G_check_func=$2
     _G_PATH=${3-"$PATH"}
@@ -436,7 +437,7 @@ test -z "$SED" && {
     rm -f conftest.in conftest.tmp conftest.nl conftest.out
   }
 
-  func_path_progs "sed gsed" func_check_prog_sed "$PATH:/usr/xpg4/bin"
+  func_path_progs "sed gsed" func_check_prog_sed "$PATH${PATH_SEPARATOR-:}/usr/xpg4/bin"
   rm -f conftest.sed
   SED=$func_path_progs_result
 }
@@ -472,7 +473,7 @@ test -z "$GREP" && {
     rm -f conftest.in conftest.tmp conftest.nl conftest.out
   }
 
-  func_path_progs "grep ggrep" func_check_prog_grep "$PATH:/usr/xpg4/bin"
+  func_path_progs "grep ggrep" func_check_prog_grep "$PATH${PATH_SEPARATOR-:}/usr/xpg4/bin"
   GREP=$func_path_progs_result
 }
 
