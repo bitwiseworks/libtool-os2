@@ -706,6 +706,14 @@ func_ltwrapper_executable_p ()
     *.exe) ;;
     *) func_ltwrapper_exec_suffix=.exe ;;
     esac
+    case $host_os in
+    os2*)
+      func_stripname '' '.exe' "$1"
+      test -f "$1$func_ltwrapper_exec_suffix" &&
+        func_ltwrapper_script_p "$func_stripname_result"
+      return $?
+      ;;
+    esac
     $GREP "$magic_exe" "$1$func_ltwrapper_exec_suffix" >/dev/null 2>&1
 }
 
@@ -715,6 +723,13 @@ func_ltwrapper_executable_p ()
 # temporary ltwrapper_script.
 func_ltwrapper_scriptname ()
 {
+    case $host_os in
+    os2*)
+      func_stripname '' '.exe' "$1"
+      func_ltwrapper_scriptname_result=$func_stripname_result
+      return
+      ;;
+    esac
     func_dirname_and_basename "$1" "" "."
     func_stripname '' '.exe' "$func_basename_result"
     func_ltwrapper_scriptname_result=$func_dirname_result/$objdir/${func_stripname_result}_ltshwrapper
@@ -2166,6 +2181,20 @@ func_mode_execute ()
       func_append_quoted args "$file"
     done
 
+    # OS/2 must load the requested DLLs even when a DLL with the same
+    # module name is already loaded by another process.
+    case $host_os in
+    os2*)
+      if $opt_dry_run; then
+        echo "LIBPATHSTRICT=T"
+        echo "export LIBPATHSTRICT"
+      else
+        LIBPATHSTRICT=T
+        export LIBPATHSTRICT
+      fi
+      ;;
+    esac
+
     if $opt_dry_run; then
       # Display what would be done.
       if test -n "$shlibpath_var"; then
@@ -2683,7 +2712,7 @@ func_mode_install ()
 
 	# Do a test to see if this is really a libtool program.
 	case $host in
-	*cygwin* | *mingw* | *windows*)
+	*cygwin* | *mingw* | *windows* | *os2*)
 	    if func_ltwrapper_executable_p "$file"; then
 	      func_ltwrapper_scriptname "$file"
 	      wrapper=$func_ltwrapper_scriptname_result
@@ -3737,20 +3766,37 @@ func_exec_program ()
 	if test -n "$dllsearchpath"; then
 	  $ECHO "\
     # Add the dll search path components to the executable PATH
-    PATH=$dllsearchpath:\$PATH
+    PATH=\"$dllsearchpath$wrapper_path_separator\$PATH\"
 "
 	fi
+
+	case $host_os in
+	os2*)
+	  $ECHO "\
+    # Keep uninstalled DLLs isolated from already loaded DLLs.
+    LIBPATHSTRICT=T
+    export LIBPATHSTRICT
+"
+	  ;;
+	esac
 
 	# Export our shlibpath_var if we have one.
 	if test yes = "$shlibpath_overrides_runpath" && test -n "$shlibpath_var" && test -n "$temp_rpath"; then
 	  $ECHO "\
     # Add our own library path to $shlibpath_var
     $shlibpath_var=\"$temp_rpath\$$shlibpath_var\"
-
+"
+	  case $host_os in
+	  os2*) ;;
+	  *)
+	    $ECHO "\
     # Some systems cannot cope with colon-terminated $shlibpath_var
     # The second colon is a workaround for a bug in BeOS R4 sed
     $shlibpath_var=\`\$ECHO \"\$$shlibpath_var\" | $SED 's/::*\$//'\`
-
+"
+	    ;;
+	  esac
+	  $ECHO "\
     export $shlibpath_var
 "
 	fi
@@ -4802,6 +4848,10 @@ func_mode_link ()
     compiler_flags=
     linker_flags=
     dllsearchpath=
+    wrapper_path_separator=:
+    case $host_os in
+    os2*) wrapper_path_separator=$PATH_SEPARATOR ;;
+    esac
     lib_search_path=`pwd`
     inst_prefix_dir=
     new_inherited_linker_flags=
@@ -5282,15 +5332,15 @@ func_mode_link ()
 	case $host in
 	*-*-cygwin* | *-*-mingw* | *-*-windows* | *-*-pw32* | *-*-os2* | *-cegcc*)
 	  testbindir=`$ECHO "$dir" | $SED 's*/lib$*/bin*'`
-	  case :$dllsearchpath: in
-	  *":$dir:"*) ;;
-	  ::) dllsearchpath=$dir;;
-	  *) func_append dllsearchpath ":$dir";;
+	  case $wrapper_path_separator$dllsearchpath$wrapper_path_separator in
+	  *"$wrapper_path_separator$dir$wrapper_path_separator"*) ;;
+	  "$wrapper_path_separator$wrapper_path_separator") dllsearchpath=$dir;;
+	  *) func_append dllsearchpath "$wrapper_path_separator$dir";;
 	  esac
-	  case :$dllsearchpath: in
-	  *":$testbindir:"*) ;;
-	  ::) dllsearchpath=$testbindir;;
-	  *) func_append dllsearchpath ":$testbindir";;
+	  case $wrapper_path_separator$dllsearchpath$wrapper_path_separator in
+	  *"$wrapper_path_separator$testbindir$wrapper_path_separator"*) ;;
+	  "$wrapper_path_separator$wrapper_path_separator") dllsearchpath=$testbindir;;
+	  *) func_append dllsearchpath "$wrapper_path_separator$testbindir";;
 	  esac
 	  ;;
 	esac
@@ -6477,11 +6527,11 @@ func_mode_link ()
 	    # We need to hardcode the library path
 	    if test -n "$shlibpath_var" && test -z "$avoidtemprpath"; then
 	      # Make sure the rpath contains only unique directories.
-	      case $temp_rpath: in
-	      *"$absdir:"*) ;;
+	      case $temp_rpath$wrapper_path_separator in
+	      *"$absdir$wrapper_path_separator"*) ;;
               *) case $absdir in
-                 "$progdir/"*) func_append temp_rpath "$absdir:" ;;
-                 *)            func_append temp_rpath_tail "$absdir:" ;;
+                 "$progdir/"*) func_append temp_rpath "$absdir$wrapper_path_separator" ;;
+                 *)            func_append temp_rpath_tail "$absdir$wrapper_path_separator" ;;
                  esac
 	      esac
 	    fi
@@ -8642,15 +8692,15 @@ func_mode_link ()
 	case $host in
 	*-*-cygwin* | *-*-mingw* | *-*-windows* | *-*-pw32* | *-*-os2* | *-cegcc*)
 	  testbindir=`$ECHO "$libdir" | $SED -e 's*/lib$*/bin*'`
-	  case :$dllsearchpath: in
-	  *":$libdir:"*) ;;
-	  ::) dllsearchpath=$libdir;;
-	  *) func_append dllsearchpath ":$libdir";;
+	  case $wrapper_path_separator$dllsearchpath$wrapper_path_separator in
+	  *"$wrapper_path_separator$libdir$wrapper_path_separator"*) ;;
+	  "$wrapper_path_separator$wrapper_path_separator") dllsearchpath=$libdir;;
+	  *) func_append dllsearchpath "$wrapper_path_separator$libdir";;
 	  esac
-	  case :$dllsearchpath: in
-	  *":$testbindir:"*) ;;
-	  ::) dllsearchpath=$testbindir;;
-	  *) func_append dllsearchpath ":$testbindir";;
+	  case $wrapper_path_separator$dllsearchpath$wrapper_path_separator in
+	  *"$wrapper_path_separator$testbindir$wrapper_path_separator"*) ;;
+	  "$wrapper_path_separator$wrapper_path_separator") dllsearchpath=$testbindir;;
+	  *) func_append dllsearchpath "$wrapper_path_separator$testbindir";;
 	  esac
 	  ;;
 	esac
@@ -8718,7 +8768,7 @@ func_mode_link ()
         # Disable wrappers for cegcc and mingw32ce hosts, we are cross compiling anyway.
         wrappers_required=false
         ;;
-      *cygwin* | *mingw* | *windows* )
+      *cygwin* | *mingw* | *windows* | *os2* )
         test yes = "$build_libtool_libs" || wrappers_required=false
         ;;
       *)
@@ -8911,6 +8961,15 @@ func_mode_link ()
 
 	    func_emit_wrapper no > $output
 	    chmod +x $output
+	    case $host_os in
+	    os2*)
+	      if $opt_quiet; then
+	        func_show_eval 'libc-script-launcher --force --install "$output" > /dev/null' 'exit $?'
+	      else
+	        func_show_eval 'libc-script-launcher --force --install "$output"' 'exit $?'
+	      fi
+	      ;;
+	    esac
 	  ;;
 	esac
       }
